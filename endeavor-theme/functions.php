@@ -82,6 +82,8 @@ function endeavor_theme_setup() {
 		)
 	);
 
+	
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -111,6 +113,19 @@ add_action( 'after_setup_theme', 'endeavor_theme_setup' );
  */
 function endeavor_theme_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'endeavor_theme_content_width', 640 );
+
+	add_theme_support( 'custom-logo' );
+	function themename_custom_logo_setup() {
+		$defaults = array(
+			'height'               => 50,
+			'width'                => 123,
+			'flex-height'          => true,
+			'flex-width'           => true,
+			'header-text'          => array( 'site-title', 'site-description' ),
+			'unlink-homepage-logo' => true, 
+		);
+		add_theme_support( 'custom-logo', $defaults );
+	}
 }
 add_action( 'after_setup_theme', 'endeavor_theme_content_width', 0 );
 
@@ -175,4 +190,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
 
