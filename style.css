@@ -1043,3 +1043,11 @@ footer ul li {
 .bold {
 	font-weight: bold;
 }
+
+/* This is a test Number 2 */
+
+footer .flex {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+}
