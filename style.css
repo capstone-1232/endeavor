@@ -495,8 +495,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -536,9 +536,9 @@ a {
 	color: #4169e1;
 }
 
-a:visited {
+/* a:visited {
 	color: #800080;
-}
+} */
 
 a:hover,
 a:focus,
@@ -673,8 +673,8 @@ textarea {
 	top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:hover>ul,
+.main-navigation ul ul li.focus>ul {
 	display: block;
 	left: auto;
 }
@@ -683,9 +683,11 @@ textarea {
 	width: 200px;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li:hover>ul,
+.main-navigation ul li.focus>ul {
 	left: auto;
+	flex-direction: column;
+	padding: 1rem;
 }
 
 .main-navigation li {
@@ -703,7 +705,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 900px) {
 
 	.menu-toggle {
 		display: none;
@@ -711,14 +713,14 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+		gap: 2rem;
+		justify-content: end;
 	}
 }
 
 .site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
+.site-main .posts-navigation,
+.site-main .post-navigation {
 	margin: 0 0 1.5em;
 }
 
@@ -966,4 +968,78 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+
+/* ----------------------------------------------------------------------- OUR STYLES ---------------------------------------------------------------- */
+
+/* Variables */
+:root {
+	/* Color */
+	--white: #F2F2F2;
+	--brown: #77614C;
+	--blue: #2D487F;
+	--dark: #363432;
+
+	/* Typography */
+	--h1: 96px;
+	--h2: 68.66px;
+	--h3: 43.95px;
+	--h4: 35.16px;
+	--h5: 28.13px;
+	--h6: 22.5px;
+	--base: 18px;
+	--small: 14.4px;
+}
+
+/* Utility */
+.flex {
+	display: flex;
+}
+
+/* Header */
+.nav-flex {
+	display: flex;
+	padding: 1rem 3rem;
+	gap: 2rem;
+	background-color: var(--dark);
+	align-items: center;
+	justify-content: center;
+}
+
+header img {
+	width: 123px;
+	height: 50px;
+	max-width: unset;
+}
+
+.shop-btn {
+	background-color: var(--dark);
+	border: none;
+	padding: 0px;
+}
+
+header a {
+	color: var(--white);
+	font-size: var(--base);
+}
+
+
+.logo {
+	width: 123px;
+	height: 50px;
+}
+
+/* Footer */
+footer {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+footer ul li {
+	list-style: none;
+}
+
+.bold {
+	font-weight: bold;
 }
