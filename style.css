@@ -648,8 +648,9 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-	display: block;
+	/* display: block; */
 	width: 100%;
+	display: none;
 }
 
 .main-navigation ul {
@@ -992,9 +993,21 @@ textarea {
 	--small: 14.4px;
 }
 
-/* Utility */
+/* Utility
+
+-Universal classes i.e
+	-Buttons
+	-etc.
+*/
 .flex {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.inner-container {
+	max-width: 1384px;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
 /* Header */
@@ -1030,6 +1043,12 @@ header a {
 	height: 50px;
 }
 
+@media screen and (min-width: 900px) {
+	.main-navigation {
+		display: block;
+	}
+}
+
 /* Footer */
 footer {
 	background-color: var(--dark);
@@ -1040,14 +1059,21 @@ footer ul li {
 	list-style: none;
 }
 
+.hours {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
 .bold {
 	font-weight: bold;
 }
 
-/* This is a test Number 2 */
+/* PAGES */
 
-footer .flex {
+/* MEET THE TEAM */
+.staff-flex {
 	display: flex;
-	justify-content: space-between;
-	padding: 1rem 3rem;
+	flex-wrap: wrap;
+	gap: 2rem;
 }

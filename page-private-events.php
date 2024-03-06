@@ -27,7 +27,7 @@ $title = get_the_title();
     <main>
         <!-- Hero banner -->
         <div>
-            <h2>Private Functions</h2>
+            <h2><?php echo $title; ?></h2>
         </div>
 
         <section class="">

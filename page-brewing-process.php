@@ -25,11 +25,11 @@ $title = get_the_title();
 </head>
 <body>
     <main>
-        <!-- Hero banner -->
-        <div>
-            <h2>Our Brewing Process</h2>
-        </div>
         <section>
+            <div>
+                <!-- Hero banner -->
+                <h2><?php echo $title; ?></h2>
+            </div>
             <section>
                 <h3>Malting</h3>
                 <p>
