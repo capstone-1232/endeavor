@@ -28,21 +28,24 @@ get_header();
 				<p><?php echo get_field('description'); ?></p>
 			</div>
 		</section>
-		<section>
-			<div class="inner-container">
-				<div>
-					<h2>The Story</h2>
-					<p><?php echo get_field('story'); ?></p>
-				</div>	
-				<?php
-				$story_image = get_field('story_image');
-					if( !empty( $story_image ) ): ?>
-						<img src="<?php echo esc_url($story_image['url']); ?>" alt="<?php echo esc_attr($story_image['alt']); ?>" />
-					<?php endif; ?>
-			</div>
-		</section>
-
-
+		
+		<?php
+		$story = get_field('story'); 
+		$story_image = get_field('story_image');
+		if(!empty ($story) || !empty($story_image)): ?>
+			<section>
+				<div class="inner-container">
+					<div>
+						<h2>The Story</h2>
+						<p><?php echo get_field('story'); ?></p>
+					</div>	
+					<?php
+						if( !empty( $story_image ) ): ?>
+							<img src="<?php echo esc_url($story_image['url']); ?>" alt="<?php echo esc_attr($story_image['alt']); ?>" />
+						<?php endif; ?>
+				</div>
+			</section>
+		<?php endif; ?>
 	</main><!-- #main -->
 
 <?php
