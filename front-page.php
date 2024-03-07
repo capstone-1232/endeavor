@@ -31,7 +31,7 @@
         <div class="inner-container">
           <h2> <?php echo $title; ?> </h2>
           <p>The taproom and cafe are open! Come and join us for refreshments, off-sales, and a wonderful time with friends and family!</p>
-          <a href="page-our-beer.php" class="">Expore our Beers</a>
+          <a href="page-our-beer-coffee.php" class="">Expore our Beers</a>
         </div>
       </div>
     </section>
