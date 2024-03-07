@@ -28,21 +28,21 @@ $title = get_the_title();
         <section>
             <h2>Our Beer and Coffee</h2>
             <div>
-                <a href="page-year-round.php">
+                <a href="year-round">
                 <h3>Year-Round</h3>
                     <img src="" alt="">
                 </a>
                 
             </div>
             <div>
-                <a href="page-seasonal.php">
+                <a href="seasonal">
                 <h3>Seasonal</h3>
                     <img src="" alt="">
                 </a>
                 
             </div>
             <div>
-                <a href="page-barrel-aged.php">
+                <a href="barrel-aged">
                 <h3>Barrel Aged</h3>
                     <img src="" alt="">
                 </a>
