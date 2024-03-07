@@ -24,7 +24,6 @@ get_header();
         
         <div class="beers">
         <?php 
-
             $posts = get_posts(array(
                 'post_type' => 'seasonal-beers',
                 'posts_per_page' => -1,
