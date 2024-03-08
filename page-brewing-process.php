@@ -86,8 +86,6 @@ $title = get_the_title();
             </section>
         </section>
     </main>
-</body>
-</html>
 
 
 <?php
