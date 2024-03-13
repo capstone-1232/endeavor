@@ -69,20 +69,20 @@ $title = get_the_title();
                 }
             }
 
-            display_menu('taproom_menu', 'taproom_category', 'Snacks');
-            display_menu('taproom_menu', 'taproom_category', 'Tacos');
-            display_menu('taproom_menu', 'taproom_category', 'Quesadillas');
-            display_menu('taproom_menu', 'taproom_category', 'On Tap');
+            display_menu('taproom_menu', 'menu_category', 'Snacks');
+            display_menu('taproom_menu', 'menu_category', 'Tacos');
+            display_menu('taproom_menu', 'menu_category', 'Quesadillas');
+            display_menu('taproom_menu', 'menu_category', 'On Tap');
             ?>
 
         </section>
         <section>
             <h3>Cafe Menu</h3>
             <?php
-            display_menu('cafe_menu', 'cafe_category', 'Espresso Drinks');
-            display_menu('cafe_menu', 'cafe_category', 'Fresh Endeavor Coffee');
-            display_menu('cafe_menu', 'cafe_category', 'Tea');
-            display_menu('cafe_menu', 'cafe_category', 'Fresh Rotating Pastries');
+            display_menu('taproom_menu', 'menu_category', 'Espresso Drinks');
+            display_menu('taproom_menu', 'menu_category', 'Fresh Endeavor Coffee');
+            display_menu('taproom_menu', 'menu_category', 'Tea');
+            display_menu('taproom_menu', 'menu_category', 'Fresh Rotating Pastries');
             ?>
 
         </section>
