@@ -15,9 +15,8 @@
 get_header();
 ?>
 
-<h1>
-THis Is Upcoming Events
-</h1>
+
+?>
 
 <?php
 

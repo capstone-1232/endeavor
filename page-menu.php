@@ -33,61 +33,81 @@ $title = get_the_title();
         <section>
             <h3>Taproom Menu</h3>
             <?php
-            function display_menu($post_type, $category_field, $category) {
-                $posts = get_posts(array(
-                    'post_type' => $post_type,
-                    'posts_per_page' => -1,
-                    'meta_query' => array(
-                        array(
-                            'key' => $category_field,
-                            'value' => $category,
-                            'compare' => '='
-                        )
-                    )
-                ));
-                if ($posts) {
-                    echo '<h4>' . $category . '</h4>';
-                    foreach ($posts as $post) {
-                        setup_postdata($post);
-                        $price = get_field('price', $post->ID);
-                        $description = get_field('description', $post->ID);
-                        $options = get_field('options', $post->ID);
-                        $option_price = get_field('option_price', $post->ID);
-                        echo '<h5>' . $post->post_title . '</h5>'; 
-                        echo '<p>' . $price . '</p>';
-                        echo '<p>' . $description . '</p>';
-                        if ($options) {
-                            echo '<p>' . $options . '</p>';
-                            echo '<p>' . $option_price . '</p>';
+
+                function display_menu($posts, $category) {
+                    if ($posts) {
+                        echo '<h4>' . $category . '</h4>';
+                        foreach ($posts as $post) {
+                            setup_postdata($post);
+                            $price = get_field('price', $post->ID);
+                            $description = get_field('description', $post->ID);
+                            $options = get_field('options', $post->ID);
+                            $option_price = get_field('option_price', $post->ID);
+                            echo '<h5>' . $post->post_title . '</h5>'; 
+                            echo '<p>' . $price . '</p>';
+                            echo '<p>' . $description . '</p>';
+                            if ($options) {
+                                echo '<p>' . $options . '</p>';
+                                echo '<p>' . $option_price . '</p>';
+                            }
                         }
-                    
-                        echo '</div>';
                         wp_reset_postdata();
+                    } else {
+                        echo '<p>No menu items found for category: ' . $category . '</p>';
                     }
-                } else {
-                    echo '<p>No menu items found for category: ' . $category . '</p>';
+                }
+            $taproom_menu_posts = new WP_Query(array(
+                'post_type' => 'taproom_menu',
+                'posts_per_page' => -1,
+            ));
+
+            $taproom_menu_items = array(); 
+
+            if ($taproom_menu_posts->have_posts()) {
+                while ($taproom_menu_posts->have_posts()) {
+                    $taproom_menu_posts->the_post();
+                    $menu_category = get_field('menu_category');
+                    $taproom_menu_items[$menu_category][] = $post;
                 }
             }
 
-            display_menu('taproom_menu', 'menu_category', 'Snacks');
-            display_menu('taproom_menu', 'menu_category', 'Tacos');
-            display_menu('taproom_menu', 'menu_category', 'Quesadillas');
-            display_menu('taproom_menu', 'menu_category', 'On Tap');
+            
+            $taproom_menu_items = array_reverse($taproom_menu_items); 
+
+            foreach ($taproom_menu_items as $category => $posts) {
+                display_menu($posts, $category);
+            }
             ?>
 
         </section>
         <section>
             <h3>Cafe Menu</h3>
             <?php
-            display_menu('taproom_menu', 'menu_category', 'Espresso Drinks');
-            display_menu('taproom_menu', 'menu_category', 'Fresh Endeavor Coffee');
-            display_menu('taproom_menu', 'menu_category', 'Tea');
-            display_menu('taproom_menu', 'menu_category', 'Fresh Rotating Pastries');
-            ?>
+            $cafe_menu_posts = new WP_Query(array(
+                'post_type' => 'cafe_menu',
+                'posts_per_page' => -1,
+            ));
 
+            $cafe_menu_items = array();
+
+            if ($cafe_menu_posts->have_posts()) {
+                while ($cafe_menu_posts->have_posts()) {
+                    $cafe_menu_posts->the_post();
+                    $cafe_category = get_field('cafe_category');
+                    $cafe_menu_items[$cafe_category][] = $post;
+                }
+            }
+
+            $cafe_menu_items = array_reverse($cafe_menu_items); 
+
+            foreach ($cafe_menu_items as $category => $posts) {
+                display_menu($posts, $category);
+            }
+            ?>
         </section>
     </section>
 </main>
 
 <?php
 get_footer();
+?>
