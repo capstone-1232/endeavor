@@ -12,68 +12,102 @@
  * @package endeavor-theme
  */
 
- get_header();
- $title = get_the_title();
- ?>
- 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title><?php echo $title; ?></title>
- </head>
- <body>
-        <main>
-            <section>
-             <div>
-                 <!-- Hero banner -->
-                 <h2><?php echo $title; ?></h2>
-             </div>
-             <section>
-                 <h3>Taproom Menu</h3>
-                 <h4>Snacks</h4>
-                    <div class="flex">
-                        <?php 
-                        $posts = get_posts(array(
-                            'post_type' => 'snacks', // Replace 'your_post_type' with your actual post type slug
-                            'posts_per_page' => -1, // Retrieve all posts
-                        ));
+get_header();
+$title = get_the_title();
+?>
 
-                        // Loop through each post
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $title; ?></title>
+</head>
+<body>
+<main>
+    <section>
+        <div>
+            <!-- Hero banner -->
+            <h2><?php echo $title; ?></h2>
+        </div>
+        <section>
+            <h3>Taproom Menu</h3>
+            <?php
+
+                function display_menu($posts, $category) {
+                    if ($posts) {
+                        echo '<h4>' . $category . '</h4>';
                         foreach ($posts as $post) {
-                            // Setup post data
                             setup_postdata($post);
-
-                            // Retrieve ACF fields for each post
                             $price = get_field('price', $post->ID);
                             $description = get_field('description', $post->ID);
                             $options = get_field('options', $post->ID);
                             $option_price = get_field('option_price', $post->ID);
-
-                            // Output your post content or custom fields
-                            echo '<h5>' . get_the_title() . '</h5>';
-                            // echo '<p>' . get_the_content() . '</p>';
-                            echo '<h6>' . $price . '</h6>';
+                            echo '<h5>' . $post->post_title . '</h5>'; 
+                            echo '<p>' . $price . '</p>';
                             echo '<p>' . $description . '</p>';
-                            if ($options){
-                                echo '<h5>Options:</h5>';
+                            if ($options) {
                                 echo '<p>' . $options . '</p>';
-                                echo '<h6>Option Price:</h6>';
                                 echo '<p>' . $option_price . '</p>';
                             }
-                
-                            echo '</div>';
-
-                            // Reset post data
-                            wp_reset_postdata();
                         }
-                        ?>
-                 </div>
-             </section>
-            </section>
-        </main>
+                        wp_reset_postdata();
+                    } else {
+                        echo '<p>No menu items found for category: ' . $category . '</p>';
+                    }
+                }
+            $taproom_menu_posts = new WP_Query(array(
+                'post_type' => 'taproom_menu',
+                'posts_per_page' => -1,
+            ));
+
+            $taproom_menu_items = array(); 
+
+            if ($taproom_menu_posts->have_posts()) {
+                while ($taproom_menu_posts->have_posts()) {
+                    $taproom_menu_posts->the_post();
+                    $menu_category = get_field('menu_category');
+                    $taproom_menu_items[$menu_category][] = $post;
+                }
+            }
+
+            
+            $taproom_menu_items = array_reverse($taproom_menu_items); 
+
+            foreach ($taproom_menu_items as $category => $posts) {
+                display_menu($posts, $category);
+            }
+            ?>
+
+        </section>
+        <section>
+            <h3>Cafe Menu</h3>
+            <?php
+            $cafe_menu_posts = new WP_Query(array(
+                'post_type' => 'cafe_menu',
+                'posts_per_page' => -1,
+            ));
+
+            $cafe_menu_items = array();
+
+            if ($cafe_menu_posts->have_posts()) {
+                while ($cafe_menu_posts->have_posts()) {
+                    $cafe_menu_posts->the_post();
+                    $cafe_category = get_field('cafe_category');
+                    $cafe_menu_items[$cafe_category][] = $post;
+                }
+            }
+
+            $cafe_menu_items = array_reverse($cafe_menu_items); 
+
+            foreach ($cafe_menu_items as $category => $posts) {
+                display_menu($posts, $category);
+            }
+            ?>
+        </section>
+    </section>
+</main>
 
 <?php
-
 get_footer();
+?>
