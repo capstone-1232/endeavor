@@ -38,7 +38,36 @@
     <section>
       <div class="inner-container">
         <h3>Featured Beers</h3>
-        <!-- Load out the featured beers -->
+        <?php
+          $beer_cpts = array('year-round-beers', 'seasonal-beers', 'barrel-aged-beers'); 
+
+          foreach ($beer_cpts as $cpt) {
+              $args = array(
+                  'post_type' => $cpt,
+                  'posts_per_page' => -1, 
+              );
+              $beer_posts = get_posts($args);
+
+              foreach ($beer_posts as $beer_post) {
+                  // Get the value of the featured label using ACF
+                  $is_featured = get_field('featured', $beer_post->ID);
+                  $beer_image = get_field('beer_image', $beer_post->ID);
+                  $beer_image_url = $beer_image['url'];
+                  $beer_image_alt = get_post_meta($beer_image['id'], '_wp_attachment_image_alt', true);
+                  // Check if the beer is featured
+                  if ($is_featured) {
+                      $beer_name = $beer_post->post_title; ?>
+                      
+                      <img src="<?php echo esc_url($beer_image_url); ?>" alt="<?php echo esc_attr($beer_image_alt); ?>"/>
+                      <?php
+                      // Output the beer name
+                      echo "<h2>$beer_name</h2>";
+                  }
+              }
+          }
+          ?>
+
+
       </div>
     </section>
     <section>
