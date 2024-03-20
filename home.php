@@ -29,14 +29,14 @@ $title = get_the_title();
             <h2>Our Beer and Coffee</h2>
             <div>
                 <a href="year-round">
-                <h3>Year-Round</h3>
+                <h3>Mainstays</h3>
                     <img src="" alt="">
                 </a>
                 
             </div>
             <div>
                 <a href="seasonal">
-                <h3>Seasonal</h3>
+                <h3>Rotational</h3>
                     <img src="" alt="">
                 </a>
                 
