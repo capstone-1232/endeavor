@@ -1010,6 +1010,41 @@ textarea {
 	-Buttons
 	-etc.
 */
+h1 {
+    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+    color: var(--white);
+}
+
+h2 {
+    font-size: clamp(3.052rem, 2.698rem + 1.771vw, 4.291rem);
+    color: var(--dark);
+}
+
+h3 {
+    font-size: clamp(2.441rem, 2.158rem + 1.417vw, 3.433rem);
+    color: var(--dark);
+}
+
+h4 {
+    font-size: clamp(1.953rem, 1.726rem + 1.134vw, 2.747rem);
+    color: var(--dark);
+}
+
+h5 {
+    font-size: clamp(1.563rem, 1.381rem + 0.907vw, 2.197rem);
+    color: var(--dark);
+}
+
+h6 {
+    font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.649rem);
+    color: var(--dark);
+}
+
+p {
+    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+    color: var(--dark);
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
