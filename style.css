@@ -1129,7 +1129,6 @@ footer ul li {
 
 /* MEET THE TEAM */
 .staff-flex {
-  =======
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -1186,7 +1185,7 @@ footer ul li {
 .rotational-bg{
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/hourglass.jpeg);
     position: relative;
-
+}
 
 /* BREWING PROCESS */
 .brewing-process-bg {
