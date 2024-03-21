@@ -26,28 +26,30 @@ $title = get_the_title();
 <body>
     <main>
         <section>
-            <h2>Our Beer and Coffee</h2>
-            <div>
-                <a href="year-round">
-                <h3>Mainstays</h3>
-                    <img src="" alt="">
-                </a>
+            <div class="inner-container">
+                <h2>Our Beer and Coffee</h2>
+                <p>At Endeavour Brewing, we're driven by our love for quality beers! With fresh ingredients and consistent quality, we craft brews that match our active lifestyles and passions for the outdoors and sports. Join us in raising a glass to daring adventures and great taste!</p>
+                <div class="beer-categories">
+                    <a href="year-round">
+                        <div class="mainstay-bg beer-card">
+                        <h3>Mainstays</h3>
+                        </div>
+                    </a>
+                    <a href="year-round">
+                        <div class="barrel-bg beer-card">
+                        <h3>Barrel-Aged</h3>
+                        </div>
+                    </a>
+                    <a href="year-round">
+                        <div class="rotational-bg beer-card">
+                        <h3>Rotational</h3>
+                        </div>
+                    </a>
+                </div>
                 
             </div>
-            <div>
-                <a href="seasonal">
-                <h3>Rotational</h3>
-                    <img src="" alt="">
-                </a>
-                
-            </div>
-            <div>
-                <a href="barrel-aged">
-                <h3>Barrel Aged</h3>
-                    <img src="" alt="">
-                </a>
-                
-            </div>
+            
+            
         </section>
     </main>
 </body>
