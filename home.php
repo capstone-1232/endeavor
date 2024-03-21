@@ -11,11 +11,9 @@
  *
  * @package endeavor-theme
  */
-
 get_header();
 $title = get_the_title();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +72,6 @@ $title = get_the_title();
     </main>
 </body>
 </html>
-
 <?php
 get_footer();
 ?>
