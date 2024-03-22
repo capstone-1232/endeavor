@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
@@ -1133,7 +1133,7 @@ footer ul li {
 
 /* BREWING PROCESS */
 .brewing-process-bg {
-    background-image: url(./img/brewing-process-hero.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1144,7 +1144,7 @@ footer ul li {
 
 .brewing-process-bg h2 {
     color: var(--white);
-    font-size: var(--h1);
+    text-align: center;
 }
 
 .process-card {
@@ -1158,33 +1158,60 @@ footer ul li {
 }
 
 
-/* BREWING PROCESS */
-.brewing-process-bg {
-    background-image: url(./img/brewing-process-hero.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+
+.brewing-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+
 }
 
-.brewing-process-bg h2 {
-    color: var(--white);
-    font-size: var(--h1);
+.dot {
+    background-color: var(--brown);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: relative;
+}
+
+.line {
+    background-color: var(--brown);
+    width: 2px;
+    height: 30rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+}
+
+.last-line {
+    background-color: var(--brown);
+    width: 2px;
+    height: 21rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
 }
 
 .process-card {
     background-color: var(--brown);
     color: var(--white);
     padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    grid-column-start: 2;
+    grid-column-end: 7;
 }
 
 .process-card h3 {
-    font-size: var(--h2);
+    font-size: var(--h3-mobile);
+    margin: 1rem 0 1.5rem 0;
+    color: var(--white);
 }
 
-
+.process-card p {
+    color: var(--white);
+    margin: 0;
+}
 
 
 
@@ -1507,26 +1534,28 @@ footer ul li {
 /* ********************** Beer Pages ***************************************** */
 
 /* *********** Home Beers ************************* */
-.beer-categories{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1.5rem;
+.beer-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-.beer-card{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-color: var(--dark);
-	height: 360px;
-	flex: 1 1 340px;
-	position: relative;
+.beer-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--dark);
+    height: 360px;
+    flex: 1 1 340px;
+    position: relative;
 }
 
-.beer-card:hover{
-	transform:scale(1.05);
-	transition: all ease 0.5s ;
+.beer-card:hover {
+    transform: scale(1.05);
+    transition: all ease 0.5s;
 }
+
+
 
 
 .beer-card h3{
@@ -1538,25 +1567,26 @@ footer ul li {
 	transform: translate(-50%, -50%) ;
 	margin: 0;
 	white-space: nowrap;
+
 }
 
 /* *********** Mainstays Beers ************************* */
 
-.mainstay-bg{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/year-round.jpg);
+.mainstay-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
     position: relative;
 
 }
 
 /* *********** Barrel Beers ************************* */
-.barrel-bg{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/barrel-aged.jpeg);
+.barrel-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
     position: relative;
 }
 
 /* *********** Rotational Beers ************************* */
-.rotational-bg{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/hourglass.jpeg);
+.rotational-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
     position: relative;
 }
 
