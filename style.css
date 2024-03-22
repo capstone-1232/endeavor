@@ -1206,6 +1206,72 @@ footer ul li {
     margin: 0;
 }
 
+/* WHO WE ARE */
+
+.who-we-are-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.who-we-are-bg h2 {
+    font-size: var(--h1-mobile);
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+}
+
+.who-we-are h3 {
+    font-size: var(--h3-mobile);
+    text-align: center;
+    color: var(--dark);
+}
+
+.who-we-are p {
+    font-size: var(--base-mobile);
+    text-align: center;
+    color: var(--dark);
+}
+
+.who-we-are-bg p {
+    color: var(--white);
+}
+
+.who-we-are-bg-img-1 {
+    background-image: url(./img/year-round.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-bg-img-2 {
+    background-image: url(./img/coffee.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-bg-img-3 {
+    background-image: url(./img/employee-holding-endeavour-glass.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-img {
+    display: none;
+}
+
+
+
 
 
 
@@ -1551,15 +1617,15 @@ footer ul li {
 
 
 
-.beer-card h3{
-	text-decoration: none;
-	color: var(--white);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) ;
-	margin: 0;
-	white-space: nowrap;
+.beer-card h3 {
+    text-decoration: none;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
 
 }
 
@@ -1585,36 +1651,36 @@ footer ul li {
 
 
 /* ***************Beer Categories Pages**************** */
-.beer-container{
-	max-width: 422px;
-	margin: 0 auto;
+.beer-container {
+    max-width: 422px;
+    margin: 0 auto;
 }
 
-.beer-category-bg{
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 48px 0;
+.beer-category-bg {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px 0;
 }
 
 
 .beer-category-bg h2,
-.beer-category-bg p{
-	color: var(--white); 
-	text-align: center;
+.beer-category-bg p {
+    color: var(--white);
+    text-align: center;
 }
 
-.beer-category-bg h2{
-	margin: 0;
+.beer-category-bg h2 {
+    margin: 0;
 }
 
-.mainstay-banner-bg{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/year-round.jpg);
+.mainstay-banner-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
 
 }
 
-.featured-image{
-	display: flex;
-	justify-content: center;
-	gap: 3rem;
+.featured-image {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
