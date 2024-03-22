@@ -39,11 +39,11 @@ get_header();
                 $featured_image = get_the_post_thumbnail($post->ID, 'full');
 
                 // Display the featured image and the post title with a link to the post
-                echo '<a href="' . esc_url($permalink) . '">';
+                echo '<a class="featured-image href="' . esc_url($permalink) . '">';
                 if ($featured_image) {
-                    echo '<div class="featured-image">' . $featured_image .'';
+                    echo '<div>' . $featured_image .'';
                 }
-                echo '<h2>' . get_the_title() . '</h2></div>';
+                echo '<h3>' . get_the_title() . '</h3></div>';
                 echo '</a>';
                 
                 // Reset post data

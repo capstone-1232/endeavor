@@ -16,12 +16,12 @@ get_header();
 
 ?>
 <section>
-    <div class="beer-category-bg">
-        <div class="inner-container">
-            <h2>Seasonal</h2> 
-            <p>Endeavour Brewing offers exclusive selection of seasonal beers That may not be offered again. These beers may return eventually but are not part of our main rotation. These beers allow us to exist on the wild side and play with the different oppertunities beer has to offer</p>
+    <div class="beer-category-bg rotational-banner-bg">
+        <div class="beer-container">
+            <h2>Rotational</h2> 
+            <p>Endeavour Brewing offers exclusive selection of rotational beers that may not be offered again. These beers may return eventually but are not part of our mainstays. These beers allow us to exist on the wild side and play with the different oppertunities beer has to offer</p>
         </div>
-        
+    </div>
         <div class="beers">
         <?php 
             $posts = get_posts(array(
@@ -38,11 +38,11 @@ get_header();
                 $featured_image = get_the_post_thumbnail($post->ID, 'full');
 
                 // Display the featured image and the post title with a link to the post
-                echo '<a href="' . esc_url($permalink) . '">';
+                echo '<a class="featured-image href="' . esc_url($permalink) . '">';
                 if ($featured_image) {
-                    echo '<div class="featured-image">' . $featured_image . '</div>';
+                    echo '<div>' . $featured_image .'';
                 }
-                echo '<h2>' . get_the_title() . '</h2>';
+                echo '<h3>' . get_the_title() . '</h3></div>';
                 echo '</a>';
                 
                 // Reset post data
