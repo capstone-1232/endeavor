@@ -1524,9 +1524,6 @@ footer ul li {
 
 
 
-
-
-
 /* ********************** Beer Pages ***************************************** */
 
 /* *********** Home Beers ************************* */
@@ -1552,14 +1549,18 @@ footer ul li {
 }
 
 
-.beer-card h3 {
-    text-decoration: none;
-    color: var(--white);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+
+
+.beer-card h3{
+	text-decoration: none;
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) ;
+	margin: 0;
+	white-space: nowrap;
+
 }
 
 /* *********** Mainstays Beers ************************* */
@@ -1580,4 +1581,40 @@ footer ul li {
 .rotational-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
     position: relative;
+}
+
+
+/* ***************Beer Categories Pages**************** */
+.beer-container{
+	max-width: 422px;
+	margin: 0 auto;
+}
+
+.beer-category-bg{
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 48px 0;
+}
+
+
+.beer-category-bg h2,
+.beer-category-bg p{
+	color: var(--white); 
+	text-align: center;
+}
+
+.beer-category-bg h2{
+	margin: 0;
+}
+
+.mainstay-banner-bg{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/year-round.jpg);
+
+}
+
+.featured-image{
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
 }
