@@ -174,8 +174,6 @@ $title = get_the_title();
             <img src="" alt="">
         </section>
     </main>
-</body>
-</html>
 
 <?php
 
