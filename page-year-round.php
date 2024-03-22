@@ -16,12 +16,12 @@ get_header();
 
 ?>
 <section>
-    <div class="beer-category-bg">
-        <div class="inner-container">
-            <h2>Year-Round</h2> 
-            <p>Endeavour Brewing offers a diverse selection of year-round beers crafted to suit every palate and occasion. From crisp and refreshing lagers to bold and flavorful ales, our lineup promises something for everyone.</p>
+    <div class="beer-category-bg mainstay-banner-bg">
+        <div class="beer-container">
+            <h2>Mainstays</h2> 
+            <p>Endeavour Brewing offers a diverse selection of mainstay beers crafted to suit every palate and occasion. From crisp and refreshing lagers to bold and flavorful ales, our lineup promises something for everyone.</p>
         </div>
-        
+    </div>
         <div class="beers">
         <?php 
 
@@ -39,11 +39,11 @@ get_header();
                 $featured_image = get_the_post_thumbnail($post->ID, 'full');
 
                 // Display the featured image and the post title with a link to the post
-                echo '<a href="' . esc_url($permalink) . '">';
+                echo '<a class="featured-image href="' . esc_url($permalink) . '">';
                 if ($featured_image) {
-                    echo '<div class="featured-image">' . $featured_image . '</div>';
+                    echo '<div>' . $featured_image .'';
                 }
-                echo '<h2>' . get_the_title() . '</h2>';
+                echo '<h3>' . get_the_title() . '</h3></div>';
                 echo '</a>';
                 
                 // Reset post data
