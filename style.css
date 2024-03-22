@@ -21,7 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@300;400;500;600;700&display=swap');
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1013,36 +1013,43 @@ textarea {
 h1 {
     font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
     color: var(--white);
+	font-family: "Anton", sans-serif;
 }
 
 h2 {
     font-size: clamp(3.052rem, 2.698rem + 1.771vw, 4.291rem);
     color: var(--dark);
+	font-family: "Anton", sans-serif;
 }
 
 h3 {
     font-size: clamp(2.441rem, 2.158rem + 1.417vw, 3.433rem);
     color: var(--dark);
+	font-family: "Anton", sans-serif;
 }
 
 h4 {
     font-size: clamp(1.953rem, 1.726rem + 1.134vw, 2.747rem);
     color: var(--dark);
+	font-family: "Anton", sans-serif;
 }
 
 h5 {
     font-size: clamp(1.563rem, 1.381rem + 0.907vw, 2.197rem);
     color: var(--dark);
+	font-family: "Anton", sans-serif;
 }
 
 h6 {
     font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.649rem);
     color: var(--dark);
+	font-family: "Anton", sans-serif;
 }
 
 p {
     font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
     color: var(--dark);
+	font-family: "Hind", sans-serif;  
 }
 
 .flex {
@@ -1275,321 +1282,6 @@ footer ul li {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ********************** Beer Pages ***************************************** */
 
 /* *********** Home Beers ************************* */
@@ -1674,13 +1366,66 @@ footer ul li {
     margin: 0;
 }
 
-.mainstay-banner-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
+
+
+.mainstay-banner-bg{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/year-round.jpg);
+}
+
+.rotational-banner-bg{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/hourglass.jpeg);
+}
+
+.barrel-aged-banner-bg{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/barrel-aged.jpeg);
 
 }
 
-.featured-image {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+.beers a{
+	text-decoration: none;
+}
+
+
+.featured-image{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex: 0 0 210px;
+}
+
+.featured-image:hover{
+	cursor: pointer;
+	transform: scale(1.05);
+	transition: all ease 0.5s;
+}
+
+.featured-image h3{
+	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.featured-image img{
+	padding: 1rem;
+}
+.beers{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem;
+	margin: 3rem;
+}
+
+/* *********************Single Beer Pages************************ */
+
+.beer-background{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(img/beer-bg/beer-spout.jpg);
+}
+
+.single-beer h2,
+.single-beer p,
+.single-beer li{
+	color: var(--white);
 }

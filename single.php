@@ -13,6 +13,9 @@ get_header();
 <main id="primary" class="site-main">
     <section class="beer-background">
         <div class="inner-container">
+            <div class="single-beer">
+
+            
             <?php
             $beer_image = get_field('beer_image');
             if (!empty($beer_image)) {
@@ -29,6 +32,7 @@ get_header();
                 <li> IBU: <?php echo esc_html(get_field('ibu')); ?></li>
             </ul>
             <p><?php echo esc_html(get_field('description')); ?></p>
+        </div>
         </div>
     </section>
 
