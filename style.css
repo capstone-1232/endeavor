@@ -1232,6 +1232,7 @@ footer ul li {
 
 .who-we-are h3 {
     font-size: var(--h3-mobile);
+    font-weight: 400;
     text-align: center;
     color: var(--dark);
 }
@@ -1277,7 +1278,14 @@ footer ul li {
     display: none;
 }
 
+.who-we-are .mission-statement {
+    background-color: var(--brown);
+}
 
+.who-we-are .mission-statement h3,
+.who-we-are .mission-statement p {
+    color: var(--white);
+}
 
 
 

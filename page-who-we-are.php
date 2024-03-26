@@ -24,7 +24,7 @@
      <title><?php echo $title ?></title>
  </head>
  <body>
-     <main class="who-we-are">
+    <main class="who-we-are">
         <section>
             <div class="who-we-are-bg">
                 <h2><?php echo $title; ?></h2>
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </section>
-     </main>
+    </main>
  
  <?php
  get_footer();
