@@ -19,51 +19,58 @@ get_header();
     <section class="beer-background">
         <div class="inner-container">
             <div class="single-beer">
-
-
                 <?php
                 $beer_image = get_field('beer_image');
                 if (!empty ($beer_image)) {
                     $beer_image_url = $beer_image['url'];
                     $beer_image_alt = get_post_meta($beer_image['id'], '_wp_attachment_image_alt', true);
                     ?>
-                    <img class="can-img" src="<?php echo esc_url($beer_image_url); ?>" alt="<?php echo esc_attr($beer_image_alt); ?>" />
+                    <img class="can-img" src="<?php echo esc_url($beer_image_url); ?>"
+                        alt="<?php echo esc_attr($beer_image_alt); ?>" />
                 <?php } ?>
-                <h2>
-                    <?php echo esc_html(get_the_title()); ?>
-                </h2>
-                <ul class="beer-info">
-                    <div>
-                        <li>
-                            <?php echo esc_html(get_field('beer_type')); ?>
-                        </li>
-                    </div>
+                <div class="beer-flex">
+                    <h2>
+                        <?php echo esc_html(get_the_title()); ?>
+                    </h2>
+                    <ul class="beer-info">
+                        <div>
+                            <li>
+                                <?php echo esc_html(get_field('beer_type')); ?>
+                            </li>
+                        </div>
 
-                    <?php
-                    $post_type_object = get_post_type_object(get_post_type());
-                    $singular_label = $post_type_object->labels->singular_name;
-                    ?>
-                    <div>
-                        <li>
-                            <?php echo esc_html($singular_label); ?>
-                        </li>
-                    </div>
-                    <div>
-                        <li> <span> ABV: </span>
-                            <?php echo esc_html(get_field('abv')); ?>%
-                        </li>
-                    </div>
-                    <div>
-                        <li> <span>IBU:</span>
-                            <?php echo esc_html(get_field('ibu')); ?>
+                        <?php
+                        $post_type_object = get_post_type_object(get_post_type());
+                        $singular_label = $post_type_object->labels->singular_name;
+                        ?>
+                        <div>
+                            <li>
+                                <?php echo esc_html($singular_label); ?>
+                            </li>
+                        </div>
+                        <div>
+                            <li> <span> ABV: </span>
+                                <?php echo esc_html(get_field('abv')); ?>%
+                            </li>
+                        </div>
+                        <div>
+                            <li> <span>IBU:</span>
+                                <?php 
+                                if(!get_field('ibu')){
+                                    echo 'N/A';
+                                }else{
+                                    echo esc_html(get_field('ibu'));
+                                }
+                                 ?>
 
-                        </li>
-                    </div>
+                            </li>
+                        </div>
 
-                </ul>
-                <p>
-                    <?php echo esc_html(get_field('description')); ?>
-                </p>
+                    </ul>
+                    <p>
+                        <?php echo esc_html(get_field('description')); ?>
+                    </p>
+                </div>
 
             </div>
         </div>
@@ -72,7 +79,7 @@ get_header();
     <?php
     $story = get_field('story');
     $story_image = get_field('story_image');
-    if (!empty ($story) || !empty ($story_image)): ?>
+    if (!empty($story) && !empty($story_image)): ?>
         <section class="hops">
             <svg class="hop-top-left" fill="none" viewBox="0 0 219 294">
                 <g fill="#2D2D2D" clip-path="url(#clip0_319_1569)" opacity=".2">
@@ -109,23 +116,22 @@ get_header();
             </svg>
 
             <div class="inner-container">
-                <div class="story">
-                    <div>
-                        <h2>THE STORY</h2>
-                        <p>
-                            <?php echo esc_html(get_field('story')); ?>
-                        </p>
-                    </div>
-                    <?php
-                    if (!empty ($story_image)) {
-                        $story_image_url = $story_image['url'];
-                        $story_image_alt = get_post_meta($story_image['id'], '_wp_attachment_image_alt', true);
-                        ?>
-                        <img src="<?php echo esc_url($story_image_url); ?>" alt="<?php echo esc_attr($story_image_alt); ?>" />
-                    <?php } ?>
+            <h2>THE STORY</h2>
+            <div class="story">
+                <div class="story-info">
+                    <p>
+                        <?php echo esc_html(get_field('story')); ?>
+                    </p>
                 </div>
-
+                <?php
+                if (!empty($story_image)) {
+                    $story_image_url = $story_image['url'];
+                    $story_image_alt = get_post_meta($story_image['id'], '_wp_attachment_image_alt', true);
+                    ?>
+                    <img src="<?php echo esc_url($story_image_url); ?>" alt="<?php echo esc_attr($story_image_alt); ?>" />
+                <?php } ?>
             </div>
+        </div>
             <svg fill="none" class="hop-bottom-right" viewBox="0 0 262 348">
                 <g fill="#2D2D2D" clip-path="url(#clip0_319_1595)" opacity=".2">
                     <path
