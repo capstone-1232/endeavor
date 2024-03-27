@@ -24,33 +24,36 @@ $title = get_the_title();
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <main>
-        <!-- Background image here? -->
+    <main class="meet-the-team">
         <section>
-            <div class="grid">
-                <div class="inner-container">
-                    <h2><?php echo $title; ?></h2>
-                </div>
+            <div class="meet-the-team-bg">
+                <h2><?php echo $title; ?></h2>
             </div>
         </section>
         <section>
             <div class="inner-container">
                 <div class="flex">
-                    <img src="" alt="">
+                    <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/matt-and-georgia-on-a-mountain.webp" alt="Endeavour coffee on table">
                     <div>
                         <h3>Matt & Georgia Atkins</h3>
-                        <p>Aenean imperdiet purus ut purus suscipit porttitor. Etiam nec ipsum sed ante ultricies tincidunt. Sed faucibus sapien ut lorem cursus, eget lobortis justo accumsan. Cras eu ante ipsum. Nulla lacinia velit ut mattis auctor. Duis nec ullamcorper purus, cursus vestibulum metus. Quisque varius vulputate turpis, a feugiat nunc ullamcorper lobortis. Donec viverra mauris sed iaculis tristique. Suspendisse potenti. Cras tincidunt urna sed turpis placerat, id rutrum lacus ornare. Phasellus placerat posuere dui. Nunc molestie sagittis urna non tristique. Sed tempor sagittis justo, a scelerisque orci aliquam at. Vivamus ac bibendum enim, sit amet tincidunt urna. Ut finibus a felis vel condimentum. Ut in velit sollicitudin est bibendum feugiat non at turpis.</p>
+                        <p>
+                            Endeavour Brewing stands as a beacon of community in St. Albert, welcoming families and beer and coffee enthusiasts of all ages to share in our craft. Fueled by our passion for exceptional brews and coffee, we meticulously craft our favorite pints or coffee with unwavering dedication to consistent quality and the freshest ingredients. Our mission is to create beers that not only tantalize the taste buds but also complement the vibrant lifestyles we lead alongside our loved ones.
+
+                            <br><br>
+                            
+                            Rooted in our diverse passions for the outdoors and the pursuit of greatness, Endeavour Brewing is more than just a brewery—it's a celebration of life's adventures and the bold spirits who embrace them. At our core, we believe that beer and coffee brings people together, forging bonds and sparking conversations that linger long after the last sip. Join us as we raise a glass to the moments that unite us and the camaraderie that defines our community. Cheers to new friendships, shared experiences, and the endless possibilities that await at Endeavour Brewing and Coffee Roasters.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="inner-container grid">
-                <div>
-                    <h3>Our Team</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mauris, nec rutrum tellus tempor non. Nunc varius tristique porta. Pellentesque vitae eros sit amet lectus tempus consectetur.</p>
-                </div>
                 <div class="staff-flex">
+                    <div class="staff-flex-text">
+                        <h3>Our Team</h3>
+                        <p>Check out all of our valued team members! We're dedicated to serving all of our customers to the highest quality. If you ever see our employees around, don't be afraid to say hi!</p>
+                    </div>
                     <?php 
 
                         $posts = get_posts(array(
@@ -69,15 +72,17 @@ $title = get_the_title();
                             $staff_image = get_field('staff_image', $post->ID);
 
                             // Output your post content or custom fields
-                            echo '<div style="width: 16rem;">';
-                            echo '<h2>' . get_the_title() . '</h2>';
+                            echo '<div class="employee-card">';
+                            echo '<h4>' . get_the_title() . '</h4>';
                             echo '<p>' . get_the_content() . '</p>';
                             echo '<p>' . $job_title . '</p>';
                             if ($description){
-                                echo '<p>Description: ' . $description . '</p>';
+                                echo '<p class="employee-description">Description: ' . $description . '</p>';
                             }
                             if($staff_image){
+                                echo '<div class="staff-image-container">';
                                 echo '<img src="' . $staff_image['url'] . '" alt="' . $staff_image['alt'] . '">';
+                                echo '</div>';
                             }
                             echo '</div>';
 
