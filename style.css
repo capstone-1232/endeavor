@@ -1046,7 +1046,8 @@ h6 {
     font-family: "Anton", sans-serif;
 }
 
-p {
+p,
+li {
     font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
     color: var(--dark);
     font-family: "Hind", sans-serif;
@@ -1285,10 +1286,17 @@ footer ul li {
 /* ********************** Beer Pages ***************************************** */
 
 /* *********** Home Beers ************************* */
+.home-beers{
+    text-align: center;
+    max-width: 550px;
+    margin: 3rem auto;
+}
+
 .beer-categories {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .beer-card {
@@ -1346,6 +1354,7 @@ footer ul li {
 .beer-container {
     max-width: 422px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .beer-category-bg {
@@ -1421,12 +1430,184 @@ footer ul li {
 
 /* *********************Single Beer Pages************************ */
 
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    15%,
+    45%,
+    75% {
+        transform: translate(-10px, 0) rotate(-5deg);
+    }
+
+    30%,
+    60%,
+    90% {
+        transform: translate(10px, 0) rotate(5deg);
+    }
+}
+
+.single-beer img.shaking {
+    animation: shake 1s ease-in-out;
+}
+
 .beer-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .single-beer h2,
 .single-beer p,
 .single-beer li {
     color: var(--white);
+    text-align: center;
+}
+
+.single-beer h2 {
+    width: 100%;
+    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+}
+
+.single-beer img {
+    max-width: 136px;
+    padding-top: 3rem;
+}
+
+.single-beer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.beer-info {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.beer-info div {
+    flex: 1 1 calc(50%-1rem);
+    width: 120px;
+    height: 120px;
+    border: 6px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer-info li {
+    font-weight: bold;
+    font-size: var(--h6);
+}
+
+.beer-info li span {
+    font-size: var(--small-mobile);
+    display: block;
+    text-align: center;
+}
+
+.single-beer p {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.hops h2,
+.story p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hops {
+    position: relative;
+}
+
+.hops svg:first-of-type {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    top: -50px;
+}
+
+.hops svg:last-of-type {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    bottom: -20px;
+    right: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .story{
+        display: flex;
+        align-items: flex-start;
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .story-info{
+        flex: 1 0 calc(50%-3rem)
+    }
+
+    .hops h2{
+        max-width: 900px;
+        margin: 3rem auto;
+        
+    }
+
+    .story-info p{
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .story img{
+       max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .single-beer {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .beer-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 1 60%;
+        gap: 1rem;
+    }
+
+    .single-beer h2,
+    .single-beer p {
+        text-align: left;
+    }
+
+    .single-beer h2{
+        margin: 0;
+    }
+
+    .single-beer img {
+        flex: 0 1 33%;
+        max-width: 243px;
+        padding: 3rem 0;
+    }
+
+    .beer-info div {
+        width: 135px;
+        height: 135px;
+        gap: 3rem;
+        padding: 0.5rem;
+    }
+
+  
 }

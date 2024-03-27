@@ -16,17 +16,26 @@ $title = get_the_title();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title; ?></title>
+    <title>
+        <?php echo $title; ?>
+    </title>
 </head>
+
 <body>
     <main>
         <section>
             <div class="inner-container">
-                <h2>Our Beer and Coffee</h2>
-                <p>At Endeavour Brewing, we're driven by our love for quality beers! With fresh ingredients and consistent quality, we craft brews that match our active lifestyles and passions for the outdoors and sports. Join us in raising a glass to daring adventures and great taste!</p>
+                <div class="home-beers">
+                    <h2>Our Beer</h2>
+                    <p>At Endeavour Brewing, we're driven by our love for quality beers! With fresh ingredients and
+                        consistent quality, we craft brews that match our active lifestyles and passions for the
+                        outdoors and sports. Join us in raising a glass to daring adventures and great taste!</p>
+                </div>
+
                 <div class="beer-categories">
                     <a href="year-round" class="mainstay-bg beer-card">
                         <h3>Mainstays</h3>
@@ -45,6 +54,7 @@ $title = get_the_title();
         </section>
     </main>
 </body>
+
 </html>
 <?php
 get_footer();
