@@ -1105,6 +1105,10 @@ p {
 	padding: 3rem 1.5rem 0 1.5rem;
 }
 
+.container {
+	margin: 3rem 1.563rem;
+}
+
 
 /* Header */
 .nav-flex {
