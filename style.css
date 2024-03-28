@@ -1304,9 +1304,10 @@ header a {
 }
 
 .featured-beer-name {
-    text-align: center;
-    color: var(--dark);
-    width: 100%;
+	text-align: center;
+	color: var(--dark);
+	width: 100%;
+	letter-spacing: 1px;
 }
 
 .featured-beer-image {

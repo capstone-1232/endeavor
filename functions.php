@@ -101,6 +101,8 @@ function endeavor_theme_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'endeavor_theme_setup' );
 
@@ -190,3 +192,4 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 };
+
