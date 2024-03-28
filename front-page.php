@@ -105,69 +105,124 @@ $title = get_the_title();
 
       </div>
     </section>
-    <section class="events">
+    
+        <div>
+          <?php 
+          $events = tribe_get_events( array(
+            'posts_per_page' => 5,
+            'start_date'     => date( 'Y-m-d H:i:s' ),
+        ) );
+        
+        if ( $events ) :
+            ?>
+        <section class="events">
       <div class="inner-container">
         <h3>Events at Endeavour</h3>
-      </div>
-      <div>
-        <!-- Load image -->
-        <h4>
-          <!-- Load Event name -->
-        </h4>
-      </div>
-      <div>
-        <!-- Load image -->
-        <h4>
-          <!-- Load Event name -->
-        </h4>
-      </div>
-      <div>
-        <!-- Load image -->
-        <h4>
-          <!-- Load Event name -->
-        </h4>
-      </div>
-      <div>
-        <!-- Load image -->
-        <h4>
-          <!-- Load Event name -->
-        </h4>
+                    <div class="events-list">
+                        <?php
+                        foreach ( $events as $event ) :
+                            setup_postdata( $event );
+                            $featured_image_id = get_post_thumbnail_id( $event->ID );
+                            $featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'medium' );
+            
+                            ?>
+                            <div class="event-item">
+                                <?php if ( $featured_image_url ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink( $event ) ); ?>">
+                                        <img src="<?php echo esc_url( $featured_image_url[0] ); ?>" alt="<?php echo esc_attr( get_the_title( $event ) ); ?>">
+                                    </a>
+                                <?php endif; ?>
+        
+                                <h3><a href="<?php echo esc_url( get_permalink( $event ) ); ?>"><?php echo esc_html( get_the_title( $event ) ); ?></a></h3>
+                            </div>
+        
+                        <?php
+                        endforeach;
+                        wp_reset_postdata();
+                        ?>
+        
+                    </div>
+                </div>
+            </section>
+        
+        <?php
+        endif;
+          ?>
+        </div>
       </div>
     </section>
     <!-- aaron will do this part :) -->
     <section>
-    <section class="shop-our-coffee">
-      <div class="inner-container">
-        <h3>Shop Our Coffee</h3>
-        <p>We use single origin coffee beans that are sourced from a specific geographic location, such as a single farm, estate, or region. These beans reflect the unique terroir of their origin.</p>
-        <a href="page-our-beer-coffee.php" class="cta"><svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 616 638">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M578.2 307.4 308 27.7l-281.2 291L308 610l281.1-291.1zM332 24.9l284 293.9-308 318.8L0 318.8 308 0z"
-                    fill="#F2F2F2" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="m311.8 65.7 48.1 49.8a5 5 0 0 1 0 7.5L239.5 245.7h25L372.2 136a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l47 48.5 3.9 4.2a5.2 5.2 0 0 1 0 7.6l-58.4 59h25.1l45.6-46a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l85.7 89a5 5 0 0 1 1.2 5.8 5 5 0 0 1-5 3.3H83a5 5 0 0 1-4.9-3.3c-.9-2-.5-4.3 1-5.8l225-232.9A5 5 0 0 1 308 64q2.4 0 3.8 1.7m-1.5 504 82.6-83.6a5 5 0 0 0 1.2-6c-.8-2.3-3-3.6-5.3-3.6h-63.3c-5.6 0-10.3-4.6-10.3-10.3 0-5.6 4.7-10.3 10.3-10.3h99.4c22.7 0 22.1-29.8-.7-29.8h-23.6a10.3 10.3 0 0 1 0-20.7h63.7c24.8 0 21.9-30.2 3.6-30.2H355c-6.1 0-11.4-5.2-11.4-11.5s5.3-11.5 11.5-11.5H527c21 0 18.7-24.4 1.8-24.4H95.7c-21 0-19.6 31.2 4.8 31.2h80.6c22.1 0 19.5 23 2.1 23h-37.6c-14.7 0-16 24 1 24h132.3a10.4 10.4 0 0 1 0 20.7h-87.6C172 426.7 170 459 193 459h70.4c5.7 0 10.4 4.6 10.4 10.3s-4.7 10.3-10.4 10.3H246c-20.8 0-23.2 28.8 2.6 28.8h48.7c5.7 0 10.4 4.7 10.4 10.3 0 5.8-4.7 10.5-10.4 10.5h-20.7a6 6 0 0 0-5.2 3.3q-1.3 3.6 1.2 6.3l29.9 31a5 5 0 0 0 3.9 1.6q2.2 0 4-1.7"
-                    fill="#F2F2F2" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M578.2 307.4 308 27.7l-281.2 291L308 610l281.1-291.1zM332 24.9l284 293.9-308 318.8L0 318.8 308 0z"
-                    fill="#F2F2F2" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="m311.8 65.7 48.1 49.8a5 5 0 0 1 0 7.5L239.5 245.7h25L372.2 136a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l47 48.5 3.9 4.2a5.2 5.2 0 0 1 0 7.6l-58.4 59h25.1l45.6-46a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l85.7 89a5 5 0 0 1 1.2 5.8 5 5 0 0 1-5 3.3H83a5 5 0 0 1-4.9-3.3c-.9-2-.5-4.3 1-5.8l225-232.9A5 5 0 0 1 308 64q2.4 0 3.8 1.7m-1.5 504 82.6-83.6a5 5 0 0 0 1.2-6c-.8-2.3-3-3.6-5.3-3.6h-63.3c-5.6 0-10.3-4.6-10.3-10.3 0-5.6 4.7-10.3 10.3-10.3h99.4c22.7 0 22.1-29.8-.7-29.8h-23.6a10.3 10.3 0 0 1 0-20.7h63.7c24.8 0 21.9-30.2 3.6-30.2H355c-6.1 0-11.4-5.2-11.4-11.5s5.3-11.5 11.5-11.5H527c21 0 18.7-24.4 1.8-24.4H95.7c-21 0-19.6 31.2 4.8 31.2h80.6c22.1 0 19.5 23 2.1 23h-37.6c-14.7 0-16 24 1 24h132.3a10.4 10.4 0 0 1 0 20.7h-87.6C172 426.7 170 459 193 459h70.4c5.7 0 10.4 4.6 10.4 10.3s-4.7 10.3-10.4 10.3H246c-20.8 0-23.2 28.8 2.6 28.8h48.7c5.7 0 10.4 4.7 10.4 10.3 0 5.8-4.7 10.5-10.4 10.5h-20.7a6 6 0 0 0-5.2 3.3q-1.3 3.6 1.2 6.3l29.9 31a5 5 0 0 0 3.9 1.6q2.2 0 4-1.7"
-                    fill="#F2F2F2" />
-                </svg><span>Shop Our Coffee</span></a>
+      <section class="shop-our-coffee">
+        <div class="inner-container">
+          <h3>Shop Our Coffee</h3>
+          <p>We use single origin coffee beans that are sourced from a specific geographic location, such as a single
+            farm, estate, or region. These beans reflect the unique terroir of their origin.</p>
+          <a href="page-our-beer-coffee.php" class="cta"><svg fill="none" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 616 638">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M578.2 307.4 308 27.7l-281.2 291L308 610l281.1-291.1zM332 24.9l284 293.9-308 318.8L0 318.8 308 0z"
+                fill="#F2F2F2" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="m311.8 65.7 48.1 49.8a5 5 0 0 1 0 7.5L239.5 245.7h25L372.2 136a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l47 48.5 3.9 4.2a5.2 5.2 0 0 1 0 7.6l-58.4 59h25.1l45.6-46a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l85.7 89a5 5 0 0 1 1.2 5.8 5 5 0 0 1-5 3.3H83a5 5 0 0 1-4.9-3.3c-.9-2-.5-4.3 1-5.8l225-232.9A5 5 0 0 1 308 64q2.4 0 3.8 1.7m-1.5 504 82.6-83.6a5 5 0 0 0 1.2-6c-.8-2.3-3-3.6-5.3-3.6h-63.3c-5.6 0-10.3-4.6-10.3-10.3 0-5.6 4.7-10.3 10.3-10.3h99.4c22.7 0 22.1-29.8-.7-29.8h-23.6a10.3 10.3 0 0 1 0-20.7h63.7c24.8 0 21.9-30.2 3.6-30.2H355c-6.1 0-11.4-5.2-11.4-11.5s5.3-11.5 11.5-11.5H527c21 0 18.7-24.4 1.8-24.4H95.7c-21 0-19.6 31.2 4.8 31.2h80.6c22.1 0 19.5 23 2.1 23h-37.6c-14.7 0-16 24 1 24h132.3a10.4 10.4 0 0 1 0 20.7h-87.6C172 426.7 170 459 193 459h70.4c5.7 0 10.4 4.6 10.4 10.3s-4.7 10.3-10.4 10.3H246c-20.8 0-23.2 28.8 2.6 28.8h48.7c5.7 0 10.4 4.7 10.4 10.3 0 5.8-4.7 10.5-10.4 10.5h-20.7a6 6 0 0 0-5.2 3.3q-1.3 3.6 1.2 6.3l29.9 31a5 5 0 0 0 3.9 1.6q2.2 0 4-1.7"
+                fill="#F2F2F2" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M578.2 307.4 308 27.7l-281.2 291L308 610l281.1-291.1zM332 24.9l284 293.9-308 318.8L0 318.8 308 0z"
+                fill="#F2F2F2" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="m311.8 65.7 48.1 49.8a5 5 0 0 1 0 7.5L239.5 245.7h25L372.2 136a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l47 48.5 3.9 4.2a5.2 5.2 0 0 1 0 7.6l-58.4 59h25.1l45.6-46a5 5 0 0 1 3.8-1.6q2.4 0 4 1.7l85.7 89a5 5 0 0 1 1.2 5.8 5 5 0 0 1-5 3.3H83a5 5 0 0 1-4.9-3.3c-.9-2-.5-4.3 1-5.8l225-232.9A5 5 0 0 1 308 64q2.4 0 3.8 1.7m-1.5 504 82.6-83.6a5 5 0 0 0 1.2-6c-.8-2.3-3-3.6-5.3-3.6h-63.3c-5.6 0-10.3-4.6-10.3-10.3 0-5.6 4.7-10.3 10.3-10.3h99.4c22.7 0 22.1-29.8-.7-29.8h-23.6a10.3 10.3 0 0 1 0-20.7h63.7c24.8 0 21.9-30.2 3.6-30.2H355c-6.1 0-11.4-5.2-11.4-11.5s5.3-11.5 11.5-11.5H527c21 0 18.7-24.4 1.8-24.4H95.7c-21 0-19.6 31.2 4.8 31.2h80.6c22.1 0 19.5 23 2.1 23h-37.6c-14.7 0-16 24 1 24h132.3a10.4 10.4 0 0 1 0 20.7h-87.6C172 426.7 170 459 193 459h70.4c5.7 0 10.4 4.6 10.4 10.3s-4.7 10.3-10.4 10.3H246c-20.8 0-23.2 28.8 2.6 28.8h48.7c5.7 0 10.4 4.7 10.4 10.3 0 5.8-4.7 10.5-10.4 10.5h-20.7a6 6 0 0 0-5.2 3.3q-1.3 3.6 1.2 6.3l29.9 31a5 5 0 0 0 3.9 1.6q2.2 0 4-1.7"
+                fill="#F2F2F2" />
+            </svg><span>Shop Our Coffee</span></a>
 
-      </div>
-    </section>
+          <?php
+         $args = array(
+          'post_type'      => 'product',
+          'posts_per_page' => 4,
+          'tax_query'      => array(
+              array(
+                  'taxonomy' => 'product_cat',
+                  'field'    => 'slug',
+                  'terms'    => 'coffee',
+              ),
+          ),
+      );
+      
+      $coffee_products = new WP_Query( $args );
+      
+      // Check if there are coffee products
+      if ( $coffee_products->have_posts() ) : ?>
+          <?php while ( $coffee_products->have_posts() ) : $coffee_products->the_post(); ?>
+                  <a href="<?php the_permalink(); ?>">
+                      <?php the_post_thumbnail('medium'); ?>
+                      <h3><?php the_title(); ?></h3>
+                  </a>
+      
+          <?php endwhile; ?>
+
+    
+      
+      <?php endif; ?>
+      
+
+        </div>
+      </section>
     </section>
     <section class="about-us">
       <div class="inner-container wide-flex">
         <div>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/footprint-poster.webp" alt="Endeavour's footprint logo on a poster in their taproom.">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/footprint-poster.webp"
+            alt="Endeavour's footprint logo on a poster in their taproom.">
         </div>
         <div>
           <h3>About Us</h3>
           <div>
-            <p>At Endeavour, we are more than just makers of great beer and coffee; we are cultivators of community, quality, and connection. Our mission is to create exceptional beer/coffee that not only tantalizes the taste buds but also brings people together in shared moments of joy and camaraderie. We are committed to upholding the highest standards of quality in every pint or cup of coffee we pour, ensuring that each sip is a testament to our dedication to excellence. Through our craft, we strive to create a welcoming space where individuals from all walks of life can gather, forge meaningful connections, and celebrate the simple pleasures of life over a pint of beer or a cup of coffee.</p>
+            <p>At Endeavour, we are more than just makers of great beer and coffee; we are cultivators of community,
+              quality, and connection. Our mission is to create exceptional beer/coffee that not only tantalizes the
+              taste buds but also brings people together in shared moments of joy and camaraderie. We are committed to
+              upholding the highest standards of quality in every pint or cup of coffee we pour, ensuring that each sip
+              is a testament to our dedication to excellence. Through our craft, we strive to create a welcoming space
+              where individuals from all walks of life can gather, forge meaningful connections, and celebrate the
+              simple pleasures of life over a pint of beer or a cup of coffee.</p>
           </div>
           <a href="page-who-we-are.php" class="cta">More About Us</a>
         </div>
@@ -180,7 +235,8 @@ $title = get_the_title();
           <p>Seeking sponsorship or a charitable donation from Endeavour Brewing? Fantastic! We're passionate about
             collaborating with local charities and volunteer organizations that contribute to the vibrancy of our
             community. Let's work together to make a positive impact and spread the spirit of giving.</p>
-          <p>Feel free to reach out with your specific request, we'll do our best to find a way to support your cause and
+          <p>Feel free to reach out with your specific request, we'll do our best to find a way to support your cause
+            and
             contribute to the community.</p>
           <p>Click the button below to access the form and express your interest in collaborating with Endeavour.</p>
           <a href="#" class="cta">Register For Support</a>
