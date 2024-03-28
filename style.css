@@ -1023,7 +1023,7 @@ h2 {
 }
 
 h3 {
-	font-size: clamp(3.052rem, 2.698rem + 1.771vw, 4.291rem);
+	font-size: clamp(2.958rem, 2.006rem + 2.539vw, 4.291rem);
 	color: var(--dark);
 	font-family: "Anton", sans-serif;
 	text-transform: uppercase;
@@ -1893,6 +1893,12 @@ footer ul li {
     margin: 3rem auto;
 }
 
+.home-beers h2{
+    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+    color: var(--dark);
+    margin: 0;
+}
+
 .beer-categories {
     display: flex;
     flex-wrap: wrap;
@@ -1927,6 +1933,7 @@ footer ul li {
     transform: translate(-50%, -50%);
     margin: 0;
     white-space: nowrap;
+    font-size: clamp(2.441rem, 2.258rem + 0.489vw, 2.747rem);
 
 }
 
