@@ -1308,6 +1308,7 @@ header a {
 	text-align: center;
 	color: var(--dark);
 	width: 100%;
+	letter-spacing: 1px;
 }
 
 .featured-beer-image {
