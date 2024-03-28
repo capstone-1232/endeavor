@@ -24,16 +24,17 @@ $title = get_the_title();
     <title><?php echo $title; ?></title>
 </head>
 <body>
-    <main>
-        <!-- Hero banner -->
-        <div>
-            <h2><?php echo $title; ?></h2>
-        </div>
+    <main class="private-events">
+       <section>
+            <div class="private-events-bg">
+                <h2><?php echo $title; ?></h2>
+            </div>
+        </section>
 
         <section class="">
-            <img src="" alt="">
             <div class="inner-container">
-                <h3>Private events<span>(30-60 People)</span></h3>
+                <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/private-events.webp" alt="Endeavour coffee on table">
+                <h3 id="private-events-h3">Private events<span>(30-60 People)</span></h3>
                 <ul>
                     <li>
                         Event Taproom Space closed to the general public (½ taproom with privacy barriers in place)
@@ -81,8 +82,14 @@ $title = get_the_title();
                 </ul>
             </div>
         </section>
-        <section class="">
+        <section class="table-bookings">
             <div class="inner-container">
+                
+                <picture>
+                    <source media="(min-width: 720px)" srcset="<?php echo get_template_directory_uri(); ?>/img/table-bookings.webp" alt="Endeavour coffee on table"s>
+                    <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/table-bookings-mobile.webp" alt="Endeavour coffee on table">
+                </picture>
+
                 <h3>Table Bookings<span>(20 People or less)</span></h3>
                 <ul>
                     <li>
@@ -99,63 +106,64 @@ $title = get_the_title();
                     </li>
                 </ul>
             </div>
-            <img src="" alt="">
         </section>
-        <section class="">
-            <img src="" alt="">
-            <div class="inner-container">
-                <h3>Wedding and / or Reception<span>(30-60 people)</span></h3>
-                <ul>
-                    <li>
-                        Event Taproom Space closed to the general public (½ taproom with privacy barriers in place)
-                    </li>
-                    <li>
-                        Event start time 7:30pm
-                    </li>
-                    <li>
-                        Last call 12:00am with your party cleaned up and leaving by 1:00am
-                    </li>
-                    <li>
-                        Wine and spirits selection available upon request, our delicious beer is always available
-                    </li>
-                    <li>
-                        Brewery tour available upon request
-                    </li>
-                    <li>
-                        Endeavour’s Food Menu may be utilized or catering, food trucks, or potluck may be brought in
-                    </li>
-                    <li>
-                        Includes bartenders for the duration of your event.
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        Help with set up and takedown is happily provided
-                    </li>
-                    <li>
-                        Angle parking available for guests
-                    </li>
-                    <li>
-                        70 inch TV available on request for slideshows or presentations
-                    </li>
-                    <li>
-                        Speaker and microphone available for use on request
-                    </li>
-                    <li>
-                        Use of the SONOS speaker system to play your specific playlist(s)
-                    </li>
-                    <li>
-                        Booking fee $1500
-                    </li>
-                    <li>
-                        Deposit of $750 is required to hold your date
-                    </li>
-                </ul>
+        <section class="wedding-receptions">
+            <div class="inner-container wedding-flex">
+                <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/wedding-photo.webp" alt="Endeavour coffee on table">
+                <div class="wedding-info">
+                    <h3>Wedding and / or Reception<span>(30 - 60 people)</span></h3>
+                    <ul>
+                        <li>
+                            Event Taproom Space closed to the general public (½ taproom with privacy barriers in place)
+                        </li>
+                        <li>
+                            Event start time 7:30pm
+                        </li>
+                        <li>
+                            Last call 12:00am with your party cleaned up and leaving by 1:00am
+                        </li>
+                        <li>
+                            Wine and spirits selection available upon request, our delicious beer is always available
+                        </li>
+                        <li>
+                            Brewery tour available upon request
+                        </li>
+                        <li>
+                            Endeavour’s Food Menu may be utilized or catering, food trucks, or potluck may be brought in
+                        </li>
+                        <li>
+                            Includes bartenders for the duration of your event.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            Help with set up and takedown is happily provided
+                        </li>
+                        <li>
+                            Angle parking available for guests
+                        </li>
+                        <li>
+                            70 inch TV available on request for slideshows or presentations
+                        </li>
+                        <li>
+                            Speaker and microphone available for use on request
+                        </li>
+                        <li>
+                            Use of the SONOS speaker system to play your specific playlist(s)
+                        </li>
+                        <li>
+                            Booking fee $1500
+                        </li>
+                        <li>
+                            Deposit of $750 is required to hold your date
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="">
             <div class="inner-container">
-                <h3>Team Building Activities/Events</h3>
+                <h3>Team Building Activities / Events</h3>
                 <ul>
                     <li>
                         Brewery Tour and Tasting with the Head Brewero Discover what goes into the making of a beer and how to taste beer.
