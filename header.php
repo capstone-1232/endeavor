@@ -25,7 +25,7 @@
 
 	<header class="nav-flex">
 			<button class="menu-toggle shop-btn" aria-controls="primary-menu" aria-expanded="false">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="28.13px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f2f2f2" class="w-6 h-6">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="28.13px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f2f2f2" class="w-6 h-6" class="site-navigation">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
 			</button>
