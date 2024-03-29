@@ -1117,7 +1117,7 @@ p {
     gap: 2rem;
     background-color: var(--dark);
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 header img {
@@ -1141,6 +1141,15 @@ header a {
 .logo {
     width: 123px;
     height: 50px;
+}
+
+.sub-menu {
+	background-color: #45423F;
+}
+
+.shop-btn > svg:hover {
+	stroke: #A8C1F5;
+	cursor: pointer;
 }
 
 
