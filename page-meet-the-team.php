@@ -73,15 +73,14 @@ $title = get_the_title();
 
                             // Output your post content or custom fields
                             echo '<div class="employee-card">';
-                            echo '<h4>' . get_the_title() . '</h4>';
-                            echo '<p>' . get_the_content() . '</p>';
-                            echo '<p>' . $job_title . '</p>';
-                            if ($description){
-                                echo '<p class="employee-description">Description: ' . $description . '</p>';
-                            }
+                            echo '<h4 class="card-title">' . get_the_title() . '</h4>';
+                            echo '<p class="job-title">' . $job_title . '</p>';
                             if($staff_image){
                                 echo '<div class="staff-image-container">';
                                 echo '<img src="' . $staff_image['url'] . '" alt="' . $staff_image['alt'] . '">';
+                                if ($description){
+                                    echo '<p class="employee-description">Description: ' . $description . '</p>';
+                                }
                                 echo '</div>';
                             }
                             echo '</div>';
