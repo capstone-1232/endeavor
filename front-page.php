@@ -120,37 +120,36 @@ $title = get_the_title();
         ?>
         <section class="events">
           <div class="inner-container">
-            <h3>Events at Endeavour</h3>
-            <div class="events-list">
-              <?php
-              foreach ($events as $event):
-                setup_postdata($event);
-                $featured_image_id = get_post_thumbnail_id($event->ID);
-                $featured_image_url = wp_get_attachment_image_src($featured_image_id, 'medium');
-
-                ?>
-                <div class="event-item">
-                  <?php if ($featured_image_url): ?>
-                    <a href="<?php echo esc_url(get_permalink($event)); ?>">
-                      <img src="<?php echo esc_url($featured_image_url[0]); ?>"
-                        alt="<?php echo esc_attr(get_the_title($event)); ?>">
-                    </a>
-                  <?php endif; ?>
-
-                  <h3><a href="<?php echo esc_url(get_permalink($event)); ?>">
-                      <?php echo esc_html(get_the_title($event)); ?>
-                    </a></h3>
-                </div>
-
-                <?php
-              endforeach;
-              wp_reset_postdata();
-              ?>
-
-            </div>
+            <h2>Events at Endeavour</h2>
           </div>
-        </section>
+                    <div class="events-list">
+                        <?php
+                        foreach ( $events as $event ) :
+                            setup_postdata( $event );
+                            $featured_image_id = get_post_thumbnail_id( $event->ID );
+                            $featured_image_url = wp_get_attachment_image_src( $featured_image_id, 'medium' );
+            
+                            ?>
+                            <div class="event-item">
+                                <?php if ( $featured_image_url ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink( $event ) ); ?>">
+                                        <img src="<?php echo esc_url( $featured_image_url[0] ); ?>" alt="<?php echo esc_attr( get_the_title( $event ) ); ?>">
+                                        <h3><?php echo esc_html( get_the_title( $event ) ); ?></h3>
+                                    </a>
+                                <?php endif; ?>
+        
+                               
+                            </div>
+        
+                        <?php
+                        endforeach;
+                        wp_reset_postdata();
+                        ?>
+        
+                    </div>
 
+            </section>
+        
         <?php
       endif;
       ?>
