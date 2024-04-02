@@ -950,12 +950,12 @@ h2 {
 }
 
 h3 {
-	font-size: clamp(2.958rem, 2.006rem + 2.539vw, 4.291rem);
-	color: var(--dark);
-	font-family: "Anton", sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-weight: 400;
+    font-size: clamp(2.958rem, 2.006rem + 2.539vw, 4.291rem);
+    color: var(--dark);
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
 }
 
 h4 {
@@ -1283,10 +1283,10 @@ nav li {
 }
 
 .featured-beer-name {
-	text-align: center;
-	color: var(--dark);
-	width: 100%;
-	letter-spacing: 1px;
+    text-align: center;
+    color: var(--dark);
+    width: 100%;
+    letter-spacing: 1px;
 }
 
 .featured-beer-image {
@@ -2091,7 +2091,7 @@ footer h4 {
     margin: 3rem auto;
 }
 
-.home-beers h2{
+.home-beers h2 {
     font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
     color: var(--dark);
     margin: 0;
@@ -2413,5 +2413,194 @@ footer h4 {
         height: 135px;
         gap: 3rem;
         padding: 0.5rem;
+    }
+}
+
+/********************************* Events Home Page *****************************************************/
+.events h2 {
+    color: var(--dark);
+    text-align: center;
+}
+
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-item {
+    position: relative;
+    flex: 0 0 calc(100%);
+}
+
+.event-item a {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
+
+.event-item img {
+    width: 100%;
+    display: block;
+}
+
+.event-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    font-size: var(--h4);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.event-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    pointer-events: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+
+}
+
+.event-item:hover h3 {
+    top: 80%;
+}
+
+.event-item:hover::before {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    z-index: 1;
+}
+
+@media screen and (min-width: 850px) {
+    .events-list {
+        flex-wrap: nowrap;
+    }
+
+    .event-item {
+        flex: 0 0 20%;
+        height: 528px;
+        position: relative;
+        transition: all 0.5s ease;
+        overflow: visible;
+    }
+
+    .event-item a {
+        display: block;
+        height: 100%;
+    }
+
+    .event-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .event-item:hover {
+        flex: 0 0 40%;
+        z-index: 1;
+    }
+
+
+    .event-item h3 {
+        position: absolute;
+        inset: 0%;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+        transform-origin: top left;
+        text-align: center;
+        z-index: 1;
+        font-size: var(--h4);
+        color: var(--white);
+        white-space: nowrap;
+    }
+
+    .event-item:hover h3 {
+        left: 30%;
+    }
+
+    .event-item:hover h3 {
+        transform: translateX(-50%) rotate(0deg);
+        width: 100%;
+    }
+
+    .events-list:hover .event-item:not(:hover) {
+        flex: 1 0 15%;
+        z-index: 0;
+    }
+
+    .events-list:hover .event-item:not(:hover).event-item::before {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+        z-index: 1;
+    }
+
+    .events-list:hover .event-item:not(:hover) img {
+        transform: scale(1);
+        z-index: 1;
+    }
+}
+
+
+/* **************************Single Events************************************************** */
+.events-button {
+    background-color: var(--blue);
+    font-size: var(--h6-mobile);
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    padding: 24px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.tribe-events-content a {
+    color: var(--white);
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.tribe-events-schedule h2 {
+    font-family: "Anton", sans-serif;
+    color: var(--dark);
+}
+
+.tribe-events-single-event-title {
+    font-family: "Anton", sans-serif;
+    font-size: var(--h3);
+    color: var(--dark);
+}
+
+.events-button:hover {
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+@media screen and (min-width:800px) {
+    .single-event-flex {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .single-event-flex img {
+        flex: 0 0 calc(50% - 2rem);
+        margin-top: 1.5rem;
+    }
+
+    .single-event-flex div {
+        flex: 0 0 calc(50% - 2rem);
     }
 }
