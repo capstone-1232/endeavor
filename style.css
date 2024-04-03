@@ -1534,7 +1534,11 @@ footer h4 {
 }
 
 .social-media a {
+<<<<<<< HEAD
     text-decoration: none;
+=======
+	text-decoration: none;
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
 }
 
 @media screen and (min-width: 720px) {
@@ -1549,11 +1553,11 @@ footer h4 {
         padding: 4.5rem 1.5rem 0 1.5rem;
     }
 
-    .about-us>.inner-container {
+    .about-us > .inner-container {
         padding: 4.5rem 1.5rem;
     }
 
-    .donations>.overlay>.inner-container {
+    .donations > .overlay > .inner-container {
         padding: 4.5rem 1.5rem;
     }
 
@@ -1590,12 +1594,20 @@ footer h4 {
         position: relative;
     }
 
+<<<<<<< HEAD
     #footer-menu .sub-menu>li:not(:last-of-type) {
+=======
+    #footer-menu .sub-menu > li:not(:last-of-type) {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         padding: 0;
         margin-bottom: 1.5rem;
     }
 
+<<<<<<< HEAD
     .featured-beers-flex>a {
+=======
+    .featured-beers-flex > a {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         width: calc(100% / 3 - 1rem);
         text-align: center;
     }
@@ -1665,7 +1677,11 @@ footer h4 {
         margin: 1.5rem auto 0 auto;
     }
 
+<<<<<<< HEAD
     .social-media>div {
+=======
+    .social-media > div {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         display: flex;
         justify-content: center;
     }
@@ -1726,7 +1742,11 @@ footer h4 {
         margin-right: 3rem;
     }
 
+<<<<<<< HEAD
     .shop-our-coffee>.inner-container {
+=======
+    .shop-our-coffee > .inner-container {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         padding: 4.5rem 1.5rem;
     }
 
@@ -1734,12 +1754,20 @@ footer h4 {
         width: 19.375rem;
     }
 
+<<<<<<< HEAD
     .main-header>.inner-container {
+=======
+    .main-header > .inner-container {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         justify-content: space-between;
         max-width: 56.625rem;
     }
 
+<<<<<<< HEAD
     .main-header>.inner-container>div:first-of-type {
+=======
+    .main-header > .inner-container > div:first-of-type {
+>>>>>>> 6c0c798618c26abac05e1b08478329ed0465a9d8
         order: 2;
     }
 
