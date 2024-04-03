@@ -1738,6 +1738,7 @@ footer h4 {
     .main-header>.inner-container {
         justify-content: space-between;
         max-width: 56.625rem;
+		flex-direction: unset;
     }
 
     .main-header>.inner-container>div:first-of-type {
