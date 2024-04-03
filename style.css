@@ -1048,9 +1048,13 @@ p {
 }
 
 .main-header>.inner-container {
+}
+
+.main-header>.inner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+	padding: 0;
 	padding: 0;
 }
 
@@ -1587,7 +1591,7 @@ footer h4 {
         margin-right: 3rem;
     }
 
-	.featured-beers-flex>div {
+	.featured-beers-flex>a {
 		width: calc(100% / 3 - 1rem);
 		text-align: center;
 	}
@@ -1598,6 +1602,17 @@ footer h4 {
 
 	.shop-our-coffee .cta {
 		width: 19.375rem;
+	}
+
+	.coffee-product-section {
+		margin: 4.5rem auto 0 auto;
+		display: flex;
+		justify-content: space-between;
+		max-width: 56.625rem;
+	}
+
+	.coffee-card:not(:last-of-type) {
+		margin-bottom: unset;
 	}
 
     .donations p {
@@ -1662,7 +1677,7 @@ footer h4 {
         display: none;
     }
 
-	.main-header {
+	.main-header>.inner-container {
 		justify-content: space-between;
 		gap: 1.5rem;
 	}
@@ -1675,7 +1690,7 @@ footer h4 {
         box-shadow: unset;
     }
 
-	.main-header>div:first-of-type {
+	.main-header>.inner-container>div:first-of-type {
 		order: 2;
 	}
 
@@ -1741,6 +1756,72 @@ footer h4 {
 		width: calc(100% / 4 - 1.5rem);
 	}
 
+	.footer-wide-flex>.footer-nav {
+		order: 4;
+	}
+
+	.footer-wide-flex>.hours {
+		order: 3;
+	}
+
+	.footer-wide-flex>.general-nap {
+		order: 2;
+	}
+
+	.footer-wide-flex>.map {
+		order: 1;
+	}
+
+	footer .hours,
+	footer .general-nap {
+		margin-top: unset;
+	}
+
+	footer .logo {
+		margin: unset;
+	}
+
+	.footer-nap {
+		margin-top: 1.5rem;
+	}
+
+	.footer-nap>p {
+		font-size: 1rem;
+		text-align: left;
+	}
+
+	.social-media>div {
+		justify-content: start;
+	}
+
+	footer p,
+	footer h4 {
+		text-align: left;
+	}
+
+	.hours-details {
+		margin-bottom: 0.5rem;
+		display: unset;
+	}
+
+	.weekday {
+		font-size: 1.125rem;
+		font-weight: 700;
+	}
+
+	#footer-menu li {
+		text-align: right;
+	}
+
+}
+
+
+@media screen and (min-width: 1100px) {
+	.featured-beers-flex>a {
+		width: calc(100% / 6 - 3rem);
+		text-align: center;
+	}
+
 	.about-us>.wide-flex {
 		flex-wrap: nowrap;
 		align-items: center;
@@ -1755,125 +1836,26 @@ footer h4 {
 		max-width: 548px;
 	}
 
-    .about-us h3,
-    .about-us p {
-        text-align: left;
-    }
+	.about-us h3,
+	.about-us p {
+		text-align: left;
+	}
 
-    .about-us .cta {
-        margin: unset;
-    }
+	.about-us .cta {
+		margin: unset;
+	}
 }
 
 @media screen and (min-width: 1400px) {
-    .menu-posts {
-        width: calc(100% / 3 - 3rem);
-    }
-  
+	.menu-posts {
+		width: calc(100% / 3 - 3rem);
+	}
+
 	.about-us>.wide-flex {
 		padding: 4.5rem 7.438rem;
 	}
 
 }
-
-/* Footer */
-footer {
-	background-color: var(--dark);
-	color: var(--white);
-}
-
-footer>.inner-container {
-	padding: 3rem 1.5rem;
-}
-
-footer>.inner-container>.flex {
-	flex-direction: column;
-	align-items: center;
-}
-
-footer .logo {
-	width: 11.734rem;
-	height: 4.5rem;
-	margin-bottom: 3rem;
-}
-
-footer ul li {
-	list-style: none;
-}
-
-#footer-menu {
-	margin: 0;
-	padding: 0;
-}
-
-#footer-menu li {
-	text-align: center;
-	margin-bottom: 1.5rem;
-}
-
-#footer-menu a {
-	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-	color: var(--white);
-	text-decoration: none;
-}
-
-#footer-menu a:hover {
-	cursor: pointer;
-}
-
-#footer-menu .sub-menu {
-	background-color: unset;
-	padding: 0;
-	margin: 0;
-}
-
-.hours {
-	display: flex;
-	flex-direction: column;
-	margin-top: 3rem;
-}
-
-.bold {
-	font-weight: bold;
-}
-
-footer p,
-footer h4 {
-	color: var(--white);
-	margin: 0;
-	text-align: center;
-}
-
-footer h4 {
-	font-size: 1.406rem;
-	margin-bottom: 1.5rem;
-}
-
-.hours-details {
-	margin-bottom: 0.5rem;
-}
-
-.weekday {
-	font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
-	font-weight: 700;
-}
-
-.footer-nap {
-	margin-top: 3rem;
-}
-
-.footer-nap a {
-	color: var(--white);
-}
-
-.social-media {
-	margin-top: 1.5rem;
-}
-
-.social-media a {
-	text-decoration: none;
-}
-
 
 
 /* PAGES */
