@@ -543,7 +543,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-    color: #A8C1F5;
+	color: #A8C1F5;
 
 }
 
@@ -940,12 +940,12 @@ textarea {
 */
 
 h2 {
-    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
-    color: var(--white);
-    font-family: "Anton", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
+	font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+	color: var(--white);
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
 
 }
 
@@ -959,46 +959,46 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(2.441rem, 2.158rem + 1.417vw, 3.433rem);
-    color: var(--dark);
-    font-family: "Anton", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
+	font-size: clamp(2.441rem, 2.158rem + 1.417vw, 3.433rem);
+	color: var(--dark);
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
 }
 
 h5 {
-    font-size: clamp(1.953rem, 1.726rem + 1.134vw, 2.747rem);
-    color: var(--dark);
-    font-family: "Anton", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
+	font-size: clamp(1.953rem, 1.726rem + 1.134vw, 2.747rem);
+	color: var(--dark);
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
 }
 
 h6 {
-    font-size: clamp(1.563rem, 1.381rem + 0.907vw, 2.197rem);
-    color: var(--dark);
-    font-family: "Anton", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
+	font-size: clamp(1.563rem, 1.381rem + 0.907vw, 2.197rem);
+	color: var(--dark);
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
 }
 
 .lead {
-    font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
-    color: var(--dark);
-    font-family: "Anton", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 400;
+	font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
+	color: var(--dark);
+	font-family: "Anton", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
 }
 
 
 p {
-    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-    color: var(--dark);
-    font-family: "Hind", sans-serif;
+	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	color: var(--dark);
+	font-family: "Hind", sans-serif;
 }
 
 .cta {
@@ -1015,9 +1015,9 @@ p {
 }
 
 .cta:hover {
-    background-color: var(--blue-hover);
-    transition: ease-in-out 0.2s;
-    color: var(--white);
+	background-color: var(--blue-hover);
+	transition: ease-in-out 0.2s;
+	color: var(--white);
 
 }
 
@@ -1027,13 +1027,13 @@ p {
 }
 
 .inner-container {
-    max-width: 1384px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem 3rem 1.5rem;
+	max-width: 1384px;
+	margin: 0 auto;
+	padding: 3rem 1.5rem 3rem 1.5rem;
 }
 
 .container {
-    margin: 3rem 1.563rem;
+	margin: 3rem 1.563rem;
 }
 
 
@@ -1045,9 +1045,13 @@ p {
     top: 0;
     z-index: 10;
     box-shadow: 0 1px 5px -2px black;
+}
+
+.main-header>.inner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+	padding: 0;
 }
 
 .menu-toggle,
@@ -1125,107 +1129,107 @@ nav li {
 
 /* Mobile Menu Page */
 .menu-hero {
-    background-image: url(./img/taco-platter.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 19.5rem;
+	background-image: url(./img/taco-platter.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 19.5rem;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu-hero h2 {
-    color: var(--white);
-    text-align: center;
+	color: var(--white);
+	text-align: center;
 }
 
 .menu-header {
-    color: var(--dark);
-    margin: 3rem 0 0 0;
-    text-align: center;
+	color: var(--dark);
+	margin: 3rem 0 0 0;
+	text-align: center;
 }
 
 .menu-sub-header {
-    color: var(--dark);
-    margin: 3rem 0 1.5rem 0;
+	color: var(--dark);
+	margin: 3rem 0 1.5rem 0;
 }
 
 .food-item {
-    color: var(--dark);
-    margin: 1.5rem 0 0 0;
-    font-weight: bold;
-    font-size: var(--h6-mobile);
+	color: var(--dark);
+	margin: 1.5rem 0 0 0;
+	font-weight: bold;
+	font-size: var(--h6-mobile);
 }
 
 .food-price {
-    color: var(--dark);
-    font-size: var(--h6-mobile);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0;
-    font-weight: bold;
-    font-family: "Anton", sans-serif;
+	color: var(--dark);
+	font-size: var(--h6-mobile);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: 0;
+	font-weight: bold;
+	font-family: "Anton", sans-serif;
 }
 
 .food-details {
-    margin: 0;
+	margin: 0;
 }
 
 /* Mobile Menu Page */
 .home-hero {
-    background-image: url(./img/home-hero.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-image: url(./img/home-hero.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .home-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 .home-hero h2 {
-    text-align: center;
-    width: 100%;
-    margin: 0 0 0 0;
-    color: var(--white);
+	text-align: center;
+	width: 100%;
+	margin: 0 0 0 0;
+	color: var(--white);
 }
 
 .home-hero svg {
-    height: 2.375rem;
+	height: 2.375rem;
 }
 
 .home-hero p {
-    font-weight: 600;
-    text-align: center;
-    color: var(--white);
-    font-size: var(--h6-mobile);
+	font-weight: 600;
+	text-align: center;
+	color: var(--white);
+	font-size: var(--h6-mobile);
 }
 
 .home-hero p {
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .home-hero a {
@@ -1244,42 +1248,53 @@ nav li {
 }
 
 .home-hero a:first-of-type {
-    background-color: var(--blue);
-    margin-bottom: 1.5rem;
+	background-color: var(--blue);
+	margin-bottom: 1.5rem;
 }
 
 .home-hero a:first-of-type:hover {
-    background-color: var(--blue-hover);
-    transition: ease-in-out 0.2s;
+	background-color: var(--blue-hover);
+	transition: ease-in-out 0.2s;
 }
 
 .home-hero a:nth-of-type(2) {
-    background-color: var(--brown);
+	background-color: var(--brown);
 }
 
 .home-hero a:nth-of-type(2):hover {
-    background-color: var(--brown-hover);
-    transition: ease-in-out 0.125s;
+	background-color: var(--brown-hover);
+	transition: ease-in-out 0.125s;
+}
+
+.featured-beers .inner-container {
+    max-width: 1384px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 0 1.5rem;
 }
 
 .featured-beers h3 {
-    text-align: center;
-    color: var(--dark);
-    margin: 0;
+	text-align: center;
+	margin: 0;
 }
 
 .featured-beers-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 3rem;
-    gap: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 3rem;
+	gap: 1.5rem;
 
 }
 
-.featured-beers-flex>div {
-    width: calc(100% / 2 - 1rem);
-    text-align: center;
+.featured-beers-flex>a {
+	width: calc(100% / 2 - 1rem);
+	text-align: center;
+	text-decoration: none;
+}
+
+.featured-beers-flex>a:hover {
+	transform: scale(1.05);
+	transition: all ease 0.5s;
 }
 
 .featured-beer-name {
@@ -1290,11 +1305,11 @@ nav li {
 }
 
 .featured-beer-image {
-    height: 312px;
+	height: 312px;
 }
 
 .events h3 {
-    margin: 0;
+	margin: 0;
 }
 
 .shop-our-coffee>.inner-container {
@@ -1302,35 +1317,62 @@ nav li {
 }
 
 .shop-our-coffee .cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
 }
 
 .shop-our-coffee svg {
-    height: 2.375rem;
+	height: 2.375rem;
 }
 
 .shop-our-coffee h3 {
-    text-align: center;
-    margin: 0;
+	text-align: center;
+	margin: 0;
 }
 
 .shop-our-coffee p {
-    text-align: center;
-    max-width: 41.75rem;
-    font-weight: 600;
+	text-align: center;
+	max-width: 41.75rem;
+	font-weight: 600;
+}
+
+.coffee-product-section {
+	margin-top: 3rem;
+}
+
+.coffee-card:not(:last-of-type) {
+	margin-bottom: 3rem;
+}
+
+.coffee-card > a {
+	text-decoration: none;
+}
+
+.coffee-card > a > div {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+}
+
+.coffee-card > a > h3 {
+	font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
+}
+
+.coffee-card:hover {
+	transform: scale(1.05);
+	transition: all ease 0.5s;
 }
 
 .about-us {
-    background-color: var(--brown);
-    text-align: center;
+	background-color: var(--brown);
+	text-align: center;
 }
 
 .about-us>.inner-container {
-    padding: 3rem 1.5rem;
+	padding: 3rem 1.5rem;
 }
 
 .about-us>.inner-container>div:first-of-type,
@@ -1339,45 +1381,159 @@ nav li {
 }
 
 .about-us h3 {
-    margin: 3rem 0 0 0;
+	margin: 3rem 0 0 0;
 }
 
 .about-us h3,
 .about-us p {
-    color: var(--white);
+	color: var(--white);
 }
 
 .about-us p {
-    max-width: 41.75rem;
+	max-width: 41.75rem;
 }
 
 
 .donations {
-    background-image: url(./img/endeavour-jugs.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-image: url(./img/endeavour-jugs.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .donations h3 {
-    margin: 0;
+	margin: 0;
 }
 
 .donations h3,
 .donations p {
-    text-align: center;
-    color: var(--white);
+	text-align: center;
+	color: var(--white);
 }
 
 .donations p {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .donations>.overlay>.inner-container {
-    padding: 3rem 1.5rem;
+	padding: 3rem 1.5rem;
+}
+
+/* Footer */
+footer {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+footer>.inner-container {
+	padding: 3rem 1.5rem;
+}
+
+
+footer .logo {
+	width: 11.734rem;
+	height: 4.5rem;
+	margin: 0 auto 3rem auto;
+}
+
+footer ul li {
+	list-style: none;
+}
+
+#footer-menu {
+	margin: 0;
+	padding: 0;
+}
+
+#footer-menu li {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+#footer-menu a {
+	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	color: var(--white);
+	text-decoration: none;
+}
+
+#footer-menu a:hover {
+	cursor: pointer;
+}
+
+#footer-menu .sub-menu {
+	background-color: unset;
+	padding: 0;
+	margin: 1.5rem 0;
+	visibility: visible;
+	position: relative;
+}
+
+#footer-menu .sub-menu>li:not(:last-of-type) {
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+
+.hours {
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+footer p,
+footer h4 {
+	color: var(--white);
+	margin: 0;
+	text-align: center;
+}
+
+footer h4 {
+	font-size: 1.406rem;
+	margin-bottom: 1.5rem;
+}
+
+.hours-details {
+	margin-bottom: 0.5rem;
+	display: block;
+	font-weight: 400;
+	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	;
+}
+
+.weekday {
+	font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
+	font-weight: 700;
+}
+
+.general-nap {
+	margin-top: 3rem;
+}
+
+.footer-nap {
+	margin-top: 3rem;
+}
+
+.footer-nap a {
+	color: var(--white);
+}
+
+.social-media {
+	margin: 1.5rem auto 0 auto;
+}
+
+.social-media>div {
+	display: flex;
+	justify-content: center;
+}
+
+.social-media a {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 720px) {
@@ -1431,18 +1587,18 @@ nav li {
         margin-right: 3rem;
     }
 
-    .featured-beers-flex>div {
-        width: calc(100% / 3 - 1rem);
-        text-align: center;
-    }
+	.featured-beers-flex>div {
+		width: calc(100% / 3 - 1rem);
+		text-align: center;
+	}
 
     .shop-our-coffee>.inner-container {
         padding: 4.5rem 1.5rem;
     }
 
-    .shop-our-coffee .cta {
-        width: 19.375rem;
-    }
+	.shop-our-coffee .cta {
+		width: 19.375rem;
+	}
 
     .donations p {
         max-width: 41.75rem;
@@ -1460,40 +1616,40 @@ nav li {
 
 @media screen and (min-width: 800px) {
 
-    /* utility */
-    .wide-flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
-    }
+	/* utility */
+	.wide-flex {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3rem;
+	}
 
-    /* Mobile Menu Page */
-    .menu-hero {
-        height: 28.5rem;
-    }
+	/* Mobile Menu Page */
+	.menu-hero {
+		height: 28.5rem;
+	}
 
-    .menu-header {
-        text-align: left;
-        margin: 4.5rem 0 0 0;
+	.menu-header {
+		text-align: left;
+		margin: 4.5rem 0 0 0;
 
-    }
+	}
 
-    .menu-posts {
-        width: calc(100% / 2 - 3rem);
-    }
+	.menu-posts {
+		width: calc(100% / 2 - 3rem);
+	}
 
-    .food-item {
-        font-size: var(--h6);
-        margin: 0;
-    }
+	.food-item {
+		font-size: var(--h6);
+		margin: 0;
+	}
 
-    .food-price {
-        font-size: var(--h6)
-    }
+	.food-price {
+		font-size: var(--h6)
+	}
 
-    .about-us h3 {
-        margin: 0;
-    }
+	.about-us h3 {
+		margin: 0;
+	}
 
 
 }
@@ -1506,10 +1662,10 @@ nav li {
         display: none;
     }
 
-    .main-header {
-        justify-content: space-between;
-        gap: 1.5rem;
-    }
+	.main-header {
+		justify-content: space-between;
+		gap: 1.5rem;
+	}
 
     nav {
         position: static;
@@ -1519,9 +1675,9 @@ nav li {
         box-shadow: unset;
     }
 
-    .main-header>div:first-of-type {
-        order: 2;
-    }
+	.main-header>div:first-of-type {
+		order: 2;
+	}
 
     .wide-nav-flex {
         display: flex;
@@ -1564,36 +1720,40 @@ nav li {
         margin: 0;
     }
 
+
 }
 
 @media screen and (min-width: 960px) {
-    .featured-beers-flex>div {
-        width: calc(100% / 4 - 1rem);
-        text-align: center;
-    }
+	.featured-beers-flex>a {
+		width: calc(100% / 4 - 1rem);
+		text-align: center;
+	}
 
-}
+	/* footer */
+	.footer-wide-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 3rem;
+	}
 
+	.footer-wide-flex>div {
+		width: calc(100% / 4 - 1.5rem);
+	}
 
-@media screen and (min-width: 1100px) {
-    .featured-beers-flex>div {
-        width: calc(100% / 6 - 3rem);
-        text-align: center;
-    }
+	.about-us>.wide-flex {
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+	}
 
-    .about-us>.wide-flex {
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-    }
+	.about-us>.wide-flex>div:first-of-type {
+		max-width: 550px;
+	}
 
-    .about-us>.wide-flex>div:first-of-type {
-        max-width: 550px;
-    }
-
-    .about-us>.wide-flex>div:nth-of-type(2) {
-        max-width: 548px;
-    }
+	.about-us>.wide-flex>div:nth-of-type(2) {
+		max-width: 548px;
+	}
 
     .about-us h3,
     .about-us p {
@@ -1609,109 +1769,109 @@ nav li {
     .menu-posts {
         width: calc(100% / 3 - 3rem);
     }
-
-    .about-us>.wide-flex {
-        padding: 4.5rem 7.438rem;
-    }
+  
+	.about-us>.wide-flex {
+		padding: 4.5rem 7.438rem;
+	}
 
 }
 
 /* Footer */
 footer {
-    background-color: var(--dark);
-    color: var(--white);
+	background-color: var(--dark);
+	color: var(--white);
 }
 
 footer>.inner-container {
-    padding: 3rem 1.5rem;
+	padding: 3rem 1.5rem;
 }
 
 footer>.inner-container>.flex {
-    flex-direction: column;
-    align-items: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 footer .logo {
-    width: 11.734rem;
-    height: 4.5rem;
-    margin-bottom: 3rem;
+	width: 11.734rem;
+	height: 4.5rem;
+	margin-bottom: 3rem;
 }
 
 footer ul li {
-    list-style: none;
+	list-style: none;
 }
 
 #footer-menu {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #footer-menu li {
-    text-align: center;
-    margin-bottom: 1.5rem;
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
 
 #footer-menu a {
-    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-    color: var(--white);
-    text-decoration: none;
+	font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	color: var(--white);
+	text-decoration: none;
 }
 
 #footer-menu a:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #footer-menu .sub-menu {
-    background-color: unset;
-    padding: 0;
-    margin: 0;
+	background-color: unset;
+	padding: 0;
+	margin: 0;
 }
 
 .hours {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
 }
 
 .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 footer p,
 footer h4 {
-    color: var(--white);
-    margin: 0;
-    text-align: center;
+	color: var(--white);
+	margin: 0;
+	text-align: center;
 }
 
 footer h4 {
-    font-size: 1.406rem;
-    margin-bottom: 1.5rem;
+	font-size: 1.406rem;
+	margin-bottom: 1.5rem;
 }
 
 .hours-details {
-    margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .weekday {
-    font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
-    font-weight: 700;
+	font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
+	font-weight: 700;
 }
 
 .footer-nap {
-    margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 .footer-nap a {
-    color: var(--white);
+	color: var(--white);
 }
 
 .social-media {
-    margin-top: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .social-media a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 
@@ -1722,20 +1882,20 @@ footer h4 {
 
 /* BREWING PROCESS */
 .brewing-process-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-self: center;
 }
 
 .brewing-process-bg h2 {
-    color: var(--white);
-    font-size: var(--h1);
-    color: var(--white);
-    text-align: center;
+	color: var(--white);
+	font-size: var(--h1);
+	color: var(--white);
+	text-align: center;
 
 
 }
@@ -1747,63 +1907,63 @@ footer h4 {
 }
 
 .process-card h3 {
-    font-size: var(--h2);
+	font-size: var(--h2);
 }
 
 
 
 .brewing-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1.5rem;
 
 }
 
 .dot {
-    background-color: var(--brown);
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-    position: relative;
+	background-color: var(--brown);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	position: relative;
 }
 
 .line {
-    background-color: var(--brown);
-    width: 2px;
-    height: 30rem;
-    position: absolute;
-    top: 2rem;
-    left: 50%;
+	background-color: var(--brown);
+	width: 2px;
+	height: 30rem;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
 }
 
 .last-line {
-    background-color: var(--brown);
-    width: 2px;
-    height: 21rem;
-    position: absolute;
-    top: 2rem;
-    left: 50%;
+	background-color: var(--brown);
+	width: 2px;
+	height: 21rem;
+	position: absolute;
+	top: 2rem;
+	left: 50%;
 }
 
 .process-card {
-    background-color: var(--brown);
-    color: var(--white);
-    padding: 1rem;
-    margin-bottom: 3rem;
-    border-radius: 5px;
-    grid-column-start: 2;
-    grid-column-end: 7;
+	background-color: var(--brown);
+	color: var(--white);
+	padding: 1rem;
+	margin-bottom: 3rem;
+	border-radius: 5px;
+	grid-column-start: 2;
+	grid-column-end: 7;
 }
 
 .process-card h3 {
-    font-size: var(--h3-mobile);
-    margin: 1rem 0 1.5rem 0;
-    color: var(--white);
+	font-size: var(--h3-mobile);
+	margin: 1rem 0 1.5rem 0;
+	color: var(--white);
 }
 
 .process-card p {
-    color: var(--white);
-    margin: 0;
+	color: var(--white);
+	margin: 0;
 }
 
 /* WHO WE ARE */
@@ -1927,10 +2087,10 @@ footer h4 {
 }
 
 .staff-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	justify-content: center;
 }
 
 .staff-flex-text {
@@ -1939,55 +2099,55 @@ footer h4 {
 }
 
 .employee-card {
-    width: 19.75rem;
-    height: 28.5rem;
-    position: relative;
-    transition: all ease-in-out 250ms;
+	width: 19.75rem;
+	height: 28.5rem;
+	position: relative;
+	transition: all ease-in-out 250ms;
 }
 
 .staff-image-container {
-    width: 19.75rem;
-    height: 28.5rem;
-    background-color: rgba(0, 0, 0, 0.397);
-    transition: all ease-in-out 250ms;
+	width: 19.75rem;
+	height: 28.5rem;
+	background-color: rgba(0, 0, 0, 0.397);
+	transition: all ease-in-out 250ms;
 
 }
 
 .employee-description {
-    opacity: 0;
-    transition: all ease-in 250ms;
-    transform: translateY(-12rem);
-    position: relative;
+	opacity: 0;
+	transition: all ease-in 250ms;
+	transform: translateY(-12rem);
+	position: relative;
 }
 
 .employee-card:hover .employee-description {
-    display: block;
-    opacity: 1;
+	display: block;
+	opacity: 1;
 }
 
 .employee-card .card-title {
-    transition: all ease-in-out 250ms;
+	transition: all ease-in-out 250ms;
 }
 
 .employee-card .job-title {
-    font-weight: 600;
-    transition: all ease-in-out 250ms;
+	font-weight: 600;
+	transition: all ease-in-out 250ms;
 }
 
 .employee-card:hover .job-title {
-    transform: translateY(-17.5rem);
-    transition: all ease-in-out 250ms;
+	transform: translateY(-17.5rem);
+	transition: all ease-in-out 250ms;
 }
 
 
 .employee-card:hover .card-title {
-    transform: translateY(-17rem);
-    transition: all ease-in-out 250ms;
+	transform: translateY(-17rem);
+	transition: all ease-in-out 250ms;
 }
 
 .employee-card:hover {
-    background-color: rgba(46, 34, 14, 0.778);
-    cursor: pointer;
+	background-color: rgba(46, 34, 14, 0.778);
+	cursor: pointer;
 }
 
 
@@ -2002,10 +2162,10 @@ footer h4 {
 
 .employee-card h4,
 .employee-card p {
-    color: var(--white);
-    position: absolute;
-    bottom: 0.125rem;
-    left: 1rem;
+	color: var(--white);
+	position: absolute;
+	bottom: 0.125rem;
+	left: 1rem;
 }
 
 @media screen and (min-width: 900px) {
@@ -2039,62 +2199,62 @@ footer h4 {
 
 /* Private events */
 .private-events-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
 }
 
 .private-events-bg h2 {
-    color: var(--white);
-    text-align: center;
+	color: var(--white);
+	text-align: center;
 }
 
 .private-events h3 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 #private-events-h3 {
-    margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .private-events span {
-    display: block;
+	display: block;
 }
 
 .private-events ul {
-    margin: 0;
-    padding: 0 0 0 1.5rem;
+	margin: 0;
+	padding: 0 0 0 1.5rem;
 }
 
 .table-bookings {
-    background-color: var(--brown);
-    color: var(--white);
+	background-color: var(--brown);
+	color: var(--white);
 }
 
 .table-bookings h3 {
-    color: var(--white);
+	color: var(--white);
 }
 
 /* ********************** Beer Pages ***************************************** */
 
 /* *********** Home Beers ************************* */
 .home-beers {
-    text-align: center;
-    max-width: 550px;
-    margin: 3rem auto;
+	text-align: center;
+	max-width: 550px;
+	margin: 3rem auto;
 }
 
 .home-beers h2 {
-    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
-    color: var(--dark);
-    margin: 0;
+	font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+	color: var(--dark);
+	margin: 0;
 }
 
 .beer-categories {
@@ -2123,15 +2283,15 @@ footer h4 {
 
 
 .beer-card h3 {
-    text-decoration: none;
-    color: var(--white);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    white-space: nowrap;
-    font-size: clamp(2.441rem, 2.258rem + 0.489vw, 2.747rem);
+	text-decoration: none;
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	white-space: nowrap;
+	font-size: clamp(2.441rem, 2.258rem + 0.489vw, 2.747rem);
 
 }
 
@@ -2351,33 +2511,33 @@ footer h4 {
 }
 
 @media screen and (min-width: 700px) {
-    .story {
-        display: flex;
-        align-items: flex-start;
-        max-width: 900px;
-        margin: 0 auto;
-        gap: 3rem;
-        margin-bottom: 3rem;
-    }
+	.story {
+		display: flex;
+		align-items: flex-start;
+		max-width: 900px;
+		margin: 0 auto;
+		gap: 3rem;
+		margin-bottom: 3rem;
+	}
 
-    .story-info {
-        flex: 1 0 calc(50%-3rem)
-    }
+	.story-info {
+		flex: 1 0 calc(50%-3rem)
+	}
 
-    .hops h2 {
-        max-width: 900px;
-        margin: 3rem auto;
+	.hops h2 {
+		max-width: 900px;
+		margin: 3rem auto;
 
-    }
+	}
 
-    .story-info p {
-        text-align: left;
-        margin-top: 0;
-    }
+	.story-info p {
+		text-align: left;
+		margin-top: 0;
+	}
 
-    .story img {
-        max-width: 50%;
-    }
+	.story img {
+		max-width: 50%;
+	}
 }
 
 @media screen and (min-width: 900px) {
