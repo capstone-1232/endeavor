@@ -1677,6 +1677,7 @@ footer h4 {
 	.main-header>.inner-container {
 		justify-content: space-between;
 		gap: 1.5rem;
+		flex-direction: unset;
 	}
 
 	nav {
