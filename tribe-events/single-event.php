@@ -98,6 +98,8 @@ $cost  = tribe_get_formatted_cost( $event_id );
 			</div>
 			<div class="tribe-events-single-event-description tribe-events-content">
 				<?php the_content(); ?>
+				<?php  $website = tribe_get_event_website_url( $event_id ); ?>
+						<a href="<?php echo $website ?>" class="events-button">Get Tickets</a>
 				</div>
 		
 		</div>
@@ -106,8 +108,7 @@ $cost  = tribe_get_formatted_cost( $event_id );
 
 			
 						<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
-						<?php  $website = tribe_get_event_website_url( $event_id ); ?>
-						<a href="<?php echo $website ?>" class="events-button">Get Tickets</a>
+						
 					
 			
 		</div>
@@ -115,18 +116,5 @@ $cost  = tribe_get_formatted_cost( $event_id );
 	</div>
    
 	<?php endwhile; ?>
-
-	<!-- Event footer -->
-	<div id="tribe-events-footer">
-		<!-- Navigation -->
-		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'the-events-calendar' ), $events_label_singular ); ?>">
-			<ul class="tribe-events-sub-nav">
-				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
-			</ul>
-			<!-- .tribe-events-sub-nav -->
-		</nav>
-	</div>
-	<!-- #tribe-events-footer -->
 
 </div><!-- #tribe-events-content -->

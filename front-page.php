@@ -95,7 +95,7 @@ $title = get_the_title();
                     class="featured-beer-image" />
                   <?php
                   // Output the beer name
-                  echo "<h2 class=\"lead featured-beer-name\">$beer_name</h2>";
+                  echo "<h4 class=\"lead featured-beer-name\">$beer_name</h4>";
                   echo "</a>";
               }
             }
@@ -120,7 +120,7 @@ $title = get_the_title();
         ?>
         <section class="events">
           <div class="inner-container">
-            <h2>Events at Endeavour</h2>
+            <h3>Events at Endeavour</h3>
           </div>
                     <div class="events-list">
                         <?php

@@ -908,6 +908,7 @@ textarea {
     --white: #F2F2F2;
     --brown: #77614C;
     --blue: #2D487F;
+    --blue-hover: #233964;
     --dark: #363432;
 
     /* Desktop Typescale */
@@ -2721,7 +2722,8 @@ footer h4 {
     z-index: 1;
     font-size: var(--h4);
     color: var(--white);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
 }
 
 .event-item::before {
@@ -2734,8 +2736,8 @@ footer h4 {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     pointer-events: none;
     opacity: 1;
-    transition: all 0.3s ease;
-
+    transition: all 0.5s ease;
+    
 }
 
 .event-item:hover h3 {
@@ -2782,25 +2784,24 @@ footer h4 {
         position: absolute;
         inset: 0%;
         top: 90%;
-        left: 50%;
+        left: 120%;
         transform: translateX(-50%) rotate(-90deg);
         transform-origin: top left;
-        text-align: center;
         z-index: 1;
         font-size: var(--h4);
         color: var(--white);
         white-space: nowrap;
+        width: 300px;
+        text-align: left;
     }
 
     .event-item:hover h3 {
         left: 50%;
+        top: 70%;
         max-width: 600px;
         white-space: wrap;
-    }
-
-    .event-item:hover h3 {
+        width: 300px;
         transform: translateX(-50%) rotate(0deg);
-        width: 100%;
     }
 
     .events-list:hover .event-item:not(:hover) {
@@ -2816,6 +2817,21 @@ footer h4 {
     .events-list:hover .event-item:not(:hover) img {
         transform: scale(1);
         z-index: 1;
+    }
+}
+
+@media screen and (min-width: 1050px){
+    .event-item h3 {
+        position: absolute;
+        inset: 0%;
+        top: 90%;
+        left: 95%;
+        width: 400px;
+    }
+
+    .event-item:hover h3 {
+        left: 40%;
+        top: 70%;
     }
 }
 
@@ -2851,10 +2867,12 @@ footer h4 {
     color: var(--dark);
 }
 
-.events-button:hover {
-    background-color: transparent;
-    border: 2px solid var(--blue);
-    color: var(--blue);
+.tribe-events-content a:hover{
+    background-color: var(--blue-hover);
+	transition: ease-in-out 0.2s;
+    color: var(--white);
+    border-bottom: none;
+
 }
 
 @media screen and (min-width:800px) {
@@ -2867,10 +2885,43 @@ footer h4 {
 
     .single-event-flex img {
         flex: 0 0 calc(50% - 2rem);
-        margin-top: 1.5rem;
     }
 
     .single-event-flex div {
         flex: 0 0 calc(50% - 2rem);
     }
 }
+/* ********************Upcoming Events********************************* */
+.events-bg{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    padding-top: 3rem;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__nav {
+    display: none !important;
+}
+
+.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button{
+background-color: var(--blue);
+}
+
+.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button:hover{
+    background-color: var(--blue-hover);
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list-nav{
+    display: none;
+}
+
+/* *********************************** Single Shop Products ************************************ */
+
+
