@@ -15,7 +15,7 @@ get_header();
         img.classList.add('shaking');
     });
 </script>
-<main id="primary" class="site-main">
+<main>
     <section class="beer-background">
         <div class="inner-container">
             <div class="single-beer">
