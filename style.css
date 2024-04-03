@@ -994,6 +994,11 @@ h6 {
     font-weight: 400;
 }
 
+.block {
+    display: block;
+
+}
+
 
 p {
     font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
@@ -2194,6 +2199,8 @@ footer h4 {
     margin-bottom: 3rem;
 }
 
+
+
 .staff-flex {
     display: flex;
     flex-wrap: wrap;
@@ -2322,14 +2329,38 @@ footer h4 {
     text-align: center;
 }
 
-.private-events h3 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+/* Private Events */
+
+.private-events-img {
+    display: flex;
+    justify-content: center;
+}
+
+.private-events>.inner-container {
+    padding: 3rem 1.5rem;
 }
 
 #private-events-h3 {
+    text-align: center;
     margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+/* Section Headings */
+.private-people {
+    font-size: var(--h4-mobile);
+    font-weight: 400;
+    font-family: "Anton", sans-serif;
+    margin: 0 0 1.5rem 0;
+}
+
+.table {
+    color: var(--white);
+}
+
+
+.private-events p {
+    text-align: center;
 }
 
 .private-events span {
@@ -2348,6 +2379,46 @@ footer h4 {
 
 .table-bookings h3 {
     color: var(--white);
+}
+
+.team-building {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.team-building h3,
+.team-building p,
+.table-bookings p {
+    color: var(--white);
+}
+
+.team-building p {
+    text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+    .private-events>.inner-container {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .private-events-img {
+        object-fit: cover;
+    }
+
+    .private-events-h3 {
+        text-align: left;
+    }
+
+    .private-events-content {
+        width: 66.66%;
+        text-align: left;
+    }
+
+    .private-events-list {
+        display: flex;
+        gap: 1.5rem;
+    }
 }
 
 /* ********************** Beer Pages ***************************************** */
