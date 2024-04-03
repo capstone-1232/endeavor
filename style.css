@@ -1534,9 +1534,7 @@ footer h4 {
 }
 
 .social-media a {
-    <<<<<<< HEAD text-decoration: none;
-    =======text-decoration: none;
-    >>>>>>>6c0c798618c26abac05e1b08478329ed0465a9d8
+    text-decoration: none;
 }
 
 @media screen and (min-width: 720px) {
@@ -1591,7 +1589,6 @@ footer h4 {
         visibility: visible;
         position: relative;
     }
-
 
     #footer-menu .sub-menu>li:not(:last-of-type) {
         padding: 0;
@@ -1729,11 +1726,6 @@ footer h4 {
         margin-right: 3rem;
     }
 
-    .featured-beers-flex>a {
-        width: calc(100% / 3 - 1rem);
-        text-align: center;
-    }
-
     .shop-our-coffee>.inner-container {
         padding: 4.5rem 1.5rem;
     }
@@ -1742,1159 +1734,1143 @@ footer h4 {
         width: 19.375rem;
     }
 
+    .main-header>.inner-container {
+        justify-content: space-between;
+        max-width: 56.625rem;
+    }
 
-    .coffee-product-section {
-        margin: 4.5rem auto 0 auto;
+    .main-header>.inner-container>div:first-of-type {
+        order: 2;
+    }
+
+    .donations p:first-of-type {
+        margin: 1.5rem auto 1.5rem auto;
+    }
+
+    .donations p:nth-of-type(2) {
+        margin: 0 auto 1.5rem auto;
+    }
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    /* utility */
+    .wide-flex {
         display: flex;
-
-        .main-header>.inner-container {
-
-            justify-content: space-between;
-            max-width: 56.625rem;
-        }
-
-        .coffee-card:not(:last-of-type) {
-            margin-bottom: unset;
-        }
-
-
-        .donations p {
-            max-width: 41.75rem;
-        }
-
-        .main-header>.inner-container>div:first-of-type {
-            order: 2;
-        }
-
-
-        .donations p:first-of-type {
-            margin: 1.5rem auto 1.5rem auto;
-        }
-
-        .donations p:nth-of-type(2) {
-            margin: 0 auto 1.5rem auto;
-        }
+        flex-wrap: wrap;
+        gap: 3rem;
     }
 
+    /* Mobile Menu Page */
+    .menu-hero {
+        height: 28.5rem;
+    }
 
-
-    @media screen and (min-width: 800px) {
-
-        /* utility */
-        .wide-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-        }
-
-        /* Mobile Menu Page */
-        .menu-hero {
-            height: 28.5rem;
-        }
-
-        .menu-header {
-            text-align: left;
-            margin: 4.5rem 0 0 0;
-
-        }
-
-        .menu-posts {
-            width: calc(100% / 2 - 3rem);
-        }
-
-        .food-item {
-            font-size: var(--h6);
-            margin: 0;
-        }
-
-        .food-price {
-            font-size: var(--h6)
-        }
-
-        .about-us h3 {
-            margin: 0;
-        }
-
+    .menu-header {
+        text-align: left;
+        margin: 4.5rem 0 0 0;
 
     }
 
-
-    @media screen and (min-width: 900px) {
-
-        /* header */
-
-        #menu-toggle {
-            display: none;
-        }
-
-        .main-header>.inner-container {
-            justify-content: space-between;
-            gap: 1.5rem;
-        }
-
-        nav {
-            position: static;
-            width: unset;
-            height: 100%;
-            transition: unset;
-            box-shadow: unset;
-        }
-
-        .main-header>.inner-container>div:first-of-type {
-            order: 2;
-        }
-
-        .wide-nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        #primary-menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            width: 100%;
-            margin: 0;
-            padding: unset;
-        }
-
-        #primary-menu li:hover>.sub-menu,
-        #primary-menu li.sub-menu-item:hover .sub-menu {
-            visibility: visible;
-        }
-
-        .sub-menu {
-            background-color: #45423F;
-            padding: 1.5rem 1rem;
-            position: absolute;
-            visibility: hidden;
-        }
-
-        .sub-menu li:not(:last-of-type) {
-            padding-bottom: 1.5rem;
-        }
-
-        .nav-flex {
-            padding: 1rem 1.5rem;
-        }
-
-        .menu-item {
-            margin: 0;
-        }
-
-
+    .menu-posts {
+        width: calc(100% / 2 - 3rem);
     }
 
-    @media screen and (min-width: 960px) {
-        .featured-beers-flex>a {
-            width: calc(100% / 4 - 1rem);
-            text-align: center;
-        }
-
-        /* footer */
-        .footer-wide-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 3rem;
-        }
-
-        .footer-wide-flex>div {
-            width: calc(100% / 4 - 1.5rem);
-        }
-
-        .footer-wide-flex>.footer-nav {
-            order: 4;
-        }
-
-        .footer-wide-flex>.hours {
-            order: 3;
-        }
-
-        .footer-wide-flex>.general-nap {
-            order: 2;
-        }
-
-        .footer-wide-flex>.map {
-            order: 1;
-        }
-
-        footer .hours,
-        footer .general-nap {
-            margin-top: unset;
-        }
-
-        footer .logo {
-            margin: unset;
-        }
-
-        .footer-nap {
-            margin-top: 1.5rem;
-        }
-
-        .footer-nap>p {
-            font-size: 1rem;
-            text-align: left;
-        }
-
-        .social-media>div {
-            justify-content: start;
-        }
-
-        footer p,
-        footer h4 {
-            text-align: left;
-        }
-
-        .hours-details {
-            margin-bottom: 0.5rem;
-            display: unset;
-        }
-
-        .weekday {
-            font-size: 1.125rem;
-            font-weight: 700;
-        }
-
-        #footer-menu li {
-            text-align: right;
-        }
-
-    }
-
-
-    @media screen and (min-width: 1100px) {
-        .featured-beers-flex>a {
-            width: calc(100% / 6 - 3rem);
-            text-align: center;
-        }
-
-        .about-us>.wide-flex {
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-us>.wide-flex>div:first-of-type {
-            max-width: 550px;
-        }
-
-        .about-us>.wide-flex>div:nth-of-type(2) {
-            max-width: 548px;
-        }
-
-        .about-us h3,
-        .about-us p {
-            text-align: left;
-        }
-
-        .about-us .cta {
-            margin: unset;
-        }
-    }
-
-    @media screen and (min-width: 1400px) {
-        .menu-posts {
-            width: calc(100% / 3 - 3rem);
-        }
-
-        .about-us>.wide-flex {
-            padding: 4.5rem 7.438rem;
-        }
-
-    }
-
-
-    /* PAGES */
-
-
-
-    /* BREWING PROCESS */
-    .brewing-process-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
-
-    .brewing-process-bg h2 {
-        color: var(--white);
-        font-size: var(--h1);
-        color: var(--white);
-        text-align: center;
-
-
-    }
-
-    .process-card {
-        background-color: var(--brown);
-        color: var(--white);
-        padding: 1rem;
-    }
-
-    .process-card h3 {
-        font-size: var(--h2);
-    }
-
-
-
-    .brewing-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1.5rem;
-
-    }
-
-    .dot {
-        background-color: var(--brown);
-        width: 2rem;
-        height: 2rem;
-        border-radius: 100%;
-        position: relative;
-    }
-
-    .line {
-        background-color: var(--brown);
-        width: 2px;
-        height: 30rem;
-        position: absolute;
-        top: 2rem;
-        left: 50%;
-    }
-
-    .last-line {
-        background-color: var(--brown);
-        width: 2px;
-        height: 21rem;
-        position: absolute;
-        top: 2rem;
-        left: 50%;
-    }
-
-    .process-card {
-        background-color: var(--brown);
-        color: var(--white);
-        padding: 1rem;
-        margin-bottom: 3rem;
-        border-radius: 5px;
-        grid-column-start: 2;
-        grid-column-end: 7;
-    }
-
-    .process-card h3 {
-        font-size: var(--h3-mobile);
-        margin: 1rem 0 1.5rem 0;
-        color: var(--white);
-    }
-
-    .process-card p {
-        color: var(--white);
+    .food-item {
+        font-size: var(--h6);
         margin: 0;
     }
 
-    /* WHO WE ARE */
-
-    .who-we-are-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    .food-price {
+        font-size: var(--h6)
     }
 
-    .who-we-are-bg h2 {
-        font-size: var(--h1-mobile);
-        color: var(--white);
-        text-align: center;
+    .about-us h3 {
         margin: 0;
     }
 
-    .who-we-are h3 {
-        font-size: var(--h3-mobile);
-        font-weight: 400;
-        text-align: center;
-        color: var(--dark);
-    }
 
-    .who-we-are p {
-        font-size: var(--base-mobile);
-        text-align: center;
-        color: var(--dark);
-    }
-
-    .who-we-are-bg p {
-        color: var(--white);
-        text-align: center;
-    }
+}
 
 
+@media screen and (min-width: 900px) {
 
-    .who-we-are-bg-img-1 {
-        background-image: url(./img/year-round.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 13.5rem;
-        width: 100%;
-    }
+    /* header */
 
-    .who-we-are-bg-img-2 {
-        background-image: url(./img/coffee.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 13.5rem;
-        width: 100%;
-    }
-
-    .who-we-are-bg-img-3 {
-        background-image: url(./img/employee-holding-endeavour-glass.webp);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 13.5rem;
-        width: 100%;
-    }
-
-    .who-we-are-img {
+    #menu-toggle {
         display: none;
     }
 
-    .who-we-are .mission-statement {
-        background-color: var(--brown);
-    }
-
-    .who-we-are .mission-statement h3,
-    .who-we-are .mission-statement p {
-        color: var(--white);
-    }
-
-    @media screen and (min-width: 900px) {
-        .who-we-are-bg {
-            height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
-        }
-
-        .who-we-are-bg p {
-            width: 60%;
-        }
-    }
-
-    /* Meet the Team */
-    .meet-the-team-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps.webp);
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
-    }
-
-    .meet-the-team-bg h2 {
-        color: var(--white);
-        text-align: center;
-    }
-
-    .meet-the-team h3 {
-        margin: 0;
-    }
-
-    .meet-the-team .inner-container .flex {
-        flex-direction: column-reverse;
-    }
-
-    .meet-the-team .inner-container .flex p {
-        margin-bottom: 3rem;
-    }
-
-    .staff-flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
-        justify-content: center;
-    }
-
-    .staff-flex-text {
-        width: 19.75rem;
-        height: 28.5rem;
-    }
-
-    .employee-card {
-        width: 19.75rem;
-        height: 28.5rem;
-        position: relative;
-        transition: all ease-in-out 250ms;
-    }
-
-    .staff-image-container {
-        width: 19.75rem;
-        height: 28.5rem;
-        background-color: rgba(0, 0, 0, 0.397);
-        transition: all ease-in-out 250ms;
-
-    }
-
-    .employee-description {
-        opacity: 0;
-        transition: all ease-in 250ms;
-        transform: translateY(-12rem);
-        position: relative;
-    }
-
-    .employee-card:hover .employee-description {
-        display: block;
-        opacity: 1;
-    }
-
-    .employee-card .card-title {
-        transition: all ease-in-out 250ms;
-    }
-
-    .employee-card .job-title {
-        font-weight: 600;
-        transition: all ease-in-out 250ms;
-    }
-
-    .employee-card:hover .job-title {
-        transform: translateY(-17.5rem);
-        transition: all ease-in-out 250ms;
-    }
-
-
-    .employee-card:hover .card-title {
-        transform: translateY(-17rem);
-        transition: all ease-in-out 250ms;
-    }
-
-    .employee-card:hover {
-        background-color: rgba(46, 34, 14, 0.778);
-        cursor: pointer;
-    }
-
-
-
-    .employee-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -100;
-        position: relative;
-    }
-
-    .employee-card h4,
-    .employee-card p {
-        color: var(--white);
-        position: absolute;
-        bottom: 0.125rem;
-        left: 1rem;
-    }
-
-    @media screen and (min-width: 900px) {
-        .meet-the-team .inner-container .flex {
-            display: grid;
-            grid-auto-flow: row;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2rem;
-            padding: 4rem 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .meet-the-team .inner-container .flex>img {
-            grid-column-start: 1;
-            grid-column-end: 6;
-        }
-
-        .meet-the-team .inner-container .flex>div {
-            grid-column-start: 6;
-            grid-column-end: 13;
-
-        }
-
-        .meet-the-team .inner-container .flex p {
-            margin-bottom: 0;
-        }
-
-
-    }
-
-    /* Private events */
-    .private-events-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
-    }
-
-    .private-events-bg h2 {
-        color: var(--white);
-        text-align: center;
-    }
-
-    .private-events h3 {
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    #private-events-h3 {
-        margin-top: 2rem;
-    }
-
-    .private-events span {
-        display: block;
-    }
-
-    .private-events ul {
-        margin: 0;
-        padding: 0 0 0 1.5rem;
-    }
-
-    .table-bookings {
-        background-color: var(--brown);
-        color: var(--white);
-    }
-
-    .table-bookings h3 {
-        color: var(--white);
-    }
-
-    /* ********************** Beer Pages ***************************************** */
-
-    /* *********** Home Beers ************************* */
-    .home-beers {
-        text-align: center;
-        max-width: 550px;
-        margin: 3rem auto;
-    }
-
-    .home-beers h2 {
-        font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
-        color: var(--dark);
-        margin: 0;
-    }
-
-    .beer-categories {
-        display: flex;
-        flex-wrap: wrap;
+    .main-header>.inner-container {
+        justify-content: space-between;
         gap: 1.5rem;
-        margin-bottom: 3rem;
     }
 
-    .beer-card {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-color: var(--dark);
-        height: 360px;
-        flex: 1 1 340px;
-        position: relative;
+    nav {
+        position: static;
+        width: unset;
+        height: 100%;
+        transition: unset;
+        box-shadow: unset;
     }
 
-    .beer-card:hover {
-        transform: scale(1.05);
-        transition: all ease 0.5s;
+    .main-header>.inner-container>div:first-of-type {
+        order: 2;
     }
 
-
-
-
-    .beer-card h3 {
-        text-decoration: none;
-        color: var(--white);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        white-space: nowrap;
-        font-size: clamp(2.441rem, 2.258rem + 0.489vw, 2.747rem);
-
-    }
-
-    /* *********** Mainstays Beers ************************* */
-
-    .mainstay-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
-        position: relative;
-
-    }
-
-    /* *********** Barrel Beers ************************* */
-    .barrel-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
-        position: relative;
-    }
-
-    /* *********** Rotational Beers ************************* */
-    .rotational-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
-        position: relative;
-    }
-
-
-    /* ***************Beer Categories Pages**************** */
-    .beer-container {
-        max-width: 422px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
-    .beer-category-bg {
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 48px 0;
-    }
-
-
-    .beer-category-bg h2,
-    .beer-category-bg p {
-        color: var(--white);
-        text-align: center;
-    }
-
-    .beer-category-bg h2 {
-        margin: 0;
-    }
-
-
-
-    .mainstay-banner-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
-    }
-
-    .rotational-banner-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
-    }
-
-    .barrel-aged-banner-bg {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
-
-    }
-
-    .beers a {
-        text-decoration: none;
-    }
-
-
-    .featured-image {
+    .wide-nav-flex {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex: 0 0 210px;
-    }
-
-    .featured-image:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        transition: all ease 0.5s;
-    }
-
-    .featured-image h3 {
-        font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-        width: 100%;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .featured-image img {
-        padding: 1rem;
-    }
-
-    .beers {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 3rem;
-        margin: 3rem;
-    }
-
-    /* *********************Single Beer Pages************************ */
-
-    @keyframes shake {
-        0% {
-            transform: translate(0, 0) rotate(0);
-        }
-
-        15%,
-        45%,
-        75% {
-            transform: translate(-10px, 0) rotate(-5deg);
-        }
-
-        30%,
-        60%,
-        90% {
-            transform: translate(10px, 0) rotate(5deg);
-        }
-    }
-
-    .single-beer img.shaking {
-        animation: shake 1s ease-in-out;
-    }
-
-    .beer-background {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .single-beer h2,
-    .single-beer p,
-    .single-beer li {
-        color: var(--white);
-        text-align: center;
-    }
-
-    .single-beer h2 {
-        width: 100%;
-        font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
-    }
-
-    .single-beer img {
-        max-width: 136px;
-        padding-top: 3rem;
-    }
-
-    .single-beer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .beer-info {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    .beer-info div {
-        flex: 1 1 calc(50%-1rem);
-        width: 120px;
-        height: 120px;
-        border: 6px solid var(--white);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
-    .beer-info li {
-        font-weight: bold;
-        font-size: var(--h6);
+    #primary-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        margin: 0;
+        padding: unset;
     }
 
-    .beer-info li span {
-        font-size: var(--small-mobile);
-        display: block;
-        text-align: center;
+    #primary-menu li:hover>.sub-menu,
+    #primary-menu li.sub-menu-item:hover .sub-menu {
+        visibility: visible;
     }
 
-    .single-beer p {
-        text-align: center;
+    .sub-menu {
+        background-color: #45423F;
+        padding: 1.5rem 1rem;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .sub-menu li:not(:last-of-type) {
         padding-bottom: 1.5rem;
     }
 
-    .hops h2,
-    .story p {
-        text-align: center;
-        margin-bottom: 3rem;
+    .nav-flex {
+        padding: 1rem 1.5rem;
     }
 
-    .hops {
-        position: relative;
+    .menu-item {
+        margin: 0;
     }
 
-    .hops svg:first-of-type {
-        position: absolute;
-        width: 150px;
-        z-index: 0;
-        top: -50px;
-    }
 
-    .hops svg:last-of-type {
-        position: absolute;
-        width: 150px;
-        z-index: 0;
-        bottom: -20px;
-        right: 0;
-    }
+}
 
-    @media screen and (min-width: 700px) {
-        .story {
-            display: flex;
-            align-items: flex-start;
-            max-width: 900px;
-            margin: 0 auto;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .story-info {
-            flex: 1 0 calc(50%-3rem)
-        }
-
-        .hops h2 {
-            max-width: 900px;
-            margin: 3rem auto;
-
-        }
-
-        .story-info p {
-            text-align: left;
-            margin-top: 0;
-        }
-
-        .story img {
-            max-width: 50%;
-        }
-    }
-
-    @media screen and (min-width: 900px) {
-        .single-beer {
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .beer-flex {
-            display: flex;
-            flex-wrap: wrap;
-            flex: 0 1 60%;
-            gap: 1rem;
-        }
-
-        .single-beer h2,
-        .single-beer p {
-            text-align: left;
-        }
-
-        .single-beer h2 {
-            margin: 0;
-        }
-
-        .single-beer img {
-            flex: 0 1 33%;
-            max-width: 243px;
-            padding: 3rem 0;
-        }
-
-        .beer-info div {
-            width: 135px;
-            height: 135px;
-            gap: 3rem;
-            padding: 0.5rem;
-        }
-    }
-
-    /********************************* Events Home Page *****************************************************/
-    .events h2 {
-        color: var(--dark);
+@media screen and (min-width: 960px) {
+    .featured-beers-flex>a {
+        width: calc(100% / 4 - 1rem);
         text-align: center;
     }
 
-    .events-list {
+    /* footer */
+    .footer-wide-flex {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .footer-wide-flex>div {
+        width: calc(100% / 4 - 1.5rem);
+    }
+
+    .footer-wide-flex>.footer-nav {
+        order: 4;
+    }
+
+    .footer-wide-flex>.hours {
+        order: 3;
+    }
+
+    .footer-wide-flex>.general-nap {
+        order: 2;
+    }
+
+    .footer-wide-flex>.map {
+        order: 1;
+    }
+
+    footer .hours,
+    footer .general-nap {
+        margin-top: unset;
+    }
+
+    footer .logo {
+        margin: unset;
+    }
+
+    .footer-nap {
+        margin-top: 1.5rem;
+    }
+
+    .footer-nap>p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .social-media>div {
+        justify-content: start;
+    }
+
+    footer p,
+    footer h4 {
+        text-align: left;
+    }
+
+    .hours-details {
+        margin-bottom: 0.5rem;
+        display: unset;
+    }
+
+    .weekday {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+
+    #footer-menu li {
+        text-align: right;
+    }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+    .featured-beers-flex>a {
+        width: calc(100% / 6 - 3rem);
+        text-align: center;
+    }
+
+    .about-us>.wide-flex {
+        flex-wrap: nowrap;
+        align-items: center;
         justify-content: center;
     }
 
+    .about-us>.wide-flex>div:first-of-type {
+        max-width: 550px;
+    }
+
+    .about-us>.wide-flex>div:nth-of-type(2) {
+        max-width: 548px;
+    }
+
+    .about-us h3,
+    .about-us p {
+        text-align: left;
+    }
+
+    .about-us .cta {
+        margin: unset;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .menu-posts {
+        width: calc(100% / 3 - 3rem);
+    }
+
+    .about-us>.wide-flex {
+        padding: 4.5rem 7.438rem;
+    }
+
+}
+
+
+/* PAGES */
+
+
+
+/* BREWING PROCESS */
+.brewing-process-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.brewing-process-bg h2 {
+    color: var(--white);
+    font-size: var(--h1);
+    color: var(--white);
+    text-align: center;
+
+
+}
+
+.process-card {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 1rem;
+}
+
+.process-card h3 {
+    font-size: var(--h2);
+}
+
+
+
+.brewing-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+
+}
+
+.dot {
+    background-color: var(--brown);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: relative;
+}
+
+.line {
+    background-color: var(--brown);
+    width: 2px;
+    height: 30rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+}
+
+.last-line {
+    background-color: var(--brown);
+    width: 2px;
+    height: 21rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+}
+
+.process-card {
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+.process-card h3 {
+    font-size: var(--h3-mobile);
+    margin: 1rem 0 1.5rem 0;
+    color: var(--white);
+}
+
+.process-card p {
+    color: var(--white);
+    margin: 0;
+}
+
+/* WHO WE ARE */
+
+.who-we-are-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.who-we-are-bg h2 {
+    font-size: var(--h1-mobile);
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+}
+
+.who-we-are h3 {
+    font-size: var(--h3-mobile);
+    font-weight: 400;
+    text-align: center;
+    color: var(--dark);
+}
+
+.who-we-are p {
+    font-size: var(--base-mobile);
+    text-align: center;
+    color: var(--dark);
+}
+
+.who-we-are-bg p {
+    color: var(--white);
+    text-align: center;
+}
+
+
+
+.who-we-are-bg-img-1 {
+    background-image: url(./img/year-round.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-bg-img-2 {
+    background-image: url(./img/coffee.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-bg-img-3 {
+    background-image: url(./img/employee-holding-endeavour-glass.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13.5rem;
+    width: 100%;
+}
+
+.who-we-are-img {
+    display: none;
+}
+
+.who-we-are .mission-statement {
+    background-color: var(--brown);
+}
+
+.who-we-are .mission-statement h3,
+.who-we-are .mission-statement p {
+    color: var(--white);
+}
+
+@media screen and (min-width: 900px) {
+    .who-we-are-bg {
+        height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+    }
+
+    .who-we-are-bg p {
+        width: 60%;
+    }
+}
+
+/* Meet the Team */
+.meet-the-team-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps.webp);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+}
+
+.meet-the-team-bg h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+.meet-the-team h3 {
+    margin: 0;
+}
+
+.meet-the-team .inner-container .flex {
+    flex-direction: column-reverse;
+}
+
+.meet-the-team .inner-container .flex p {
+    margin-bottom: 3rem;
+}
+
+.staff-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.staff-flex-text {
+    width: 19.75rem;
+    height: 28.5rem;
+}
+
+.employee-card {
+    width: 19.75rem;
+    height: 28.5rem;
+    position: relative;
+    transition: all ease-in-out 250ms;
+}
+
+.staff-image-container {
+    width: 19.75rem;
+    height: 28.5rem;
+    background-color: rgba(0, 0, 0, 0.397);
+    transition: all ease-in-out 250ms;
+
+}
+
+.employee-description {
+    opacity: 0;
+    transition: all ease-in 250ms;
+    transform: translateY(-12rem);
+    position: relative;
+}
+
+.employee-card:hover .employee-description {
+    display: block;
+    opacity: 1;
+}
+
+.employee-card .card-title {
+    transition: all ease-in-out 250ms;
+}
+
+.employee-card .job-title {
+    font-weight: 600;
+    transition: all ease-in-out 250ms;
+}
+
+.employee-card:hover .job-title {
+    transform: translateY(-17.5rem);
+    transition: all ease-in-out 250ms;
+}
+
+
+.employee-card:hover .card-title {
+    transform: translateY(-17rem);
+    transition: all ease-in-out 250ms;
+}
+
+.employee-card:hover {
+    background-color: rgba(46, 34, 14, 0.778);
+    cursor: pointer;
+}
+
+
+
+.employee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    position: relative;
+}
+
+.employee-card h4,
+.employee-card p {
+    color: var(--white);
+    position: absolute;
+    bottom: 0.125rem;
+    left: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+    .meet-the-team .inner-container .flex {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        padding: 4rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .meet-the-team .inner-container .flex>img {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    .meet-the-team .inner-container .flex>div {
+        grid-column-start: 6;
+        grid-column-end: 13;
+
+    }
+
+    .meet-the-team .inner-container .flex p {
+        margin-bottom: 0;
+    }
+
+
+}
+
+/* Private events */
+.private-events-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+}
+
+.private-events-bg h2 {
+    color: var(--white);
+    text-align: center;
+}
+
+.private-events h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#private-events-h3 {
+    margin-top: 2rem;
+}
+
+.private-events span {
+    display: block;
+}
+
+.private-events ul {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+}
+
+.table-bookings {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.table-bookings h3 {
+    color: var(--white);
+}
+
+/* ********************** Beer Pages ***************************************** */
+
+/* *********** Home Beers ************************* */
+.home-beers {
+    text-align: center;
+    max-width: 550px;
+    margin: 3rem auto;
+}
+
+.home-beers h2 {
+    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+    color: var(--dark);
+    margin: 0;
+}
+
+.beer-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.beer-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--dark);
+    height: 360px;
+    flex: 1 1 340px;
+    position: relative;
+}
+
+.beer-card:hover {
+    transform: scale(1.05);
+    transition: all ease 0.5s;
+}
+
+
+
+
+.beer-card h3 {
+    text-decoration: none;
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+    font-size: clamp(2.441rem, 2.258rem + 0.489vw, 2.747rem);
+
+}
+
+/* *********** Mainstays Beers ************************* */
+
+.mainstay-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
+    position: relative;
+
+}
+
+/* *********** Barrel Beers ************************* */
+.barrel-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
+    position: relative;
+}
+
+/* *********** Rotational Beers ************************* */
+.rotational-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
+    position: relative;
+}
+
+
+/* ***************Beer Categories Pages**************** */
+.beer-container {
+    max-width: 422px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.beer-category-bg {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px 0;
+}
+
+
+.beer-category-bg h2,
+.beer-category-bg p {
+    color: var(--white);
+    text-align: center;
+}
+
+.beer-category-bg h2 {
+    margin: 0;
+}
+
+
+
+.mainstay-banner-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
+}
+
+.rotational-banner-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
+}
+
+.barrel-aged-banner-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
+
+}
+
+.beers a {
+    text-decoration: none;
+}
+
+
+.featured-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 0 0 210px;
+}
+
+.featured-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all ease 0.5s;
+}
+
+.featured-image h3 {
+    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.featured-image img {
+    padding: 1rem;
+}
+
+.beers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 3rem;
+}
+
+/* *********************Single Beer Pages************************ */
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    15%,
+    45%,
+    75% {
+        transform: translate(-10px, 0) rotate(-5deg);
+    }
+
+    30%,
+    60%,
+    90% {
+        transform: translate(10px, 0) rotate(5deg);
+    }
+}
+
+.single-beer img.shaking {
+    animation: shake 1s ease-in-out;
+}
+
+.beer-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.single-beer h2,
+.single-beer p,
+.single-beer li {
+    color: var(--white);
+    text-align: center;
+}
+
+.single-beer h2 {
+    width: 100%;
+    font-size: clamp(3.815rem, 2.834rem + 4.907vw, 7.25rem);
+}
+
+.single-beer img {
+    max-width: 136px;
+    padding-top: 3rem;
+}
+
+.single-beer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.beer-info {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.beer-info div {
+    flex: 1 1 calc(50%-1rem);
+    width: 120px;
+    height: 120px;
+    border: 6px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beer-info li {
+    font-weight: bold;
+    font-size: var(--h6);
+}
+
+.beer-info li span {
+    font-size: var(--small-mobile);
+    display: block;
+    text-align: center;
+}
+
+.single-beer p {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.hops h2,
+.story p {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hops {
+    position: relative;
+}
+
+.hops svg:first-of-type {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    top: -50px;
+}
+
+.hops svg:last-of-type {
+    position: absolute;
+    width: 150px;
+    z-index: 0;
+    bottom: -20px;
+    right: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .story {
+        display: flex;
+        align-items: flex-start;
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .story-info {
+        flex: 1 0 calc(50%-3rem)
+    }
+
+    .hops h2 {
+        max-width: 900px;
+        margin: 3rem auto;
+
+    }
+
+    .story-info p {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .story img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .single-beer {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .beer-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 1 60%;
+        gap: 1rem;
+    }
+
+    .single-beer h2,
+    .single-beer p {
+        text-align: left;
+    }
+
+    .single-beer h2 {
+        margin: 0;
+    }
+
+    .single-beer img {
+        flex: 0 1 33%;
+        max-width: 243px;
+        padding: 3rem 0;
+    }
+
+    .beer-info div {
+        width: 135px;
+        height: 135px;
+        gap: 3rem;
+        padding: 0.5rem;
+    }
+}
+
+/********************************* Events Home Page *****************************************************/
+.events h2 {
+    color: var(--dark);
+    text-align: center;
+}
+
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-item {
+    position: relative;
+    flex: 0 0 calc(100%);
+}
+
+.event-item a {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
+
+.event-item img {
+    width: 100%;
+    display: block;
+}
+
+.event-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    font-size: var(--h4);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.event-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    pointer-events: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+
+}
+
+.event-item:hover h3 {
+    top: 80%;
+}
+
+.event-item:hover::before {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    z-index: 1;
+}
+
+@media screen and (min-width: 850px) {
+    .events-list {
+        flex-wrap: nowrap;
+    }
+
     .event-item {
+        flex: 0 0 20%;
+        height: 528px;
         position: relative;
-        flex: 0 0 calc(100%);
+        transition: all 0.5s ease;
+        overflow: visible;
     }
 
     .event-item a {
         display: block;
-        text-decoration: none;
         height: 100%;
     }
 
     .event-item img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: block;
     }
 
+    .event-item:hover {
+        flex: 0 0 40%;
+        z-index: 1;
+    }
+
+
     .event-item h3 {
         position: absolute;
-        top: 50%;
+        inset: 0%;
+        top: 90%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%) rotate(-90deg);
+        transform-origin: top left;
         text-align: center;
         z-index: 1;
         font-size: var(--h4);
         color: var(--white);
-        transition: all 0.3s ease;
-    }
-
-    .event-item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-        pointer-events: none;
-        opacity: 1;
-        transition: all 0.3s ease;
-
+        white-space: nowrap;
     }
 
     .event-item:hover h3 {
-        top: 80%;
+        left: 50%;
+        max-width: 600px;
+        white-space: wrap;
     }
 
-    .event-item:hover::before {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    .event-item:hover h3 {
+        transform: translateX(-50%) rotate(0deg);
+        width: 100%;
+    }
+
+    .events-list:hover .event-item:not(:hover) {
+        flex: 1 0 15%;
+        z-index: 0;
+    }
+
+    .events-list:hover .event-item:not(:hover).event-item::before {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
         z-index: 1;
     }
 
-    @media screen and (min-width: 850px) {
-        .events-list {
-            flex-wrap: nowrap;
-        }
-
-        .event-item {
-            flex: 0 0 20%;
-            height: 528px;
-            position: relative;
-            transition: all 0.5s ease;
-            overflow: visible;
-        }
-
-        .event-item a {
-            display: block;
-            height: 100%;
-        }
-
-        .event-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .event-item:hover {
-            flex: 0 0 40%;
-            z-index: 1;
-        }
-
-
-        .event-item h3 {
-            position: absolute;
-            inset: 0%;
-            top: 90%;
-            left: 50%;
-            transform: translateX(-50%) rotate(-90deg);
-            transform-origin: top left;
-            text-align: center;
-            z-index: 1;
-            font-size: var(--h4);
-            color: var(--white);
-            white-space: nowrap;
-        }
-
-        .event-item:hover h3 {
-            left: 50%;
-            max-width: 600px;
-            white-space: wrap;
-        }
-
-        .event-item:hover h3 {
-            transform: translateX(-50%) rotate(0deg);
-            width: 100%;
-        }
-
-        .events-list:hover .event-item:not(:hover) {
-            flex: 1 0 15%;
-            z-index: 0;
-        }
-
-        .events-list:hover .event-item:not(:hover).event-item::before {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-            z-index: 1;
-        }
-
-        .events-list:hover .event-item:not(:hover) img {
-            transform: scale(1);
-            z-index: 1;
-        }
+    .events-list:hover .event-item:not(:hover) img {
+        transform: scale(1);
+        z-index: 1;
     }
+}
 
 
-    /* **************************Single Events************************************************** */
-    .events-button {
-        background-color: var(--blue);
-        font-size: var(--h6-mobile);
-        font-weight: bold;
-        text-align: center;
-        color: var(--white);
-        padding: 24px;
-        text-decoration: none;
-        display: block;
-        border-radius: 5px;
+/* **************************Single Events************************************************** */
+.events-button {
+    background-color: var(--blue);
+    font-size: var(--h6-mobile);
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    padding: 24px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.tribe-events-content a {
+    color: var(--white);
+    border: none;
+    margin-bottom: 3rem;
+}
+
+.tribe-events-schedule h2 {
+    font-family: "Anton", sans-serif;
+    color: var(--dark);
+}
+
+.tribe-events-single-event-title {
+    font-family: "Anton", sans-serif;
+    font-size: var(--h3);
+    color: var(--dark);
+}
+
+.events-button:hover {
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+@media screen and (min-width:800px) {
+    .single-event-flex {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
         margin-bottom: 3rem;
     }
 
-    .tribe-events-content a {
-        color: var(--white);
-        border: none;
-        margin-bottom: 3rem;
+    .single-event-flex img {
+        flex: 0 0 calc(50% - 2rem);
+        margin-top: 1.5rem;
     }
 
-    .tribe-events-schedule h2 {
-        font-family: "Anton", sans-serif;
-        color: var(--dark);
+    .single-event-flex div {
+        flex: 0 0 calc(50% - 2rem);
     }
-
-    .tribe-events-single-event-title {
-        font-family: "Anton", sans-serif;
-        font-size: var(--h3);
-        color: var(--dark);
-    }
-
-    .events-button:hover {
-        background-color: transparent;
-        border: 2px solid var(--blue);
-        color: var(--blue);
-    }
-
-    @media screen and (min-width:800px) {
-        .single-event-flex {
-            display: flex;
-            gap: 2rem;
-            align-items: flex-start;
-            margin-bottom: 3rem;
-        }
-
-        .single-event-flex img {
-            flex: 0 0 calc(50% - 2rem);
-            margin-top: 1.5rem;
-        }
-
-        .single-event-flex div {
-            flex: 0 0 calc(50% - 2rem);
-        }
-    }
+}
