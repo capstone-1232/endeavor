@@ -29,35 +29,57 @@
 			<div class="hours">
 				<h4>Hours:</h4>
 				<?php
-				$posts = get_posts(
-					array(
-						'post_type' => 'hours', // Replace 'your_post_type' with your actual post type slug
-						'posts_per_page' => -1, // Retrieve all posts
-					)
-				);
+    // Define the custom order of days
+    $custom_order = array(
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    );
 
-				// Loop through each post
-				foreach ($posts as $post) {
-					// Setup post data
-					setup_postdata($post);
+    $posts = get_posts(
+        array(
+            'post_type'      => 'hours', // Replace 'your_post_type' with your actual post type slug
+            'posts_per_page' => -1,       // Retrieve all posts
+            'orderby'        => 'title',  // Order by post title
+            'order'          => 'ASC',    // Ascending order
+        )
+    );
 
-					// Retrieve ACF fields for each post
-					$day = get_field('day');
-					$open = get_field('open');
-					$close = get_field('close');
-					$closed = get_field('closed');
+    // Loop through each post
+    foreach ($custom_order as $day) {
+        // Find the post with the matching day
+        $post_found = false;
+        foreach ($posts as $post) {
+            setup_postdata($post);
+            $day_name = get_field('day');
+            if ($day_name === $day) {
+                $post_found = true;
+                break;
+            }
+        }
 
-					if ($closed) {
-						echo "<p class=\"weekday\">$day: <span class=\"hours-details\">Closed</span></p>";
-					} else {
-						echo "<p class=\"weekday\">$day: <span class=\"hours-details\">$open - $close</span></p>";
-					}
+        if ($post_found) {
+            // Retrieve ACF fields for each post
+            $open   = get_field('open');
+            $close  = get_field('close');
+            $closed = get_field('closed');
 
+            if ($closed) {
+                echo "<p class=\"weekday\">$day: <span class=\"hours-details\">Closed</span></p>";
+            } else {
+                echo "<p class=\"weekday\">$day: <span class=\"hours-details\">$open - $close</span></p>";
+            }
 
-					// Reset post data
-					wp_reset_postdata();
-				}
-				?>
+            // Reset post data
+            wp_reset_postdata();
+        }
+    }
+?>
+
 			</div>
 
 			<div class="general-nap">
