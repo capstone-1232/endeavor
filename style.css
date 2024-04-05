@@ -1618,7 +1618,7 @@ footer .map {
 		margin: 4.5rem auto 0 auto;
 		display: flex;
 		justify-content: space-between;
-		max-width: 56.625rem;
+		max-width: 71.625rem;
 	}
 
 	.coffee-card:not(:last-of-type) {
