@@ -1797,6 +1797,11 @@ footer .map {
         display: flex;
         justify-content: space-between;
         max-width: 56.625rem;
+        gap: 1rem;
+    }
+
+    .coffee-card{
+        flex: calc(25% - 1rem);
     }
 
     .coffee-card:not(:last-of-type) {
@@ -3213,6 +3218,7 @@ footer .map {
     color: var(--white);
     transition: all 0.5s ease;
     overflow: hidden;
+    width: 290px;
 }
 
 .event-item::before {
@@ -3363,9 +3369,19 @@ footer .map {
 
 }
 
+.single-event-flex{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.single-event-flex img{
+    margin-top: 2.5rem;
+}
+
 @media screen and (min-width:800px) {
     .single-event-flex {
         display: flex;
+        flex-direction: unset;
         gap: 2rem;
         align-items: flex-start;
         margin-bottom: 3rem;
