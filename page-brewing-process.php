@@ -25,7 +25,7 @@ $title = get_the_title();
 </head>
 <body>
     <main>
-        <section>
+        <section class="brewing-process">
             <div class="brewing-process-bg">
                 <!-- Hero banner -->
                 <h2><?php echo $title; ?></h2>

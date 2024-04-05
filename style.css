@@ -1055,11 +1055,11 @@ p {
 }
 
 .main-header>.inner-container {
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
 }
 
 .menu-toggle,
@@ -1526,6 +1526,8 @@ footer h4 {
 	text-decoration: none;
 }
 
+
+  
 footer .map {
 	display: flex;
 	justify-content: center;
@@ -1533,24 +1535,24 @@ footer .map {
 }
 
 @media screen and (min-width: 720px) {
-	.container {
-		max-width: 1512px;
-		padding: 0 4rem;
-		margin: 4.5rem auto;
-	}
+    .container {
+        max-width: 1512px;
+        padding: 0 4rem;
+        margin: 4.5rem auto;
+    }
 
-	.inner-container {
-		max-width: 1512px;
-		padding: 4.5rem 1.5rem 0 1.5rem;
-	}
+    .inner-container {
+        max-width: 1512px;
+        padding: 1.5rem;
+    }
 
-	.about-us>.inner-container {
-		padding: 4.5rem 1.5rem;
-	}
+    .about-us>.inner-container {
+        padding: 4.5rem 1.5rem;
+    }
 
-	.donations>.overlay>.inner-container {
-		padding: 4.5rem 1.5rem;
-	}
+    .donations>.overlay>.inner-container {
+        padding: 4.5rem 1.5rem;
+    }
 
 	p {
 		font-size: 1.125rem;
@@ -1929,6 +1931,10 @@ footer .map {
 		font-weight: 700;
 	}
 
+    .main-header>.inner-container {
+        justify-content: space-between;
+        flex-direction: unset;
+    }
 	footer .map {
 		margin-top: unset;
 	}
@@ -1983,14 +1989,22 @@ footer .map {
 
 
 /* BREWING PROCESS */
+.brewing-process {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-process-svg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
 .brewing-process-bg {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	align-self: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
 }
 
 .brewing-process-bg h2 {
@@ -2071,15 +2085,16 @@ footer .map {
 /* WHO WE ARE */
 
 .who-we-are-bg {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 2rem 1.5rem 1.5rem 1.5rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
 }
 
 .who-we-are-bg h2 {
@@ -2175,6 +2190,8 @@ footer .map {
 	color: var(--white);
 	text-align: center;
 }
+
+
 
 .meet-the-team h3 {
 	margin: 0;
@@ -2301,6 +2318,18 @@ footer .map {
 
 }
 
+/* Section Headings */
+.private-people {
+    font-size: var(--h4-mobile);
+    font-weight: 400;
+    font-family: "Anton", sans-serif;
+    margin: 0 0 1.5rem 0;
+}
+
+.table {
+    color: var(--white);
+}
+
 /* Private events */
 .private-events-bg {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
@@ -2318,9 +2347,10 @@ footer .map {
 	text-align: center;
 }
 
-/* Private Events */
-
-.private-events-img {
+.private-events-img,
+.table-bookings-picture,
+.wedding-receptions-img,
+.team-building-img {
     display: flex;
     justify-content: center;
 }
@@ -2329,24 +2359,11 @@ footer .map {
     padding: 3rem 1.5rem;
 }
 
-#private-events-h3 {
+.private-events h3 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 0;
 }
-
-/* Section Headings */
-.private-people {
-    font-size: var(--h4-mobile);
-    font-weight: 400;
-    font-family: "Anton", sans-serif;
-    margin: 0 0 1.5rem 0;
-}
-
-.table {
-    color: var(--white);
-}
-
 
 .private-events p {
     text-align: center;
@@ -2361,34 +2378,10 @@ footer .map {
 	padding: 0 0 0 1.5rem;
 }
 
-.table-bookings {
-	background-color: var(--brown);
-	color: var(--white);
-}
-
-.table-bookings h3 {
-	color: var(--white);
-}
-
-.team-building {
-    background-color: var(--brown);
-    color: var(--white);
-}
-
-.team-building h3,
-.team-building p,
-.table-bookings p {
-    color: var(--white);
-}
-
-.team-building p {
-    text-align: center;
-}
-
 @media screen and (min-width: 1000px) {
-    .private-events>.inner-container {
+    .private-section>.inner-container {
         display: flex;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .private-events-img {
@@ -2409,6 +2402,97 @@ footer .map {
         gap: 1.5rem;
     }
 }
+
+@media screen and (min-width:1000px) {}
+
+/* Table bookings */
+
+.table-bookings {
+	background-color: var(--brown);
+	color: var(--white);
+}
+
+.table-bookings h3 {
+    color: var(--white);
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+
+    .table-bookings>.inner-container {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .table-bookings-picture {
+        order: 1;
+    }
+
+    #table-bookings-h3,
+    .bookings-content p,
+    .bookings-content ul {
+        text-align: left;
+    }
+
+}
+
+/* Wedding Receptions */
+@media screen and (min-width: 1000px) {
+    .wedding-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .wedding-receptions-img {
+        object-fit: contain;
+    }
+
+    .wedding-info h3,
+    .wedding-info p {
+        text-align: left;
+    }
+}
+
+
+/* Team Building */
+
+.team-building {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.team-building h3,
+.team-building p,
+.table-bookings p {
+    color: var(--white);
+}
+
+.team-building p {
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .team-building>.inner-container {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .team-content h3,
+    .team-content p {
+        text-align: left;
+    }
+
+    .team-building-img {
+        order: 2;
+    }
+}
+
+
 
 /* ********************** Beer Pages ***************************************** */
 
@@ -2878,7 +2962,7 @@ footer .map {
     }
 }
 
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1050px) {
     .event-item h3 {
         position: absolute;
         inset: 0%;
@@ -2925,9 +3009,9 @@ footer .map {
 	color: var(--dark);
 }
 
-.tribe-events-content a:hover{
+.tribe-events-content a:hover {
     background-color: var(--blue-hover);
-	transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
     color: var(--white);
     border-bottom: none;
 
@@ -2949,15 +3033,16 @@ footer .map {
         flex: 0 0 calc(50% - 2rem);
     }
 }
+
 /* ********************Upcoming Events********************************* */
-.events-bg{
+.events-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	align-self: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
@@ -2968,15 +3053,17 @@ footer .map {
     display: none !important;
 }
 
-.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button{
-background-color: var(--blue);
+.tribe-events .tribe-events-c-search__button,
+.tribe-events button.tribe-events-c-search__button {
+    background-color: var(--blue);
 }
 
-.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button:hover{
+.tribe-events .tribe-events-c-search__button,
+.tribe-events button.tribe-events-c-search__button:hover {
     background-color: var(--blue-hover);
 }
 
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list-nav{
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list-nav {
     display: none;
 }
 
