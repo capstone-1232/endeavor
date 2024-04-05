@@ -1554,15 +1554,192 @@ footer .map {
         padding: 4.5rem 1.5rem;
     }
 
-    p {
-        font-size: 1.125rem;
-        margin: 1.5rem auto 3rem auto;
-    }
 
-    #footer-menu {
-        margin: 0;
-        padding: 0;
-    }
+	p {
+		font-size: 1.125rem;
+		margin: 1.5rem auto 3rem auto;
+	}
+
+	#footer-menu {
+		margin: 0;
+		padding: 0;
+	}
+
+	#footer-menu li {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	#footer-menu a {
+		font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+		color: var(--white);
+		text-decoration: none;
+	}
+
+	#footer-menu a:hover {
+		cursor: pointer;
+	}
+
+	#footer-menu .sub-menu {
+		background-color: unset;
+		padding: 0;
+		margin: 1.5rem 0;
+		visibility: visible;
+		position: relative;
+	}
+
+	#footer-menu .sub-menu>li:not(:last-of-type) {
+		padding: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.featured-beers-flex>a {
+		width: calc(100% / 3 - 1rem);
+		text-align: center;
+	}
+
+	.hours {
+		display: flex;
+		flex-direction: column;
+		margin-top: 3rem;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	footer p,
+	footer h4 {
+		color: var(--white);
+		margin: 0;
+		text-align: center;
+	}
+
+	.coffee-product-section {
+		margin: 4.5rem auto 0 auto;
+		display: flex;
+		justify-content: space-between;
+		max-width: 71.625rem;
+	}
+
+	.coffee-card:not(:last-of-type) {
+		margin-bottom: unset;
+	}
+
+	.donations p {
+		max-width: 41.75rem;
+	}
+
+	footer h4 {
+		font-size: 1.406rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.hours-details {
+		margin-bottom: 0.5rem;
+		display: block;
+		font-weight: 400;
+		font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+	}
+
+	.weekday {
+		font-size: clamp(1.25rem, 1.103rem + 0.682vw, 1.406rem);
+		font-weight: 700;
+	}
+
+	.general-nap {
+		margin-top: 3rem;
+	}
+
+	.footer-nap {
+		margin-top: 3rem;
+	}
+
+	.footer-nap a {
+		color: var(--white);
+	}
+
+	.social-media {
+		margin: 1.5rem auto 0 auto;
+	}
+
+	.social-media>div {
+		display: flex;
+		justify-content: center;
+	}
+
+	.social-media a {
+		text-decoration: none;
+	}
+
+	.cta {
+		font-size: var(--h6);
+		width: 19.375rem;
+		margin: 0 auto;
+	}
+
+	.medium-flex {
+		display: flex;
+		justify-content: center;
+	}
+
+	.home-hero p {
+		max-width: 41.75rem;
+		font-size: 1.406rem;
+	}
+
+	.menu-hero {
+		height: 28.5rem;
+	}
+
+	.menu-header {
+		text-align: left;
+		margin: 4.5rem 0 0 0;
+	}
+
+	.menu-posts {
+		width: calc(100% / 2 - 3rem);
+	}
+
+	.food-item {
+		font-size: var(--h6);
+		margin: 0;
+	}
+
+	.food-price {
+		font-size: var(--h6);
+	}
+
+	.about-us h3 {
+		margin: 0;
+	}
+
+	.home-hero a {
+		width: 19.375rem;
+		font-size: 1.406rem;
+	}
+
+	.home-hero a:first-of-type {
+		margin-bottom: unset;
+		margin-right: 3rem;
+	}
+
+	.shop-our-coffee>.inner-container {
+		padding: 4.5rem 1.5rem;
+	}
+
+	.shop-our-coffee .cta {
+		width: 19.375rem;
+	}
+
+	.main-header>.inner-container {
+		justify-content: space-between;
+		flex-direction: unset;
+	}
+
+	.main-header>.inner-container>div:first-of-type {
+		order: 2;
+	}
 
     #footer-menu li {
         text-align: center;
