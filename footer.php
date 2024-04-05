@@ -16,14 +16,7 @@
 		<div class="site-info footer-wide-flex">
 
 			<div class="footer-nav">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'footer-menu',
-					)
-				);
-				?>
+				<?php bellows('main'); ?>
 			</div>
 
 			<div class="hours">
@@ -165,7 +158,10 @@
 			</div>
 
 			<div class="map">
-				<p>Map in progress...</p>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2365.5573841931187!2d-113.57844642314775!3d53.63703297237502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a025c028fbfc9b%3A0x144edd599ac90e49!2sEndeavour%20Brewing!5e0!3m2!1sen!2sca!4v1712261723563!5m2!1sen!2sca"
+					width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 
 		</div>
