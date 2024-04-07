@@ -904,33 +904,33 @@ textarea {
 
 /* Variables */
 :root {
-    /* Color */
-    --white: #F2F2F2;
-    --brown: #77614C;
-    --blue: #2D487F;
-    --blue-hover: #233964;
-    --dark: #363432;
+	/* Color */
+	--white: #F2F2F2;
+	--brown: #77614C;
+	--blue: #2D487F;
+	--blue-hover: #233964;
+	--dark: #363432;
 
-    /* Desktop Typescale */
-    --hero: 116px;
-    --h1: 68.66px;
-    --h2: 54.93px;
-    --h3: 43.95px;
-    --h4: 35.16px;
-    --h5: 28.13px;
-    --h6: 22.5px;
-    --base: 18px;
-    --small: 14.4px;
+	/* Desktop Typescale */
+	--hero: 116px;
+	--h1: 68.66px;
+	--h2: 54.93px;
+	--h3: 43.95px;
+	--h4: 35.16px;
+	--h5: 28.13px;
+	--h6: 22.5px;
+	--base: 18px;
+	--small: 14.4px;
 
-    /* Mobile Typescale */
-    --h1-mobile: 61.04px;
-    --h2-mobile: 48.83px;
-    --h3-mobile: 39.06px;
-    --h4-mobile: 31.25px;
-    --h5-mobile: 25px;
-    --h6-mobile: 20px;
-    --base-mobile: 16px;
-    --small-mobile: 12.8px;
+	/* Mobile Typescale */
+	--h1-mobile: 61.04px;
+	--h2-mobile: 48.83px;
+	--h3-mobile: 39.06px;
+	--h4-mobile: 31.25px;
+	--h5-mobile: 25px;
+	--h6-mobile: 20px;
+	--base-mobile: 16px;
+	--small-mobile: 12.8px;
 }
 
 /* Utility
@@ -996,7 +996,7 @@ h6 {
 }
 
 .block {
-    display: block;
+	display: block;
 
 }
 
@@ -1738,6 +1738,14 @@ footer .map {
 		order: 2;
 	}
 
+	.main-header>.inner-container>div:nth-of-type(2) {
+		order: 1;
+	}
+
+	.main-header>.inner-container>div:nth-of-type(3) {
+		order: 3;
+	}
+
 	.donations p:first-of-type {
 		margin: 1.5rem auto 1.5rem auto;
 	}
@@ -2321,35 +2329,35 @@ footer .map {
 /* Private Events */
 
 .private-events-img {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .private-events>.inner-container {
-    padding: 3rem 1.5rem;
+	padding: 3rem 1.5rem;
 }
 
 #private-events-h3 {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 0;
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 0;
 }
 
 /* Section Headings */
 .private-people {
-    font-size: var(--h4-mobile);
-    font-weight: 400;
-    font-family: "Anton", sans-serif;
-    margin: 0 0 1.5rem 0;
+	font-size: var(--h4-mobile);
+	font-weight: 400;
+	font-family: "Anton", sans-serif;
+	margin: 0 0 1.5rem 0;
 }
 
 .table {
-    color: var(--white);
+	color: var(--white);
 }
 
 
 .private-events p {
-    text-align: center;
+	text-align: center;
 }
 
 .private-events span {
@@ -2371,43 +2379,43 @@ footer .map {
 }
 
 .team-building {
-    background-color: var(--brown);
-    color: var(--white);
+	background-color: var(--brown);
+	color: var(--white);
 }
 
 .team-building h3,
 .team-building p,
 .table-bookings p {
-    color: var(--white);
+	color: var(--white);
 }
 
 .team-building p {
-    text-align: center;
+	text-align: center;
 }
 
 @media screen and (min-width: 1000px) {
-    .private-events>.inner-container {
-        display: flex;
-        gap: 1.5rem;
-    }
+	.private-events>.inner-container {
+		display: flex;
+		gap: 1.5rem;
+	}
 
-    .private-events-img {
-        object-fit: cover;
-    }
+	.private-events-img {
+		object-fit: cover;
+	}
 
-    .private-events-h3 {
-        text-align: left;
-    }
+	.private-events-h3 {
+		text-align: left;
+	}
 
-    .private-events-content {
-        width: 66.66%;
-        text-align: left;
-    }
+	.private-events-content {
+		width: 66.66%;
+		text-align: left;
+	}
 
-    .private-events-list {
-        display: flex;
-        gap: 1.5rem;
-    }
+	.private-events-list {
+		display: flex;
+		gap: 1.5rem;
+	}
 }
 
 /* ********************** Beer Pages ***************************************** */
@@ -2773,29 +2781,29 @@ footer .map {
 }
 
 .event-item h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    font-size: var(--h4);
-    color: var(--white);
-    transition: all 0.5s ease;
-    overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 1;
+	font-size: var(--h4);
+	color: var(--white);
+	transition: all 0.5s ease;
+	overflow: hidden;
 }
 
 .event-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    pointer-events: none;
-    opacity: 1;
-    transition: all 0.5s ease;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+	pointer-events: none;
+	opacity: 1;
+	transition: all 0.5s ease;
 }
 
 .event-item:hover h3 {
@@ -2808,89 +2816,89 @@ footer .map {
 }
 
 @media screen and (min-width: 850px) {
-    .events-list {
-        flex-wrap: nowrap;
-    }
+	.events-list {
+		flex-wrap: nowrap;
+	}
 
-    .event-item {
-        flex: 0 0 20%;
-        height: 528px;
-        position: relative;
-        transition: all 0.5s ease;
-        overflow: visible;
-    }
+	.event-item {
+		flex: 0 0 20%;
+		height: 528px;
+		position: relative;
+		transition: all 0.5s ease;
+		overflow: visible;
+	}
 
-    .event-item a {
-        display: block;
-        height: 100%;
-    }
+	.event-item a {
+		display: block;
+		height: 100%;
+	}
 
-    .event-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+	.event-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
 
-    .event-item:hover {
-        flex: 0 0 40%;
-        z-index: 1;
-    }
+	.event-item:hover {
+		flex: 0 0 40%;
+		z-index: 1;
+	}
 
 
-    .event-item h3 {
-        position: absolute;
-        inset: 0%;
-        top: 90%;
-        left: 120%;
-        transform: translateX(-50%) rotate(-90deg);
-        transform-origin: top left;
-        z-index: 1;
-        font-size: var(--h4);
-        color: var(--white);
-        white-space: nowrap;
-        width: 300px;
-        text-align: left;
-    }
+	.event-item h3 {
+		position: absolute;
+		inset: 0%;
+		top: 90%;
+		left: 120%;
+		transform: translateX(-50%) rotate(-90deg);
+		transform-origin: top left;
+		z-index: 1;
+		font-size: var(--h4);
+		color: var(--white);
+		white-space: nowrap;
+		width: 300px;
+		text-align: left;
+	}
 
-    .event-item:hover h3 {
-        left: 50%;
-        top: 70%;
-        max-width: 600px;
-        white-space: wrap;
-        width: 300px;
-        transform: translateX(-50%) rotate(0deg);
-    }
+	.event-item:hover h3 {
+		left: 50%;
+		top: 70%;
+		max-width: 600px;
+		white-space: wrap;
+		width: 300px;
+		transform: translateX(-50%) rotate(0deg);
+	}
 
-    .events-list:hover .event-item:not(:hover) {
-        flex: 1 0 15%;
-        z-index: 0;
-    }
+	.events-list:hover .event-item:not(:hover) {
+		flex: 1 0 15%;
+		z-index: 0;
+	}
 
-    .events-list:hover .event-item:not(:hover).event-item::before {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-        z-index: 1;
-    }
+	.events-list:hover .event-item:not(:hover).event-item::before {
+		background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+		z-index: 1;
+	}
 
-    .events-list:hover .event-item:not(:hover) img {
-        transform: scale(1);
-        z-index: 1;
-    }
+	.events-list:hover .event-item:not(:hover) img {
+		transform: scale(1);
+		z-index: 1;
+	}
 }
 
-@media screen and (min-width: 1050px){
-    .event-item h3 {
-        position: absolute;
-        inset: 0%;
-        top: 90%;
-        left: 95%;
-        width: 400px;
-    }
+@media screen and (min-width: 1050px) {
+	.event-item h3 {
+		position: absolute;
+		inset: 0%;
+		top: 90%;
+		left: 95%;
+		width: 400px;
+	}
 
-    .event-item:hover h3 {
-        left: 40%;
-        top: 70%;
-    }
+	.event-item:hover h3 {
+		left: 40%;
+		top: 70%;
+	}
 }
 
 
@@ -2925,33 +2933,34 @@ footer .map {
 	color: var(--dark);
 }
 
-.tribe-events-content a:hover{
-    background-color: var(--blue-hover);
+.tribe-events-content a:hover {
+	background-color: var(--blue-hover);
 	transition: ease-in-out 0.2s;
-    color: var(--white);
-    border-bottom: none;
+	color: var(--white);
+	border-bottom: none;
 
 }
 
 @media screen and (min-width:800px) {
-    .single-event-flex {
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        margin-bottom: 3rem;
-    }
+	.single-event-flex {
+		display: flex;
+		gap: 2rem;
+		align-items: flex-start;
+		margin-bottom: 3rem;
+	}
 
-    .single-event-flex img {
-        flex: 0 0 calc(50% - 2rem);
-    }
+	.single-event-flex img {
+		flex: 0 0 calc(50% - 2rem);
+	}
 
-    .single-event-flex div {
-        flex: 0 0 calc(50% - 2rem);
-    }
+	.single-event-flex div {
+		flex: 0 0 calc(50% - 2rem);
+	}
 }
+
 /* ********************Upcoming Events********************************* */
-.events-bg{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
+.events-bg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2961,23 +2970,25 @@ footer .map {
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-    padding-top: 3rem;
+	padding-top: 3rem;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__nav {
-    display: none !important;
+	display: none !important;
 }
 
-.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button{
-background-color: var(--blue);
+.tribe-events .tribe-events-c-search__button,
+.tribe-events button.tribe-events-c-search__button {
+	background-color: var(--blue);
 }
 
-.tribe-events .tribe-events-c-search__button, .tribe-events button.tribe-events-c-search__button:hover{
-    background-color: var(--blue-hover);
+.tribe-events .tribe-events-c-search__button,
+.tribe-events button.tribe-events-c-search__button:hover {
+	background-color: var(--blue-hover);
 }
 
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list-nav{
-    display: none;
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list-nav {
+	display: none;
 }
 
 /* *********************************** Single Shop Products ************************************ */
