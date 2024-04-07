@@ -31,7 +31,7 @@ $title = get_the_title();
             </div>
         </section>
 
-        <section class="private-events">
+        <section class="private-section">
             <div class="inner-container">
                 <div class="private-events-img">
                     <img class="private-events-img" src="<?php echo get_template_directory_uri(); ?>/img/private-events.webp" alt="Endeavour coffee on table">
@@ -97,13 +97,13 @@ $title = get_the_title();
         </section>
         <section class="table-bookings">
             <div class="inner-container"> 
-                <picture class="table-bookings">
+                <picture class="table-bookings-picture">
                     <source media="(min-width: 720px)" srcset="<?php echo get_template_directory_uri(); ?>/img/table-bookings.webp" alt="Endeavour coffee on table"s>
-                    <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/table-bookings-mobile.webp" alt="Endeavour coffee on table">
+                    <img class="table-bookings-img" src="<?php echo get_template_directory_uri(); ?>/img/table-bookings-mobile.webp" alt="Endeavour coffee on table">
                 </picture>
 
                 <div class="bookings-content">
-                    <h3 id="private-events-h3">Table Bookings</h3>
+                    <h3 id="table-bookings-h3">Table Bookings</h3>
                     <p class="private-people table">(20 People or less)</p>
                     <p>Section of the taproom can be sectioned off for your group, the taproom would remain open to the general public</p>
                     <ul>
@@ -125,9 +125,11 @@ $title = get_the_title();
         </section>
         <section class="wedding-receptions">
             <div class="inner-container wedding-flex">
-                <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/wedding-photo.webp" alt="Endeavour coffee on table">
+                <div class="wedding-receptions-img">
+                    <img class="wedding-receptions-img" src="<?php echo get_template_directory_uri(); ?>/img/wedding-photo.webp" alt="Endeavour coffee on table">
+                </div>
                 <div class="wedding-info">
-                    <h3 id="private-events-h3">Wedding and / or Reception</h3>
+                    <h3 id="wedding-h3">Wedding and / or Reception</h3>
                     <p class="private-people">(30 - 60 people) </p>
                     <p>We are happy to work with you to make your event special and unique</p>
                     <ul>
@@ -181,25 +183,29 @@ $title = get_the_title();
         </section>
         <section class="team-building">
             <div class="inner-container">
-                <img class="meet-the-team-img" src="<?php echo get_template_directory_uri(); ?>/img/team-building-cropped.webp" alt="Endeavour coffee on table">
-                <h3 id="private-events-h3">Team Building Activities / Events</h3>
-                <p>
-                  Enjoy a private section with your team! You can reserve a section of the taproom for the group, however the remainder of the taproom will be open to the public.
-                </p>
-                <ul>
-                    <li>
-                        Brewery Tour and Tasting with the Head Brewero Discover what goes into the making of a beer and how to taste beer.
-                    </li>
-                    <li>
-                        Table Tennis Tournament
-                    </li>
-                    <li>
-                        Board Game Event
-                    </li>
-                    <li>
-                        Movie and Beer Night
-                    </li>
-                </ul>
+                <div  class="team-building-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/team-building-cropped.webp" alt="Endeavour coffee on table">
+                </div>
+                <div class="team-content">
+                    <h3>Team Building Activities / Events</h3>
+                    <p>
+                      Enjoy a private section with your team! You can reserve a section of the taproom for the group, however the remainder of the taproom will be open to the public.
+                    </p>
+                    <ul>
+                        <li>
+                            Brewery Tour and Tasting with the Head Brewero Discover what goes into the making of a beer and how to taste beer.
+                        </li>
+                        <li>
+                            Table Tennis Tournament
+                        </li>
+                        <li>
+                            Board Game Event
+                        </li>
+                        <li>
+                            Movie and Beer Night
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>

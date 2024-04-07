@@ -107,7 +107,7 @@ $cost  = tribe_get_formatted_cost( $event_id );
     	<div class="single-events-content">
 
 			
-						<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+			<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
 						
 					
 			
