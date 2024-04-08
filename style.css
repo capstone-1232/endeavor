@@ -997,7 +997,7 @@ h6 {
 }
 
 .block {
-	display: block;
+    display: block;
 
 }
 
@@ -1742,17 +1742,18 @@ footer .map {
         order: 2;
     }
 
-	.main-header>.inner-container>div:nth-of-type(2) {
-		order: 1;
-	}
+    .main-header>.inner-container>div:nth-of-type(2) {
+        order: 1;
+    }
 
-	.main-header>.inner-container>div:nth-of-type(3) {
-		order: 3;
-	}
+    .main-header>.inner-container>div:nth-of-type(3) {
+        order: 3;
+    }
 
-	.donations p:first-of-type {
-		margin: 1.5rem auto 1.5rem auto;
-	}
+    .donations p:first-of-type {
+        margin: 1.5rem auto 1.5rem auto;
+    }
+
     #footer-menu li {
         text-align: center;
         margin-bottom: 1.5rem;
@@ -2487,7 +2488,7 @@ footer .map {
     color: var(--white);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
 
     .who-we-are-bg-img-1,
     .who-we-are-bg-img-2,
@@ -2501,12 +2502,17 @@ footer .map {
     .who-we-are h3 {
         font-size: var(--h2);
         text-align: left;
+        margin-top: 0;
+    }
+
+    .who-we-are p {
+        text-align: left;
     }
 
     .who-we-are-img {
         display: inline;
         width: 40%;
-        height: 30vh;
+        max-height: 55vh;
         object-fit: cover;
     }
 
@@ -2523,15 +2529,23 @@ footer .map {
     .who-we-are .flex {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+
     }
 
     .neo-inner-container {
         padding: 1.5rem;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
-    body>main>section:nth-child(4)>div {
-        padding: 0;
+    .last-neo-inner-container {
+        max-width: none;
+    }
+
+    .mission-content {
+        max-width: 650px;
+        margin-left: auto;
     }
 
     .who-we-are-bg {
@@ -2742,7 +2756,7 @@ footer .map {
 }
 
 .private-events>.inner-container {
-	padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 .private-events h3 {
@@ -2847,18 +2861,18 @@ footer .map {
 /* Team Building */
 
 .team-building {
-	background-color: var(--brown);
-	color: var(--white);
+    background-color: var(--brown);
+    color: var(--white);
 }
 
 .team-building h3,
 .team-building p,
 .table-bookings p {
-	color: var(--white);
+    color: var(--white);
 }
 
 .team-building p {
-	text-align: center;
+    text-align: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -3259,16 +3273,16 @@ footer .map {
 }
 
 .event-item::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-	pointer-events: none;
-	opacity: 1;
-	transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    pointer-events: none;
+    opacity: 1;
+    transition: all 0.5s ease;
 }
 
 .event-item:hover h3 {
@@ -3424,13 +3438,13 @@ footer .map {
         margin-bottom: 3rem;
     }
 
-	.single-event-flex img {
-		flex: 0 0 calc(50% - 2rem);
-	}
+    .single-event-flex img {
+        flex: 0 0 calc(50% - 2rem);
+    }
 
-	.single-event-flex div {
-		flex: 0 0 calc(50% - 2rem);
-	}
+    .single-event-flex div {
+        flex: 0 0 calc(50% - 2rem);
+    }
 }
 
 /* ********************Upcoming Events********************************* */
@@ -3445,11 +3459,11 @@ footer .map {
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
-	padding-top: 3rem;
+    padding-top: 3rem;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__nav {
-	display: none !important;
+    display: none !important;
 }
 
 .tribe-events .tribe-events-c-search__button,
