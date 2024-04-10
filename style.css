@@ -1319,7 +1319,9 @@ nav li {
 
 .events h3 {
     margin: 0;
+    text-align: center;
 }
+
 
 .shop-our-coffee>.inner-container {
     padding: 3rem 1.5rem;
@@ -2951,26 +2953,31 @@ footer .map {
 /* *********** Mainstays Beers ************************* */
 
 .mainstay-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.webp);
     position: relative;
 
 }
 
 /* *********** Barrel Beers ************************* */
 .barrel-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.webp);
     position: relative;
 }
 
 /* *********** Rotational Beers ************************* */
 .rotational-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.webp);
     position: relative;
 }
 
 
 /* ***************Beer Categories Pages**************** */
-.beer-container {
+.beer-container h2 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.beer-container p {
     max-width: 422px;
     margin: 0 auto;
     padding: 1rem;
@@ -2990,22 +2997,16 @@ footer .map {
     text-align: center;
 }
 
-.beer-category-bg h2 {
-    margin: 0;
-}
-
-
-
 .mainstay-banner-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/year-round.webp);
 }
 
 .rotational-banner-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/hourglass.webp);
 }
 
 .barrel-aged-banner-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.webp);
 
 }
 
@@ -3019,6 +3020,11 @@ footer .map {
     justify-content: center;
     flex-wrap: wrap;
     flex: 0 0 210px;
+}
+
+.featured-image img {
+    width: 207px;
+    height: 234px;
 }
 
 .featured-image:hover {
@@ -3072,7 +3078,7 @@ footer .map {
 }
 
 .beer-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -3231,6 +3237,10 @@ footer .map {
 }
 
 /********************************* Events Home Page *****************************************************/
+.events {
+    margin-bottom: 3rem;
+}
+
 .events h2 {
     color: var(--dark);
     text-align: center;
@@ -3286,7 +3296,7 @@ footer .map {
 }
 
 .event-item:hover h3 {
-    top: 80%;
+    top: 70%;
 }
 
 .event-item:hover::before {
@@ -3684,6 +3694,20 @@ footer .map {
 .search-form {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.wc-block-components-title.wc-block-components-title {
+    color: var(--dark);
+}
+
+.wc-block-components-button:not(.is-link) {
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.wc-block-components-button:not(.is-link):hover {
+    background-color: var(--blue-hover);
 }
 
 @media screen and (min-width:600px) {

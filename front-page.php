@@ -13,21 +13,9 @@
  */
 
 get_header();
-$title = get_the_title();
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <?php echo $title ?>
-  </title>
-</head>
-
-<body>
   <main>
     <section>
       <!-- Hero Banner -->
@@ -35,7 +23,7 @@ $title = get_the_title();
         <div class="home-overlay">
           <div class="container">
             <h2>
-              <?php echo $title; ?>
+            ENDEAVOUR BREWING AND COFFEE ROASTERS
             </h2>
             <p>Come and join us for refreshments, off-sales, and a wonderful time with friends and family!</p>
             <div class="medium-flex">
@@ -153,9 +141,6 @@ $title = get_the_title();
         <?php
       endif;
       ?>
-    </div>
-    </div>
-    </section>
     <section>
       <section class="shop-our-coffee">
         <div class="inner-container">
@@ -253,15 +238,6 @@ $title = get_the_title();
       </div>
     </section>
   </main>
-</body>
-
-</html>
-
-<main>
-
-
-</main>
-
 <?php
 
 get_footer();

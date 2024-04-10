@@ -37,13 +37,13 @@ $title = get_the_title();
                 </div>
 
                 <div class="beer-categories">
-                    <a href="year-round" class="mainstay-bg beer-card">
+                    <a href="mainstay" class="mainstay-bg beer-card">
                         <h3>Mainstays</h3>
                     </a>
                     <a href="barrel-aged" class="barrel-bg beer-card">
                         <h3>Barrel-Aged</h3>
                     </a>
-                    <a href="seasonal" class="rotational-bg beer-card">
+                    <a href="rotational" class="rotational-bg beer-card">
                         <h3>Rotational</h3>
                     </a>
                 </div>

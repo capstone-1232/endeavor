@@ -9,11 +9,15 @@
  * @package endeavor-theme
  */
 
-?>
-<!doctype html>
+ $title = get_the_title();
+ ?>
+ 
 <html <?php language_attributes(); ?>>
 
 <head>
+	<title>
+	 	<?php echo $title ?>
+   </title>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -44,7 +48,7 @@
 					<?php
 					the_custom_logo();
 					?>
-					<h1 class="screen-reader-text">Endeavor Brewing Company</h1>
+					<h1 class="screen-reader-text">Endeavor Brewing Company and Coffee Roasters</h1>
 				</div>
 
 
@@ -74,3 +78,4 @@
 		</div>
 
 	</header>
+	<body>
