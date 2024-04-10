@@ -79,7 +79,7 @@ $title = get_the_title();
                                 echo '<div class="staff-image-container">';
                                 echo '<img src="' . $staff_image['url'] . '" alt="' . $staff_image['alt'] . '">';
                                 if ($description){
-                                    echo '<p class="employee-description">Description: ' . $description . '</p>';
+                                    echo '<p class="employee-description">' . $description . '</p>';
                                 }
                                 echo '</div>';
                             }
