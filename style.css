@@ -2641,6 +2641,7 @@ footer .map {
     transition: all ease-in 250ms;
     transform: translateY(-12rem);
     position: relative;
+    width: 30ch;
 }
 
 .employee-card:hover .employee-description {
@@ -2690,6 +2691,8 @@ footer .map {
     bottom: 0.125rem;
     left: 1rem;
 }
+
+
 
 @media screen and (min-width: 900px) {
     .meet-the-team .inner-container .flex {
