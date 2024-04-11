@@ -1179,14 +1179,33 @@ nav li {
 
 .food-item {
     color: var(--dark);
-    margin: 1.5rem 0 0 0;
     font-weight: bold;
     font-size: var(--h6-mobile);
+    margin: 0;
+    width: fit-content;
+    
 }
 
 .food-option-price{
     font-weight: bold;
     padding-left: 1.5rem;
+}
+
+.food-item-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    gap: 0.5rem;
+
+}
+
+.menu-line{
+    height: 3px;
+    border-radius: 10px;
+    flex: 1 1 80%;
+    background-color: var(--dark);
+    
 }
 
 .food-price {
@@ -1197,11 +1216,13 @@ nav li {
     margin: 0;
     font-weight: bold;
     font-family: "Anton", sans-serif;
+    width: fit-content;
 }
 
 .food-details {
     margin: 0;
 }
+
 
 /* Mobile Menu Page */
 .home-hero {
@@ -1548,6 +1569,12 @@ footer .map {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+}
+
+@media screen and (min-width: 500px) {
+    .food-item{
+        white-space: nowrap;
+    }
 }
 
 @media screen and (min-width: 720px) {
@@ -2704,8 +2731,6 @@ footer .map {
     bottom: 0.125rem;
     left: 1rem;
 }
-
-
 
 @media screen and (min-width: 900px) {
     .meet-the-team .inner-container .flex {
