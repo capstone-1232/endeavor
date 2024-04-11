@@ -126,7 +126,7 @@ $title = get_the_title();
         <section class="wedding-receptions">
             <div class="inner-container wedding-flex">
                 <div class="wedding-receptions-img">
-                    <img class="wedding-receptions-img" src="<?php echo get_template_directory_uri(); ?>/img/wedding-photo.webp" alt="Endeavour coffee on table">
+                    <img class="wedding-receptions-img" src="<?php echo get_template_directory_uri(); ?>/img/WeddingPhotoWithPlant.webp" alt="Endeavour coffee on table">
                 </div>
                 <div class="wedding-info">
                     <h3 id="wedding-h3">Wedding and / or Reception</h3>
