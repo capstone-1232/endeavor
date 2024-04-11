@@ -95,7 +95,7 @@ get_header();
       </div>
     </section>
 
-    <div>
+  
       <?php
       $events = tribe_get_events(
         array(

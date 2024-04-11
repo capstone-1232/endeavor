@@ -57,8 +57,7 @@ $title = get_the_title();
                             echo '<p class="food-price">' . $price . '</p>';
                             echo '<p class="food-details">' . $description . '</p>';
                             if ($options) {
-                                echo '<p>' . $options . '</p>';
-                                echo '<p>' . $option_price . '</p>';
+                                echo '<p>+ ' . $options . '<span class="food-option-price">' . $option_price . '</span</p>';
                             }
                             echo "</div>";
                         }

@@ -1184,6 +1184,11 @@ nav li {
     font-size: var(--h6-mobile);
 }
 
+.food-option-price{
+    font-weight: bold;
+    padding-left: 1.5rem;
+}
+
 .food-price {
     color: var(--dark);
     font-size: var(--h6-mobile);
