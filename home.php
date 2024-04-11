@@ -12,20 +12,8 @@
  * @package endeavor-theme
  */
 get_header();
-$title = get_the_title();
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?php echo $title; ?>
-    </title>
-</head>
-
-<body>
     <main>
         <section>
             <div class="inner-container">
@@ -53,9 +41,6 @@ $title = get_the_title();
 
         </section>
     </main>
-</body>
-
-</html>
 <?php
 get_footer();
 ?>
