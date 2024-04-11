@@ -53,8 +53,9 @@ $title = get_the_title();
                             $description = get_field('description', $post->ID);
                             $options = get_field('options', $post->ID);
                             $option_price = get_field('option_price', $post->ID);
-                            echo '<div class="menu-posts"><h5 class="food-item">' . $post->post_title . '</h5>';
-                            echo '<p class="food-price">' . $price . '</p>';
+                            echo '<div class="menu-posts"><div class="food-item-flex"><h5 class="food-item">' . $post->post_title . '</h5>';
+                            echo '<div class="menu-line"></div>';
+                            echo '<p class="food-price">' . $price . '</p></div>';
                             echo '<p class="food-details">' . $description . '</p>';
                             if ($options) {
                                 echo '<p>+ ' . $options . '<span class="food-option-price">' . $option_price . '</span</p>';
