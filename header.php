@@ -30,7 +30,7 @@
 	<header class="main-header nav-flex">
 		<div class="inner-container">
 			<div class="xoo-wsc-cart-trigger">
-				<button class="shop-btn">
+				<button class="shop-btn" aria-label="Button to View Shopping Cart">
 					<svg fill="none" stroke="#f2f2f2" stroke-width="1.5" width="30px" height="28.13px" class="w-6 h-6"
 						viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round"
@@ -63,7 +63,7 @@
 				</nav>
 			</div>
 
-			<button id="menu-toggle" class="menu-toggle shop-btn" aria-controls="primary-menu" aria-expanded="false">
+			<button id="menu-toggle" class="menu-toggle shop-btn" aria-controls="primary-menu" aria-expanded="false" aria-label="Button to Toggle Menu">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="28.13px" fill="none" viewBox="0 0 24 24"
 					stroke-width="1.5" stroke="#f2f2f2" class="w-6 h-6 site-navigation">
 					<path stroke-linecap="round" stroke-linejoin="round"
