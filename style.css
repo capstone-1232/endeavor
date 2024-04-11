@@ -1515,6 +1515,12 @@ footer h4 {
 
 .footer-nap {
     margin-top: 3rem;
+    font-size: 20px;
+}
+
+.footer-nap>p,
+.footer-nap>p>a {
+    font-size: 20px;
 }
 
 .footer-nap a {
@@ -1528,10 +1534,12 @@ footer h4 {
 .social-media>div {
     display: flex;
     justify-content: center;
+    gap: 1.5rem;
 }
 
 .social-media a {
     text-decoration: none;
+    width: 3rem;
 }
 
 

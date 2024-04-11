@@ -22,56 +22,56 @@
 			<div class="hours">
 				<h4>Hours:</h4>
 				<?php
-    // Define the custom order of days
-    $custom_order = array(
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-    );
+				// Define the custom order of days
+				$custom_order = array(
+					'Sunday',
+					'Monday',
+					'Tuesday',
+					'Wednesday',
+					'Thursday',
+					'Friday',
+					'Saturday'
+				);
 
-    $posts = get_posts(
-        array(
-            'post_type'      => 'hours', // Replace 'your_post_type' with your actual post type slug
-            'posts_per_page' => -1,       // Retrieve all posts
-            'orderby'        => 'title',  // Order by post title
-            'order'          => 'ASC',    // Ascending order
-        )
-    );
+				$posts = get_posts(
+					array(
+						'post_type' => 'hours', // Replace 'your_post_type' with your actual post type slug
+						'posts_per_page' => -1,       // Retrieve all posts
+						'orderby' => 'title',  // Order by post title
+						'order' => 'ASC',    // Ascending order
+					)
+				);
 
-    // Loop through each post
-    foreach ($custom_order as $day) {
-        // Find the post with the matching day
-        $post_found = false;
-        foreach ($posts as $post) {
-            setup_postdata($post);
-            $day_name = get_field('day');
-            if ($day_name === $day) {
-                $post_found = true;
-                break;
-            }
-        }
+				// Loop through each post
+				foreach ($custom_order as $day) {
+					// Find the post with the matching day
+					$post_found = false;
+					foreach ($posts as $post) {
+						setup_postdata($post);
+						$day_name = get_field('day');
+						if ($day_name === $day) {
+							$post_found = true;
+							break;
+						}
+					}
 
-        if ($post_found) {
-            // Retrieve ACF fields for each post
-            $open   = get_field('open');
-            $close  = get_field('close');
-            $closed = get_field('closed');
+					if ($post_found) {
+						// Retrieve ACF fields for each post
+						$open = get_field('open');
+						$close = get_field('close');
+						$closed = get_field('closed');
 
-            if ($closed) {
-                echo "<p class=\"weekday\">$day: <span class=\"hours-details\">Closed</span></p>";
-            } else {
-                echo "<p class=\"weekday\">$day: <span class=\"hours-details\">$open - $close</span></p>";
-            }
+						if ($closed) {
+							echo "<p class=\"weekday\">$day: <span class=\"hours-details\">Closed</span></p>";
+						} else {
+							echo "<p class=\"weekday\">$day: <span class=\"hours-details\">$open - $close</span></p>";
+						}
 
-            // Reset post data
-            wp_reset_postdata();
-        }
-    }
-?>
+						// Reset post data
+						wp_reset_postdata();
+					}
+				}
+				?>
 
 			</div>
 
@@ -128,8 +128,8 @@
 				<div class="social-media">
 					<div>
 						<a href="https://www.instagram.com/endeavourbrewing/">
-							<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32"
-								height="32">
+							<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="2.5rem"
+								height="2.5rem" title="Instagram Logo">
 								<path
 									d="M12 0H7Q5.3.3 4.2.7 3 1.1 2.1 2 1 3 .5 4.1t-.5 3a87 87 0 0 0 .5 12.8q.4 1 1.4 2 1 1.1 2.1 1.5 1.1.5 3 .5a87 87 0 0 0 12.8-.5q1.2-.5 2-1.4 1.1-1 1.5-2.1.5-1.1.5-3a87 87 0 0 0-.5-12.8q-.5-1.2-1.4-2Q21 1 19.9.5t-3-.5zm-1 2.2h5.8q1.8.1 2.3.4.8.3 1.4 1t.9 1.3q.2.5.4 2.3a82 82 0 0 1-.4 11.9q-.3.8-1 1.4t-1.3.8q-.5.3-2.3.5A84 84 0 0 1 5 21.3q-.8-.2-1.4-.8t-1-1.5q-.2-.5-.4-2.3A84 84 0 0 1 2.6 5q.3-.8 1-1.4t1.3-.9 2.3-.4zm7.4 2a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8M12 5.8a6.2 6.2 0 1 0-.2 12.4A6.2 6.2 0 0 0 12 5.8M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8"
 									fill="#F2F2F2" />
@@ -137,8 +137,8 @@
 						</a>
 
 						<a href="https://www.facebook.com/EndeavourBrewing/">
-							<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
+							<svg width="2.5rem" height="2.5rem" viewBox="0 0 32 32" fill="none"
+								xmlns="http://www.w3.org/2000/svg" title="Facebook Logo">
 								<path
 									d="M24 12.0735C24 5.40533 18.6277 1.90735e-06 12.0015 1.90735e-06C5.37233 0.00150172 0 5.40533 0 12.075C0 18.0997 4.38845 23.0941 10.1237 24V15.5636H7.07911V12.075H10.1267V9.41283C10.1267 6.3877 11.919 4.71691 14.6592 4.71691C15.973 4.71691 17.3453 4.95238 17.3453 4.95238V7.92201H15.832C14.3427 7.92201 13.8778 8.8534 13.8778 9.80878V12.0735H17.2043L16.6734 15.5621H13.8763V23.9985C19.6115 23.0926 24 18.0982 24 12.0735Z"
 									fill="#F2F2F2" />
@@ -146,12 +146,13 @@
 						</a>
 
 						<a href="https://twitter.com/Endeavour_Beer">
-							<svg width="32" height="29" viewBox="0 0 32 29" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
+							<svg width="2.5rem" height="2.5rem" viewBox="0 0 32 29" fill="none"
+								xmlns="http://www.w3.org/2000/svg" title="Twitter/X Logo">
 								<path
 									d="M20.8552 0H24.917L16.0452 10.1661L26.4828 24H18.3112L11.9106 15.6083L4.58648 24H0.523035L10.0121 13.1255L0 0H8.38014L14.165 7.66841L20.8552 0ZM19.4317 21.5636H21.6828L7.15531 2.30897H4.74207L19.4317 21.5636Z"
 									fill="#F2F2F2" />
 							</svg>
+
 						</a>
 					</div>
 				</div>
@@ -161,7 +162,7 @@
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2365.5573841931187!2d-113.57844642314775!3d53.63703297237502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a025c028fbfc9b%3A0x144edd599ac90e49!2sEndeavour%20Brewing!5e0!3m2!1sen!2sca!4v1712261723563!5m2!1sen!2sca"
 					width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
+					referrerpolicy="no-referrer-when-downgrade" title="Google Map to Endeavor Brewing Company">Map to Endeavour Brewing Company</iframe>
 			</div>
 
 		</div>
