@@ -81,7 +81,7 @@
                     <div class="who-we-are-bg-img-3"></div>
     
                     <!-- This is for when we hit tablet view -->
-                    <img class="who-we-are-img beer-man" src="<?php echo get_template_directory_uri(); ?>/img/employee-holding-endeavour-glass.webp" alt="Employee holding endeavour glass">
+                    <img class="who-we-are-img beer-man" src="<?php echo get_template_directory_uri(); ?>/img/GeorgiaBeer.webp" alt="Employee holding endeavour glass">
                     <div class="mission-statement inner-container">
                         <div class="mission-content">
                             <h3>Mission Statement</h3>
