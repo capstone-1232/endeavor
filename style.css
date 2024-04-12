@@ -1539,9 +1539,8 @@ footer h4 {
     font-size: 20px;
 }
 
-.footer-nap>p,
-.footer-nap>p>a {
-    font-size: 20px;
+.footer-nap>p {
+    padding: 1rem 0;
 }
 
 .footer-nap a {
