@@ -2082,6 +2082,22 @@ footer .map {
         visibility: hidden;
     }
 
+    
+    .main-navigation ul li:hover > ul.submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .main-navigation ul li:focus-within > ul,
+    .main-navigation ul li > ul:focus {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    ul.utility-nav{
+        margin-bottom: 0;
+    }
+
     .sub-menu li:not(:last-of-type) {
         padding-bottom: 1.5rem;
     }
