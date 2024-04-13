@@ -121,7 +121,7 @@ get_header();
                             <div class="event-item">
                                 <?php if ( $featured_image_url ) : ?>
                                     <a href="<?php echo esc_url( get_permalink( $event ) ); ?>">
-                                        <img src="<?php echo esc_url( $featured_image_url[0] ); ?>" alt="<?php echo esc_attr( get_the_title( $event ) ); ?>">
+                                        <img src="<?php echo esc_url( $featured_image_url[0] ); ?>" alt="event - <?php echo esc_attr( get_the_title( $event ) ); ?>">
                                         <h3><?php echo esc_html( get_the_title( $event ) ); ?></h3>
                                     </a>
                                 <?php endif; ?>

@@ -97,22 +97,62 @@
 // 		}
 // 	}
 // }() );
-
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('nav').classList.toggle('show-nav');
-    document.querySelector('.nav-overlay').classList.toggle('show-overlay');
-});
-
-
-document.addEventListener('click', (event) => {
-    const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const isClickInsideNav = nav.contains(event.target); // Check if the clicked element is inside the nav
-    const isClickOnToggle = menuToggle.contains(event.target); // Check if the clicked element is the toggle button
+    const nav = document.querySelector('nav');
+    const navOverlay = document.querySelector('.nav-overlay');
 
-    // If the click is outside the nav and not on the toggle button, close the nav
-    if (!isClickInsideNav && !isClickOnToggle) {
+    // Toggle menu when menu toggle button is clicked
+    menuToggle.addEventListener('click', function() {
+        const expanded = nav.classList.toggle('show-nav');
+        menuToggle.setAttribute('aria-expanded', expanded.toString());
+        nav.setAttribute('aria-expanded', expanded.toString());
+
+        // Toggle overlay
+        navOverlay.classList.toggle('show-overlay', expanded);
+    });
+
+    // Toggle menu when pressing Enter or Space key on menu toggle button
+    menuToggle.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13 || event.keyCode === 32) {
+            const expanded = nav.classList.toggle('show-nav');
+            menuToggle.setAttribute('aria-expanded', expanded.toString());
+            nav.setAttribute('aria-expanded', expanded.toString());
+
+            // Toggle overlay
+            navOverlay.classList.toggle('show-overlay', expanded);
+        }
+    });
+
+    // Close menu when clicking outside the menu
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = nav.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideNav && !isClickOnToggle) {
+            closeMenu();
+        }
+    });
+
+    // Close menu when pressing ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 27) {
+            closeMenu();
+        }
+    });
+
+    function closeMenu() {
         nav.classList.remove('show-nav');
-        document.querySelector('.nav-overlay').classList.remove('show-overlay');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        nav.setAttribute('aria-expanded', 'false');
+        navOverlay.classList.remove('show-overlay');
     }
 });
+
+
+
+
+
+
+
+

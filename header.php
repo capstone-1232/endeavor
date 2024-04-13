@@ -19,7 +19,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script src="js/navigation.js" defer></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -51,7 +50,8 @@
 
 
 
-				<nav id="site-navigation" class="main-navigation ">
+				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Main Menu">
+
 
 					<?php
 					wp_nav_menu(
@@ -65,7 +65,7 @@
 				</nav>
 			</div>
 
-			<button id="menu-toggle" class="menu-toggle shop-btn" aria-controls="primary-menu" aria-expanded="false" aria-label="Button to Toggle Menu">
+			<button id="menu-toggle" class="menu-toggle shop-btn" aria-controls="primary-menu" aria-expanded="false" aria-label="Button to Toggle Menu" tabindex="0">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="28.13px" fill="none" viewBox="0 0 24 24"
 					stroke-width="1.5" stroke="#f2f2f2" class="w-6 h-6 site-navigation">
 					<path stroke-linecap="round" stroke-linejoin="round"
