@@ -1241,7 +1241,7 @@ nav li {
 }
 
 /* Mobile Menu Page */
-/* .home-hero {
+.home-hero {
     background-image: url(./img/home-hero-mobile.webp);
     background-size: cover;
     background-position: center;
@@ -1261,7 +1261,7 @@ nav li {
     .home-hero {
         background-image: url(./img/home-hero.webp);
     }
-} */
+}
 
 /* These are preloaded in the header */
 

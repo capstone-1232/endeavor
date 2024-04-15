@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<style>
+	<!-- <style>
 		.home-hero {
     	background-image: url(./img/home-hero-mobile.webp);
 		background-size: cover;	
@@ -42,7 +42,7 @@
 			background-image: url(./img/home-hero.webp);
 		}
 	}
-	</style>
+	</style> -->
 
 	<?php wp_head(); ?>
 </head>
