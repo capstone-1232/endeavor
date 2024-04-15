@@ -40,7 +40,7 @@
                     <div class="who-we-are-bg-img-1"></div>
     
                     <!-- This is for when we hit tablet view -->
-                    <img class="who-we-are-img" src="<?php echo get_template_directory_uri(); ?>/img/year-round.webp" alt="Endeavour beer on table">
+                    <img class="who-we-are-img" src="<?php echo get_template_directory_uri(); ?>/img/year-round.webp" alt="A hand extending out to you offering you a delicious glass of beer">
                     <div class="inner-container">
                         <h3>Endeavour Brewing</h3>
                         <p>
@@ -61,7 +61,7 @@
                     <div class="who-we-are-bg-img-2"></div>
     
                     <!-- This is for when we hit tablet view -->
-                    <img class="who-we-are-img" src="<?php echo get_template_directory_uri(); ?>/img/coffee.webp" alt="Endeavour coffee on table">
+                    <img class="who-we-are-img" src="<?php echo get_template_directory_uri(); ?>/img/coffee.webp" alt="Endevour coffee, sitting on a bar top">
                     <div class="inner-container">
                         <h3>Endeavour Coffee roasters</h3>
                         <p>In 2022, we ventured into our second passion: coffee. Our love for coffee runs deep—it's a beverage that brings people together, boasts diverse flavor profiles akin to beer, and kick-starts our day, every day.
@@ -81,7 +81,7 @@
                     <div class="who-we-are-bg-img-3"></div>
     
                     <!-- This is for when we hit tablet view -->
-                    <img class="who-we-are-img beer-man" src="<?php echo get_template_directory_uri(); ?>/img/GeorgiaBeer.webp" alt="Employee holding endeavour glass">
+                    <img class="who-we-are-img beer-man" src="<?php echo get_template_directory_uri(); ?>/img/GeorgiaBeer.webp" alt="Georgia, (one of the owners of Endevour) holding endeavour glass">
                     <div class="mission-statement inner-container">
                         <div class="mission-content">
                             <h3>Mission Statement</h3>
