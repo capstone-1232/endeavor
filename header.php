@@ -20,6 +20,30 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<style>
+		.home-hero {
+    	background-image: url(./img/home-hero-mobile.webp);
+		background-size: cover;	
+		background-position: center;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;		
+		}
+
+		@media screen and (min-width: 700px) {
+    		.home-hero {
+        	background-image: url(./img/home-hero-tablet.webp);
+    	}
+}
+
+		@media screen and (min-width: 1000px) {
+			.home-hero {
+			background-image: url(./img/home-hero.webp);
+		}
+	}
+	</style>
+
 	<?php wp_head(); ?>
 </head>
 

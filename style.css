@@ -1138,7 +1138,7 @@ nav li {
 
 /* Mobile Menu Page */
 .menu-hero {
-    background-image: url(./img/taco-platter.webp);
+    background-image: url(./img/taco-platter-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1146,6 +1146,18 @@ nav li {
     justify-content: center;
     align-items: center;
     height: 19.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    .menu-hero {
+        background-image: url(./img/taco-platter-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .menu-hero {
+        background-image: url(./img/taco-platter.webp);
+    }
 }
 
 .overlay {
@@ -1183,15 +1195,15 @@ nav li {
     font-size: var(--h6-mobile);
     margin: 0;
     width: fit-content;
-    
+
 }
 
-.food-option-price{
+.food-option-price {
     font-weight: bold;
     padding-left: 1.5rem;
 }
 
-.food-item-flex{
+.food-item-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1200,12 +1212,12 @@ nav li {
 
 }
 
-.menu-line{
+.menu-line {
     height: 3px;
     border-radius: 10px;
     flex: 1 1 80%;
     background-color: var(--dark);
-    
+
 }
 
 .food-price {
@@ -1223,10 +1235,14 @@ nav li {
     margin: 0;
 }
 
+#preload {
+    display: none;
+
+}
 
 /* Mobile Menu Page */
-.home-hero {
-    background-image: url(./img/home-hero.webp);
+/* .home-hero {
+    background-image: url(./img/home-hero-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1234,6 +1250,20 @@ nav li {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (min-width: 700px) {
+    .home-hero {
+        background-image: url(./img/home-hero-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .home-hero {
+        background-image: url(./img/home-hero.webp);
+    }
+} */
+
+/* These are preloaded in the header */
 
 .home-overlay {
     background-color: rgba(0, 0, 0, 0.7);
@@ -1571,7 +1601,7 @@ footer .map {
 }
 
 @media screen and (min-width: 500px) {
-    .food-item{
+    .food-item {
         white-space: nowrap;
     }
 }
@@ -2243,14 +2273,16 @@ footer .map {
 
 /* BREWING PROCESS */
 .brewing-process {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-process-svg.svg);
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-process-svg-cropped.svg);
+    background-size: contain;
     background-position: center;
     background-repeat: repeat;
+    object-fit: cover;
+    height: 80%;
 }
 
 .brewing-process-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2258,6 +2290,18 @@ footer .map {
     justify-content: center;
     align-items: center;
     height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+}
+
+@media screen and (min-width: 700px) {
+    .brewing-process-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .brewing-process-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/brewing-process-hero.webp);
+    }
 }
 
 .brewing-process-bg h2 {
@@ -2467,7 +2511,7 @@ footer .map {
 /* WHO WE ARE */
 
 .who-we-are-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2476,6 +2520,18 @@ footer .map {
     align-items: center;
     flex-direction: column;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    .who-we-are-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .who-we-are-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/who-we-are-hero.webp);
+    }
 }
 
 .who-we-are-bg h2 {
@@ -2633,7 +2689,7 @@ footer .map {
 
 /* Meet the Team */
 .meet-the-team-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps-mobile.webp);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -2641,6 +2697,18 @@ footer .map {
     justify-content: center;
     align-items: center;
     height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+}
+
+@media screen and (min-width: 700px) {
+    .meet-the-team-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .meet-the-team-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/beer-taps.webp);
+    }
 }
 
 .meet-the-team-bg h2 {
@@ -2790,7 +2858,7 @@ footer .map {
 
 /* Private events */
 .private-events-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero-mobile.webp);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -2798,6 +2866,18 @@ footer .map {
     justify-content: center;
     align-items: center;
     height: clamp(19.5rem, 17.0839rem + 12.0805vw, 28.5rem);
+}
+
+@media screen and (min-width: 700px) {
+    .private-events-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .private-events-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/private-functions-hero.webp);
+    }
 }
 
 .private-events-bg h2 {
@@ -3062,8 +3142,19 @@ footer .map {
 }
 
 .barrel-aged-banner-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged-mobile.webp);
+}
 
+@media screen and (min-width:700px) {
+    .barrel-aged-banner-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .barrel-aged-banner-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/barrel-aged.webp);
+    }
 }
 
 .beers a {
@@ -3134,9 +3225,21 @@ footer .map {
 }
 
 .beer-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout-mobile.webp);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media screen and (min-width: 700px) {
+    .beer-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .beer-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/beer-bg/beer-spout.webp);
+    }
 }
 
 .single-beer h2,
@@ -3515,13 +3618,25 @@ footer .map {
 
 /* ********************Upcoming Events********************************* */
 .events-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-self: center;
+}
+
+@media screen and (min-width: 700px) {
+    .events-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour-tablet.webp);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .events-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/yoga-at-endeavour.webp);
+    }
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {

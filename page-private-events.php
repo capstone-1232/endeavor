@@ -34,7 +34,7 @@ $title = get_the_title();
         <section class="private-section">
             <div class="inner-container">
                 <div class="private-events-img">
-                    <img class="private-events-img" src="<?php echo get_template_directory_uri(); ?>/img/private-events.webp" alt="Endeavour coffee on table">
+                    <img class="private-events-img" src="<?php echo get_template_directory_uri(); ?>/img/private-events.webp" alt="Group of people gathered at endevour">
                 </div>
                 <div class="private-events-content">
                     <div>
@@ -98,8 +98,8 @@ $title = get_the_title();
         <section class="table-bookings">
             <div class="inner-container"> 
                 <picture class="table-bookings-picture">
-                    <source media="(min-width: 720px)" srcset="<?php echo get_template_directory_uri(); ?>/img/table-bookings.webp" alt="Endeavour coffee on table"s>
-                    <img class="table-bookings-img" src="<?php echo get_template_directory_uri(); ?>/img/table-bookings-mobile.webp" alt="Endeavour coffee on table">
+                    <source media="(min-width: 720px)" srcset="<?php echo get_template_directory_uri(); ?>/img/table-bookings.webp" alt="Matt (one of the owners of Endevour) having a discussion with 2 gentlemen"s>
+                    <img class="table-bookings-img" src="<?php echo get_template_directory_uri(); ?>/img/table-bookings-mobile.webp" alt="Matt (one of the owners of Endevour) having a discussion with 2 gentlemen">
                 </picture>
 
                 <div class="bookings-content">
@@ -126,7 +126,7 @@ $title = get_the_title();
         <section class="wedding-receptions">
             <div class="inner-container wedding-flex">
                 <div class="wedding-receptions-img">
-                    <img class="wedding-receptions-img" src="<?php echo get_template_directory_uri(); ?>/img/WeddingPhotoWithPlant.webp" alt="Endeavour coffee on table">
+                    <img class="wedding-receptions-img" src="<?php echo get_template_directory_uri(); ?>/img/WeddingPhotoWithPlant.webp" alt="Wedding reception at Endevour">
                 </div>
                 <div class="wedding-info">
                     <h3 id="wedding-h3">Wedding and / or Reception</h3>
@@ -184,7 +184,7 @@ $title = get_the_title();
         <section class="team-building">
             <div class="inner-container">
                 <div  class="team-building-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/team-building-cropped.webp" alt="Endeavour coffee on table">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/team-building-cropped.webp" alt="A group of people coming together as a team- pressing their hands together in a circle.">
                 </div>
                 <div class="team-content">
                     <h3>Team Building Activities / Events</h3>
