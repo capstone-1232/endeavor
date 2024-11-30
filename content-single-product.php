@@ -64,12 +64,13 @@ echo '<div class="short-description">' . wc_format_content($product->get_short_d
 echo '<div class="form-flex">';
 do_action('woocommerce_before_add_to_cart_form');
 woocommerce_template_single_add_to_cart();
-do_action('woocommerce_after_add_to_cart_form');
-
-// Back to Shop Button
 echo '<div class="back-to-shop">';
 echo '<a href="' . esc_url(wc_get_page_permalink('shop')) . '" class="button">Back to Shop</a>';
 echo '</div>';
+do_action('woocommerce_after_add_to_cart_form');
+
+// Back to Shop Button
+
 
 echo '</div>';
 echo '</div>';

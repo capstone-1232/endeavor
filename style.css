@@ -1138,7 +1138,7 @@ nav li {
 
 /* Mobile Menu Page */
 .menu-hero {
-    background-image: url(./img/taco-platter-mobile.webp);
+    background-image: url(./img/on-tap-beers-mobile.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1150,13 +1150,13 @@ nav li {
 
 @media screen and (min-width: 700px) {
     .menu-hero {
-        background-image: url(./img/taco-platter-tablet.webp);
+        background-image: url(./img/on-tap-beers-tablet.webp);
     }
 }
 
 @media screen and (min-width: 1000px) {
     .menu-hero {
-        background-image: url(./img/taco-platter.webp);
+        background-image: url(./img/on-tap-beers.webp);
     }
 }
 
@@ -2112,19 +2112,19 @@ footer .map {
         visibility: hidden;
     }
 
-    
-    .main-navigation ul li:hover > ul.submenu {
+
+    .main-navigation ul li:hover>ul.submenu {
         visibility: visible;
         opacity: 1;
     }
 
-    .main-navigation ul li:focus-within > ul,
-    .main-navigation ul li > ul:focus {
+    .main-navigation ul li:focus-within>ul,
+    .main-navigation ul li>ul:focus {
         visibility: visible;
         opacity: 1;
     }
 
-    ul.utility-nav{
+    ul.utility-nav {
         margin-bottom: 0;
     }
 
@@ -3688,7 +3688,6 @@ footer .map {
     display: block;
     border-radius: 5px;
     width: 100%;
-    margin-bottom: 1.5rem;
 }
 
 .reset_variations {
@@ -3696,6 +3695,10 @@ footer .map {
     margin-left: 1rem;
 }
 
+.gpay-card-info-container.black,
+.gpay-button.black {
+    padding: 24px 0;
+}
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled:hover {
@@ -3715,7 +3718,7 @@ footer .map {
     text-decoration: none;
     display: block;
     border-radius: 5px;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     white-space: nowrap;
 }
 
@@ -3790,12 +3793,7 @@ footer .map {
 }
 
 @media screen and (min-width: 600px) {
-    .form-flex {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
+
 
     .single-product-flex {
         display: flex;

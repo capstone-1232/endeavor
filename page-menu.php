@@ -42,7 +42,7 @@ $title = get_the_title();
                 <h3 class="menu-header">Taproom Menu</h3>
                 <?php
 
-                function display_menu($posts, $category)
+                function display_menu($posts, $category, $order)
                 {
                     if ($posts) {
                         echo '<h4 class="menu-sub-header">' . $category . '</h4>';
@@ -69,28 +69,50 @@ $title = get_the_title();
                     }
                     
                 }
-                $taproom_menu_posts = new WP_Query(
-                    array(
-                        'post_type' => 'taproom_menu',
-                        'posts_per_page' => -1,
-                    )
-                );
 
-                $taproom_menu_items = array();
-
+                $taproom_menu_posts = new WP_Query(array(
+                    'post_type'      => 'taproom_menu',
+                    'posts_per_page' => -1,
+                ));
+                
+                $menu_items_by_category = [];
+                $category_order = [];
+                
                 if ($taproom_menu_posts->have_posts()) {
                     while ($taproom_menu_posts->have_posts()) {
                         $taproom_menu_posts->the_post();
-                        $menu_category = get_field('menu_category');
-                        $taproom_menu_items[$menu_category][] = $post;
+                
+                        $menu_category = get_field('menu_category'); 
+                        $menu_order = get_field('order'); 
+                
+                        if (!isset($menu_items_by_category[$menu_category])) {
+                            $menu_items_by_category[$menu_category] = [];
+                            $category_order[$menu_category] = PHP_INT_MAX; 
+                        }
+                
+                        $menu_items_by_category[$menu_category][] = $post;
+                
+                     
+                        $category_order[$menu_category] = min($category_order[$menu_category], $menu_order);
                     }
+                
+                    wp_reset_postdata();
                 }
-
-
-                $taproom_menu_items = array_reverse($taproom_menu_items);
-
-                foreach ($taproom_menu_items as $category => $posts) {
-                    display_menu($posts, $category);
+                
+                
+                uasort($category_order, function($a, $b) {
+                    return $a - $b; 
+                });
+                
+                
+                $sorted_menu_items = [];
+                foreach (array_keys($category_order) as $category) {
+                    $sorted_menu_items[$category] = $menu_items_by_category[$category];
+                }
+                
+                
+                foreach ($sorted_menu_items as $category => $posts) {
+                    display_menu($posts, $category, $order);
                 }
                 ?>
 
@@ -98,27 +120,48 @@ $title = get_the_title();
             <section class="container">
                 <h3 class="menu-header">Cafe Menu</h3>
                 <?php
-                $cafe_menu_posts = new WP_Query(
-                    array(
-                        'post_type' => 'cafe_menu',
-                        'posts_per_page' => -1,
-                    )
-                );
-
-                $cafe_menu_items = array();
-
+                $cafe_menu_posts = new WP_Query(array(
+                    'post_type'      => 'cafe_menu',
+                    'posts_per_page' => -1,
+                ));
+                
+                $cafe_menu_items = [];
+                $category_order = []; 
+                
                 if ($cafe_menu_posts->have_posts()) {
                     while ($cafe_menu_posts->have_posts()) {
                         $cafe_menu_posts->the_post();
-                        $cafe_category = get_field('cafe_category');
+                
+                        $cafe_category = get_field('cafe_category'); 
+                        $menu_order = get_field('order'); 
+                
+                        if (!isset($cafe_menu_items[$cafe_category])) {
+                            $cafe_menu_items[$cafe_category] = [];
+                            $category_order[$cafe_category] = PHP_INT_MAX; 
+                        }
+                
                         $cafe_menu_items[$cafe_category][] = $post;
+                
+                        $category_order[$cafe_category] = min($category_order[$cafe_category], $menu_order);
                     }
+                
+                    wp_reset_postdata();
                 }
-
-                $cafe_menu_items = array_reverse($cafe_menu_items);
-
-                foreach ($cafe_menu_items as $category => $posts) {
-                    display_menu($posts, $category);
+                
+             
+                uasort($category_order, function($a, $b) {
+                    return $a - $b; 
+                });
+                
+                
+                $sorted_cafe_menu_items = [];
+                foreach (array_keys($category_order) as $category) {
+                    $sorted_cafe_menu_items[$category] = $cafe_menu_items[$category];
+                }
+                
+                
+                foreach ($sorted_cafe_menu_items as $category => $posts) {
+                    display_menu($posts, $category, $order);
                 }
                 ?>
             </section>

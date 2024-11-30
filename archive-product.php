@@ -92,6 +92,8 @@ get_header('shop');
 					wc_get_template_part('content', 'product');
 				}
 			}
+			
+
 
 			woocommerce_product_loop_end();
 		} else {
