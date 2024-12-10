@@ -2255,9 +2255,9 @@ footer .map {
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
     .menu-posts {
-        width: calc(100% / 3 - 3rem);
+        width: calc(100% / 3 - 2rem);
     }
 
     .about-us>.wide-flex {

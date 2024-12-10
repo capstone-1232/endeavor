@@ -34,7 +34,7 @@ $title = get_the_title();
         <section class="private-section">
             <div class="inner-container">
                 <div class="private-events-img">
-                    <img class="private-events-img" src="<?php echo get_template_directory_uri(); ?>/img/private-events.webp" alt="Group of people gathered at endevour">
+                    <img class="private-events-img" src="<?php echo get_template_directory_uri(); ?>/img/privateevents.webp" alt="Group of people gathered at endevour">
                 </div>
                 <div class="private-events-content">
                     <div>
@@ -60,7 +60,7 @@ $title = get_the_title();
                                 Brewery tour available upon request
                             </li>
                             <li>
-                                Endeavour’s Food Menu may be utilized or catering, food trucks, or potluck may be brought in
+                                Endeavour’s Food Menu may be utilized or catering, or potluck may be brought in
                             </li>
                             <li>
                                 70 inch TV available on request for slideshows or presentations
@@ -86,7 +86,7 @@ $title = get_the_title();
                                 <b>
                                     IF BOOKING FOR A CORPORATE PRIVATE EVENT 
                                     <span class="block">
-                                    - We Include servers and bartenders for the duration of your event.
+                                    - Bartenders included for the duration of the event
                                     </span>
                                 </b>
                             </li>
@@ -111,7 +111,7 @@ $title = get_the_title();
                             Section of the taproom can be sectioned off for your group, the taproom would remain open to the general public
                         </li>
                         <li>
-                            Brewery tour available
+                            Brewery tour available by request
                         </li>
                         <li>
                             Regular taproom hours apply
@@ -184,7 +184,7 @@ $title = get_the_title();
         <section class="team-building">
             <div class="inner-container">
                 <div  class="team-building-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/team-building-cropped.webp" alt="A group of people coming together as a team- pressing their hands together in a circle.">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/team-building.webp" alt="A group of people coming together as a team- PLaying some monopoly">
                 </div>
                 <div class="team-content">
                     <h3>Team Building Activities / Events</h3>
@@ -194,9 +194,6 @@ $title = get_the_title();
                     <ul>
                         <li>
                             Brewery Tour and Tasting with the Head Brewero Discover what goes into the making of a beer and how to taste beer.
-                        </li>
-                        <li>
-                            Table Tennis Tournament
                         </li>
                         <li>
                             Board Game Event

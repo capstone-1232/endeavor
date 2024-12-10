@@ -98,8 +98,10 @@ $cost  = tribe_get_formatted_cost( $event_id );
 			</div>
 			<div class="tribe-events-single-event-description tribe-events-content">
 				<?php the_content(); ?>
-				<?php  $website = tribe_get_event_website_url( $event_id ); ?>
-						<a href="<?php echo $website ?>" class="events-button">Get Tickets</a>
+				<?php  $website = tribe_get_event_website_url( $event_id ); 
+						if (!empty($website)): ?>
+							<a href="<?php echo esc_url($website); ?>" class="events-button">Get Tickets</a>
+						<?php endif; ?>
 				</div>
 		
 		</div>

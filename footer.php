@@ -22,7 +22,6 @@
 			<div class="hours">
 				<h4>Hours:</h4>
 				<?php
-				// Define the custom order of days
 				$custom_order = array(
 					'Sunday',
 					'Monday',
@@ -31,44 +30,68 @@
 					'Thursday',
 					'Friday',
 					'Saturday'
+					
 				);
-
+				
 				$posts = get_posts(
 					array(
-						'post_type' => 'hours', // Replace 'your_post_type' with your actual post type slug
-						'posts_per_page' => -1,       // Retrieve all posts
-						'orderby' => 'title',  // Order by post title
-						'order' => 'ASC',    // Ascending order
+						'post_type' => 'hours', // Replace 'hours' with your actual post type slug
+						'posts_per_page' => -1, // Retrieve all posts
+						'orderby' => 'title',   // Order by post title
+						'order' => 'ASC',       // Ascending order
 					)
 				);
-
-				// Loop through each post
-				foreach ($custom_order as $day) {
-					// Find the post with the matching day
+				
+				// Collect extra days from ACF that are not in $custom_order
+				$extra_days = array();
+				
+				foreach ($posts as $post) {
+					setup_postdata($post);
+				
+					$day_name = get_field('day'); // Retrieve the 'day' field from ACF
+				
+					// Add day_name to $extra_days if it's not in $custom_order and not already added
+					if (!in_array($day_name, $custom_order) && !in_array($day_name, $extra_days) && !empty($day_name)) {
+						$extra_days[] = $day_name;
+					}
+				}
+				
+				// Merge the custom order with extra days
+				$display_order = array_merge($custom_order, $extra_days);
+				
+				foreach ($display_order as $day) {
 					$post_found = false;
+				
 					foreach ($posts as $post) {
 						setup_postdata($post);
-						$day_name = get_field('day');
+				
+						$day_name = get_field('day'); // Retrieve the 'day' field from ACF
+				
+						// Match the current day in the display order
 						if ($day_name === $day) {
 							$post_found = true;
-							break;
+				
+							// Retrieve ACF fields
+							$open = get_field('open');
+							$close = get_field('close');
+							$closed = get_field('closed');
+				
+							// Display hours
+							if ($closed) {
+								echo "<p class=\"weekday\">$day_name: <span class=\"hours-details\">Closed</span></p>";
+							} else {
+								echo "<p class=\"weekday\">$day_name: <span class=\"hours-details\">$open - $close</span></p>";
+							}
+				
+							break; // Exit the loop once a match is found
 						}
 					}
-
-					if ($post_found) {
-						// Retrieve ACF fields for each post
-						$open = get_field('open');
-						$close = get_field('close');
-						$closed = get_field('closed');
-
-						if ($closed) {
-							echo "<p class=\"weekday\">$day: <span class=\"hours-details\">Closed</span></p>";
-						} else {
-							echo "<p class=\"weekday\">$day: <span class=\"hours-details\">$open - $close</span></p>";
-						}
-
-						// Reset post data
-						wp_reset_postdata();
+				
+					wp_reset_postdata(); // Reset post data after each loop iteration
+				
+					// Optionally handle unmatched days
+					if (!$post_found && !in_array($day, $custom_order)) {
+						// Optionally show: echo "<p class=\"weekday\">$day: <span class=\"hours-details\">No hours available</span></p>";
 					}
 				}
 				?>
