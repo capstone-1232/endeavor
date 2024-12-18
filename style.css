@@ -3839,6 +3839,11 @@ footer .map {
     display: none;
 }
 
+.woocommerce-order-details__title,
+.woocommerce-customer-details .woocommerce-column__title {
+    color: var(--dark);
+}
+
 .shop-filter-buttons {
     display: flex;
     gap: 1rem;

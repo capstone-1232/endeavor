@@ -29,7 +29,7 @@
             <div class="who-we-are-bg">
                 <h2><?php echo $title; ?></h2>
                 <p>
-                   Endeavour Brewing is a family friendly (all kids are welcome), community orientated craft brewery in St. Albert.  Our love for great quality beers drove us to develop and brew our favourite pints.  Consistent quality and the freshest ingredients are paramount as we strive to create beers that cater to not only our thirsty palate but to the active lifestyles we enjoy with our friends, family and colleagues.  At Endeavour Brewing, we are inspired by our other passions in life including the outdoors, sports and those who are taking risks and making great things happen.
+                Endeavour Brewing and Coffee Roasters is a family friendly, community orientated craft brewery and roastery in St. Albert. Our love for great quality beers and coffee drove us to develop and brew our favourite pints/cups. Consistent quality and the freshest ingredients are paramount as we strive to create beers and coffee that cater to not only our thirsty palate but to the active lifestyles we enjoy with our friends, family and colleagues. At Endeavour Brewing and Coffee Roasters, we are inspired by our other passions in life including the outdoors, sports and those who are taking risks and making great things happen.
                 </p>
             </div>
         </section>
