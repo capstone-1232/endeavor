@@ -3851,7 +3851,8 @@ footer .map {
     justify-content: space-between;
 }
 
-.shop-button {
+.shop-button,
+.order-again {
     display: flex;
     flex-direction: column;
     align-items: center;
