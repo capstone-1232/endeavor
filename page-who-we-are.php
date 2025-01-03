@@ -46,7 +46,7 @@
                         <p>
                             We discovered a long time ago that beer is about socialization. It brings people together. We started Endeavour in 2018, with that goal in mind. We wanted a place where people could come enjoy a fresh craft beer and socialize, make connections and be comfortable. 
                             <br><br>
-                            Alberta has a long-standing reputation for growing superior quality barely and is sought after by brewers from around the world. This is in part due the province's growing season of long, warm days and cool evenings and medium texture soils. All of our beers are made with barley grown by farmers in Alberta. Sustainability is very important to us in everything we do and we strive to support our community every way we can. 
+                            Alberta has a long-standing reputation for growing superior quality barley and is sought after by brewers from around the world. This is in part due the province's growing season of long, warm days and cool evenings and medium texture soils. All of our beers are made with barley grown by farmers in Alberta. Sustainability is very important to us in everything we do and we strive to support our community every way we can. 
                             <br><br>
                             As a brewer, Matt holds dear to tradition. You will find many traditional styles on our beer board, including  English ales or German lagers. At Endeavour Brewing, we honor the past while embracing the spirit of community and camaraderie that defines the present and shapes the future.
                         </p>
@@ -91,6 +91,21 @@
                 </div>
             </div>
         </section>
+        <section class="donations">
+      <div class="overlay">
+        <div class="inner-container">
+          <h3>Donations</h3>
+          <p>Seeking sponsorship or a charitable donation from Endeavour Brewing? Fantastic! We're passionate about
+            collaborating with local charities and volunteer organizations that contribute to the vibrancy of our
+            community. Let's work together to make a positive impact and spread the spirit of giving.</p>
+          <p>Feel free to reach out with your specific request, we'll do our best to find a way to support your cause
+            and
+            contribute to the community.</p>
+          <!-- <p>Click the button below to access the form and express your interest in collaborating with Endeavour.</p>
+          <a href="#" class="cta">Register For Support</a> -->
+        </div>
+      </div>
+    </section>
     </main>
  
  <?php
